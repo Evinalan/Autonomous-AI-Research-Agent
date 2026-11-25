@@ -1,0 +1,11 @@
+requests
+python-dotenv
+pymupdf
+pandas
+numpy
+streamlit
+reportlab
+sentence-transformers
+faiss-cpu
+langgraph
+pytest
