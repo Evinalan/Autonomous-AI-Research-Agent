@@ -1,47 +1,28 @@
 
-import json
-import urllib.request
-import urllib.error
+from src.llm.gemini_client import (
+    generate_response as gemini_generate_response,
+    get_gemini_api_key,
+    MODEL_NAME
+)
 
 
-OLLAMA_URL = "http://localhost:11434/api/chat"
+def check_gemini_connection():
+    """
+    Check whether a Gemini API key is configured.
 
-MODEL_NAME = "llama3.2:3b"
-def check_ollama_connection():
-
-    url = "http://localhost:11434/api/tags"
-
-    request = urllib.request.Request(
-        url,
-        method="GET"
-    )
+    This checks configuration only. It does not make
+    a paid or quota-consuming model generation request.
+    """
 
     try:
-
-        with urllib.request.urlopen(
-            request,
-            timeout=5
-        ) as response:
-
-            data = json.loads(
-                response.read().decode("utf-8")
-            )
-
-        models = [
-            model.get("name", "")
-            for model in data.get("models", [])
-        ]
+        get_gemini_api_key()
 
         return {
             "available": True,
-            "models": models
+            "models": [MODEL_NAME]
         }
 
-    except (
-        urllib.error.URLError,
-        TimeoutError,
-        json.JSONDecodeError
-    ) as error:
+    except Exception as error:
 
         return {
             "available": False,
@@ -50,88 +31,33 @@ def check_ollama_connection():
         }
 
 
+def check_ollama_connection():
+    """
+    Temporary compatibility alias.
+
+    Existing app imports can continue working until
+    the Streamlit status section is updated.
+    """
+
+    return check_gemini_connection()
+
+
 def generate_response(
     prompt,
     num_predict=500,
     temperature=0.2
 ):
     """
-    Send a prompt to Ollama and generate a response.
+    Compatibility function.
 
-    Optimizations:
-    1. Keep the model loaded for 10 minutes.
-    2. Limit unnecessary response generation.
-    3. Use a consistent temperature.
+    Existing agents can continue importing
+    generate_response from ollama_client.py.
+
+    Actual generation now happens through Gemini.
     """
 
-    payload = {
-        "model": MODEL_NAME,
-
-        "messages": [
-            {
-                "role": "user",
-                "content": prompt
-            }
-        ],
-
-        "stream": False,
-
-        # Keep the model in memory between requests.
-        "keep_alive": "10m",
-
-        "options": {
-            "num_predict": num_predict,
-            "temperature": temperature,
-            "num_ctx": 4096
-        }
-    }
-
-    data = json.dumps(payload).encode("utf-8")
-
-    request = urllib.request.Request(
-        OLLAMA_URL,
-        data=data,
-        headers={
-            "Content-Type": "application/json"
-        },
-        method="POST"
+    return gemini_generate_response(
+        prompt=prompt,
+        num_predict=num_predict,
+        temperature=temperature
     )
-
-    try:
-
-        with urllib.request.urlopen(
-            request,
-            timeout=600
-        ) as response:
-
-            result = json.loads(
-                response.read().decode("utf-8")
-            )
-
-        return result["message"]["content"]
-
-    except urllib.error.HTTPError as error:
-
-        error_details = error.read().decode(
-            "utf-8",
-            errors="replace"
-        )
-
-        raise RuntimeError(
-            f"Ollama HTTP error {error.code}: "
-            f"{error_details}"
-        )
-
-    except urllib.error.URLError as error:
-
-        raise RuntimeError(
-            "Could not connect to Ollama. "
-            "Make sure Ollama is installed and running. "
-            f"Details: {error.reason}"
-        )
-
-    except (KeyError, json.JSONDecodeError) as error:
-
-        raise RuntimeError(
-            f"Could not read Ollama's response: {error}"
-        )

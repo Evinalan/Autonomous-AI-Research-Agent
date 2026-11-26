@@ -1,4 +1,3 @@
-
 import streamlit as st
 from pathlib import Path
 
@@ -14,19 +13,9 @@ from src.exporting.export_generator import (
     create_export_filename
 )
 from src.comparison.research_comparator import compare_research_topics
-from src.llm.ollama_client import check_ollama_connection
-ollama_status = check_ollama_connection()
+from src.llm.ollama_client import check_gemini_connection
 
-if ollama_status["available"]:
 
-    st.success("Ollama is connected.")
-
-else:
-
-    st.error(
-        "Ollama is not available. "
-        "Start Ollama before running research."
-    )
 # ------------------------------------------
 # PAGE CONFIGURATION
 # ------------------------------------------
@@ -37,7 +26,19 @@ st.set_page_config(
     layout="wide"
 )
 
+# ------------------------------------------
+# GEMINI API STATUS
+# ------------------------------------------
 
+gemini_status = check_gemini_connection()
+
+if gemini_status["available"]:
+    st.success("Gemini API key is configured.")
+else:
+    st.error(
+        "Gemini API key is not configured. "
+        "Please add GEMINI_API_KEY to your Streamlit secrets."
+    )
 # ------------------------------------------
 # SESSION STATE
 # ------------------------------------------
@@ -58,7 +59,7 @@ st.title("🧠 Autonomous AI Research Agent")
 st.markdown(
     """
     Discover, analyze and summarize scientific research
-    using locally running AI models.
+    using Gemini API and retrieval-augmented generation.
     """
 )
 
@@ -79,7 +80,7 @@ with st.sidebar:
         """
         - Python
         - LangGraph
-        - Ollama
+        - Gemini API
         - Sentence Transformers
         - FAISS
         - Crossref
@@ -110,7 +111,7 @@ topic = st.text_area(
 verify_claims = st.checkbox(
     "Enable additional AI claim verification (slower)",
     value=False,
-    help="This makes an additional Ollama request to check generated claims."
+    help="This makes an additional Gemini API request to check generated claims."
 )
 
 start_button = st.button(
@@ -127,16 +128,13 @@ start_button = st.button(
 if start_button:
 
     if not topic.strip():
-
         st.warning("Please enter a research topic.")
 
     else:
-
         st.session_state.research_result = None
         st.session_state.research_error = None
 
         try:
-
             with st.status(
                 "Preparing your research...",
                 expanded=True
@@ -145,20 +143,23 @@ if start_button:
                 progress_area = st.empty()
 
                 def update_progress(message):
-
-                    progress_area.write(
-                        f"⏳ {message}"
-                    )
+                    progress_area.write(f"⏳ {message}")
 
                 update_progress("Starting research workflow...")
 
-                result = run_research(
+                research_output = run_research(
                     topic,
                     verify_claims=verify_claims,
                     progress_callback=update_progress
                 )
 
-                st.session_state.research_result = result
+                if not isinstance(research_output, dict):
+                    raise ValueError(
+                        "The research workflow did not return a valid result. "
+                        "Check the research service and workflow logs."
+                    )
+
+                st.session_state.research_result = research_output
 
                 status.update(
                     label="Research completed successfully!",
@@ -169,9 +170,7 @@ if start_button:
             st.success("Your research report is ready!")
 
         except Exception as error:
-
             st.session_state.research_error = str(error)
-
             st.error("Research failed. Check the error details below.")
 
 
@@ -349,17 +348,11 @@ else:
 
             st.markdown("### Claim Verification")
 
-            verification = previous_result.get(
-                "claim_verification",
-                {}
-            )
+            verification = previous_result.get("claim_verification") or {}
 
             st.write(
                 "Status:",
-                verification.get(
-                    "verification_status",
-                    "Unknown"
-                )
+                verification.get("verification_status", "Unknown")
             )
 
             st.write(
@@ -372,105 +365,83 @@ else:
             claims = verification.get("claims", [])
 
             if claims:
-
                 for index, claim in enumerate(claims, start=1):
-
                     with st.expander(f"Claim {index}"):
-
-                        st.write(
-                            "**Statement:**",
-                            claim.get("statement", "")
-                        )
-
-                        st.write(
-                            "**Status:**",
-                            claim.get("status", "Unknown")
-                        )
-
+                        st.write("**Statement:**", claim.get("statement", ""))
+                        st.write("**Status:**", claim.get("status", "Unknown"))
                         st.write(
                             "**Supporting sources:**",
                             claim.get("supporting_sources", [])
                         )
-
-                        st.write(
-                            "**Explanation:**",
-                            claim.get("explanation", "")
-                        )
+                        st.write("**Explanation:**", claim.get("explanation", ""))
+            else:
+                st.info("No individual claim results are available.")
 
             # ------------------------------------------
             # PREVIOUS PDF REPORT DOWNLOAD
             # ------------------------------------------
 
-                    st.markdown("### Previous PDF Report")
+            st.markdown("### Previous PDF Report")
 
-        pdf_path = previous_result.get("pdf_path", "")
+            pdf_path = previous_result.get("pdf_path", "")
 
-        if pdf_path:
+            if pdf_path:
+                pdf_file = Path(pdf_path)
 
-            pdf_file = Path(pdf_path)
-
-            if pdf_file.is_file():
-
-                pdf_bytes = pdf_file.read_bytes()
-
-                st.download_button(
-                    label="📄 Download Previous PDF Report",
-                    data=pdf_bytes,
-                    file_name=pdf_file.name,
-                    mime="application/pdf",
-                    key=f"history_pdf_{selected_id}"
-                )
-
+                if pdf_file.is_file():
+                    pdf_bytes = pdf_file.read_bytes()
+                    st.download_button(
+                        label="📄 Download Previous PDF Report",
+                        data=pdf_bytes,
+                        file_name=pdf_file.name,
+                        mime="application/pdf",
+                        key=f"history_pdf_{selected_id}"
+                    )
+                else:
+                    st.warning(
+                        "The PDF file could not be found. "
+                        "The saved research information is still available."
+                    )
             else:
+                st.info("No PDF report path was saved for this research run.")
 
-                st.warning(
-                    "The PDF file could not be found. "
-                    "The saved research information is still available."
+            # ------------------------------------------
+            # PREVIOUS RESEARCH JSON AND MARKDOWN EXPORT
+            # ------------------------------------------
+
+            st.markdown("### Export Previous Research")
+
+            json_data = export_research_json(previous_result)
+            markdown_data = export_research_markdown(previous_result)
+
+            col1, col2 = st.columns(2)
+
+            with col1:
+                st.download_button(
+                    label="📥 Download JSON",
+                    data=json_data,
+                    file_name=create_export_filename(
+                        previous_result.get("topic", "research"),
+                        "json"
+                    ),
+                    mime="application/json",
+                    key=f"history_json_{selected_id}",
+                    use_container_width=True
                 )
 
-        else:
+            with col2:
+                st.download_button(
+                    label="📥 Download Markdown",
+                    data=markdown_data,
+                    file_name=create_export_filename(
+                        previous_result.get("topic", "research"),
+                        "md"
+                    ),
+                    mime="text/markdown",
+                    key=f"history_markdown_{selected_id}",
+                    use_container_width=True
+                )
 
-            st.info(
-                "No PDF report path was saved for this research run."
-            )
-
-        # JSON and Markdown Export Buttons
-
-        st.markdown("### Export Previous Research")
-
-        json_data = export_research_json(previous_result)
-
-        markdown_data = export_research_markdown(previous_result)
-
-        col1, col2 = st.columns(2)
-
-        with col1:
-
-            st.download_button(
-                label="📥 Download JSON",
-                data=json_data,
-                file_name=create_export_filename(
-                    previous_result.get("topic", "research"),
-                    "json"
-                ),
-                mime="application/json",
-                key=f"history_json_{selected_id}",
-                use_container_width=True
-            )
-
-        with col2:
-
-            st.download_button(
-                label="📥 Download Markdown",
-                data=markdown_data,
-                file_name=create_export_filename(
-                    previous_result.get("topic", "research"),
-                    "md"
-                ),
-                mime="text/markdown",
-                key=f"history_markdown_{selected_id}",
-                use_container_width=True
-            )
 # ------------------------------------------
 # DISPLAY ERRORS
 # ------------------------------------------
@@ -798,151 +769,152 @@ if result:
 # EXPORT CURRENT RESEARCH
 # ------------------------------------------
 
-st.divider()
+if isinstance(result, dict) and result:
 
-st.header("Export Research Data")
+    st.divider()
+    st.header("Export Research Data")
 
-json_data = export_research_json(result)
+    json_data = export_research_json(result)
+    markdown_data = export_research_markdown(result)
 
-markdown_data = export_research_markdown(result)
+    col1, col2 = st.columns(2)
 
-col1, col2 = st.columns(2)
+    with col1:
+        st.download_button(
+            label="📥 Download Research as JSON",
+            data=json_data,
+            file_name=create_export_filename(
+                result.get("topic", "research"),
+                "json"
+            ),
+            mime="application/json",
+            use_container_width=True
+        )
 
-with col1:
-
-    st.download_button(
-        label="📥 Download Research as JSON",
-        data=json_data,
-        file_name=create_export_filename(
-            result.get("topic", "research"),
-            "json"
-        ),
-        mime="application/json",
-        use_container_width=True
-    )
-
-with col2:
-
-    st.download_button(
-        label="📥 Download Research as Markdown",
-        data=markdown_data,
-        file_name=create_export_filename(
-            result.get("topic", "research"),
-            "md"
-        ),
-        mime="text/markdown",
-        use_container_width=True
-    )
+    with col2:
+        st.download_button(
+            label="📥 Download Research as Markdown",
+            data=markdown_data,
+            file_name=create_export_filename(
+                result.get("topic", "research"),
+                "md"
+            ),
+            mime="text/markdown",
+            use_container_width=True
+        )
 
 # ==========================================
 # PHASE 14.5 - FOLLOW-UP RESEARCH QUESTIONS
 # ==========================================
 
-st.divider()
+if isinstance(result, dict) and result:
 
-st.header("💬 Ask Follow-up Research Questions")
+    st.divider()
 
-st.write(
-    "Ask additional questions about your completed research "
-    "without running the entire research workflow again."
-)
+    st.header("💬 Ask Follow-up Research Questions")
 
-# Store separate conversations for different research topics.
-
-if "followup_conversations" not in st.session_state:
-    st.session_state.followup_conversations = {}
-
-# Use the current research topic as the conversation identifier.
-followup_topic = result.get("topic", "current_research")
-
-if followup_topic not in st.session_state.followup_conversations:
-    st.session_state.followup_conversations[followup_topic] = []
-
-conversation = st.session_state.followup_conversations[followup_topic]
-
-# Display previous questions and answers.
-
-for message in conversation:
-
-    with st.chat_message(message["role"]):
-        st.markdown(message["content"])
-
-# Question input.
-
-followup_question = st.text_input(
-    "Ask a follow-up question",
-    placeholder="e.g. What are the main research limitations?",
-    key=f"followup_input_{followup_topic}"
-)
-
-col1, col2 = st.columns([3, 1])
-
-with col1:
-
-    ask_followup = st.button(
-        "Send Question",
-        use_container_width=True,
-        key=f"ask_followup_{followup_topic}"
+    st.write(
+        "Ask additional questions about your completed research "
+        "without running the entire research workflow again."
     )
 
-with col2:
+    # Store separate conversations for different research topics.
 
-    clear_followup = st.button(
-        "Clear Chat",
-        use_container_width=True,
-        key=f"clear_followup_{followup_topic}"
+    if "followup_conversations" not in st.session_state:
+        st.session_state.followup_conversations = {}
+
+    # Use the current research topic as the conversation identifier.
+    followup_topic = result.get("topic", "current_research")
+
+    if followup_topic not in st.session_state.followup_conversations:
+        st.session_state.followup_conversations[followup_topic] = []
+
+    conversation = st.session_state.followup_conversations[followup_topic]
+
+    # Display previous questions and answers.
+
+    for message in conversation:
+
+        with st.chat_message(message["role"]):
+            st.markdown(message["content"])
+
+    # Question input.
+
+    followup_question = st.text_input(
+        "Ask a follow-up question",
+        placeholder="e.g. What are the main research limitations?",
+        key=f"followup_input_{followup_topic}"
     )
 
-if clear_followup:
+    col1, col2 = st.columns([3, 1])
 
-    st.session_state.followup_conversations[followup_topic] = []
+    with col1:
 
-    st.rerun()
+        ask_followup = st.button(
+            "Send Question",
+            use_container_width=True,
+            key=f"ask_followup_{followup_topic}"
+        )
+
+    with col2:
+
+        clear_followup = st.button(
+            "Clear Chat",
+            use_container_width=True,
+            key=f"clear_followup_{followup_topic}"
+        )
+
+    if clear_followup:
+
+        st.session_state.followup_conversations[followup_topic] = []
+
+        st.rerun()
 
 
-if ask_followup:
+    if ask_followup:
 
-    if not followup_question.strip():
+        if not followup_question.strip():
 
-        st.warning("Please enter a question.")
+            st.warning("Please enter a question.")
 
-    else:
+        else:
 
-        try:
+            try:
 
-            with st.spinner(
-                "Searching research passages and generating an answer..."
-            ):
+                with st.spinner(
+                    "Searching research passages and generating an answer..."
+                ):
 
-                followup_result = answer_followup_question(
-                    question=followup_question,
-                    research_result=result,
-                    conversation_history=conversation,
-                    top_k=5
+                    followup_result = answer_followup_question(
+                        question=followup_question,
+                        research_result=result,
+                        conversation_history=conversation,
+                        top_k=5
+                    )
+
+                # Save the user question and assistant answer.
+
+                conversation.append({
+                    "role": "user",
+                    "content": followup_question
+                })
+
+                conversation.append({
+                    "role": "assistant",
+                    "content": followup_result["answer"]
+                })
+
+                st.session_state.followup_conversations[followup_topic] = conversation
+
+                st.rerun()
+
+            except Exception as error:
+
+                st.error(
+                    f"Could not answer the follow-up question: {error}"
                 )
+        
 
-            # Save the user question and assistant answer.
-
-            conversation.append({
-                "role": "user",
-                "content": followup_question
-            })
-
-            conversation.append({
-                "role": "assistant",
-                "content": followup_result["answer"]
-            })
-
-            st.session_state.followup_conversations[followup_topic] = conversation
-
-            st.rerun()
-
-        except Exception as error:
-
-            st.error(
-                f"Could not answer the follow-up question: {error}"
-            )
-    
 # ==========================================
 # PHASE 14.4 - RESEARCH COMPARISON
 # ==========================================
@@ -953,7 +925,7 @@ st.header("🔬 Research Comparison")
 
 st.write(
     "Compare two research topics using retrieved research papers "
-    "and your local AI model."
+    "and Gemini AI."
 )
 
 if "comparison_result" not in st.session_state:
@@ -1108,5 +1080,5 @@ st.divider()
 
 st.caption(
     "Autonomous AI Research Agent | "
-    "Built using Python, LangGraph, Ollama and Streamlit"
+    "Built using Python, LangGraph, Gemini API and Streamlit"
 )

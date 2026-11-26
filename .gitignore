@@ -1,35 +1,68 @@
 
-# Python
+# ==============================
+# Python cache
+# ==============================
 __pycache__/
 *.py[cod]
 .pytest_cache/
+.mypy_cache/
+.ruff_cache/
 
-# Virtual environment
+# ==============================
+# Virtual environments
+# ==============================
 venv/
 .venv/
+env/
 
-# Environment variables
+# ==============================
+# Environment variables and secrets
+# ==============================
 .env
 .env.*
+!.env.example
 
-# IDE
+.streamlit/secrets.toml
+
+# ==============================
+# IDE and editor files
+# ==============================
 .vscode/
 .idea/
 
+# ==============================
 # Streamlit
-.streamlit/secrets.toml
+# ==============================
+.streamlit/credentials.toml
 
+# ==============================
 # Generated research data
+# ==============================
 data/raw/
 data/processed/
 data/research_history/
 
+# ==============================
 # Generated reports
+# ==============================
 reports/
+*.pdf
 
-# Temporary files
+# ==============================
+# Temporary files and logs
+# ==============================
+temp/
+tmp/
 *.part
 *.log
 
-# Local model files
-*.gguf
+# ==============================
+# Local AI models
+# ==============================
+*.gguf/
+
+# ==============================
+# OS files
+# ==============================
+.DS_Store
+Thumbs.db

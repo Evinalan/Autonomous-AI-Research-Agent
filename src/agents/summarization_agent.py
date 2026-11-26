@@ -1,5 +1,4 @@
-
-from src.llm.ollama_client import generate_response
+from src.llm.gemini_client import generate_response
 
 
 def run_summarization_agent(question, context):

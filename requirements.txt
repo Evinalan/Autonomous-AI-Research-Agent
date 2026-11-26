@@ -9,3 +9,5 @@ sentence-transformers
 faiss-cpu
 langgraph
 pytest
+google-genai
+pydantic

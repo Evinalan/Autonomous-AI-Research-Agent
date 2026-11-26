@@ -1,16 +1,10 @@
 
-import json
-import urllib.request
-import urllib.error
-
 from src.rag.rag_pipeline import (
     retrieve_relevant_chunks,
     build_context
 )
 
-
-OLLAMA_URL = "http://localhost:11434/api/chat"
-OLLAMA_MODEL = "llama3.2:3b"
+from src.llm.gemini_client import generate_response
 
 
 def answer_followup_question(
@@ -21,9 +15,11 @@ def answer_followup_question(
 ):
     """
     Answer a follow-up question using:
-    1. Previously retrieved research passages, when available.
-    2. New relevant passages retrieved from FAISS.
-    3. The local Ollama model.
+
+    1. Previously retrieved research passages.
+    2. New passages retrieved from FAISS.
+    3. Conversation history.
+    4. Gemini cloud AI model.
     """
 
     if not question or not question.strip():
@@ -76,17 +72,22 @@ def answer_followup_question(
 
     context = build_context(selected_chunks)
 
-    # Build a short conversation history for the model.
-    history_messages = []
+    # Build a short conversation history for Gemini.
+    history_text = []
 
     for message in conversation_history[-6:]:
 
-        if message.get("role") in ("user", "assistant"):
+        role = message.get("role", "")
 
-            history_messages.append({
-                "role": message["role"],
-                "content": message.get("content", "")
-            })
+        content = message.get("content", "")
+
+        if role in ("user", "assistant") and content:
+
+            history_text.append(
+                f"{role.upper()}: {content}"
+            )
+
+    conversation_context = "\n\n".join(history_text)
 
     system_prompt = """
 You are an academic research follow-up assistant.
@@ -94,17 +95,23 @@ You are an academic research follow-up assistant.
 Answer questions using the supplied research passages.
 
 Rules:
+
 1. Use the supplied research evidence.
 2. Do not invent authors, papers, datasets or results.
 3. Cite supporting passages using references such as [SOURCE 1].
 4. If the evidence is insufficient, clearly say so.
 5. Distinguish established findings from your own interpretations.
 6. Explain technical concepts clearly when asked.
-7. Use the conversation history to understand follow-up questions.
+7. Use conversation history to understand follow-up questions.
 8. Do not treat earlier AI-generated answers as verified research evidence.
+9. Give clear and structured answers.
 """
 
     user_prompt = f"""
+PREVIOUS CONVERSATION:
+
+{conversation_context}
+
 RESEARCH PASSAGES:
 
 {context}
@@ -113,62 +120,22 @@ FOLLOW-UP QUESTION:
 
 {question}
 
-Answer the question using the research passages above.
+Answer the question using the supplied research passages.
 Include source references wherever possible.
 """
 
-    messages = [
-        {
-            "role": "system",
-            "content": system_prompt
-        }
-    ]
-
-    messages.extend(history_messages)
-
-    messages.append({
-        "role": "user",
-        "content": user_prompt
-    })
-
-    payload = {
-        "model": OLLAMA_MODEL,
-        "messages": messages,
-        "stream": False
-    }
-
-    request_data = json.dumps(payload).encode("utf-8")
-
-    request = urllib.request.Request(
-        OLLAMA_URL,
-        data=request_data,
-        headers={
-            "Content-Type": "application/json"
-        },
-        method="POST"
-    )
-
     try:
 
-        with urllib.request.urlopen(
-            request,
-            timeout=600
-        ) as response:
-
-            result = json.loads(
-                response.read().decode("utf-8")
-            )
-
-        answer = result.get(
-            "message", {}
-        ).get(
-            "content",
-            ""
+        answer = generate_response(
+            prompt=user_prompt,
+            system_instruction=system_prompt,
+            num_predict=1000,
+            temperature=0.2
         )
 
         if not answer:
             raise RuntimeError(
-                "Ollama returned an empty answer."
+                "Gemini returned an empty answer."
             )
 
         return {
@@ -177,34 +144,8 @@ Include source references wherever possible.
             "sources": selected_chunks
         }
 
-    except urllib.error.HTTPError as error:
-
-        details = error.read().decode(
-            "utf-8",
-            errors="replace"
-        )
+    except Exception as error:
 
         raise RuntimeError(
-            f"Ollama HTTP error {error.code}: {details}"
-        )
-
-    except urllib.error.URLError as error:
-
-        raise RuntimeError(
-            "Could not connect to Ollama. "
-            "Make sure Ollama is running. "
-            f"Details: {error}"
-        )
-
-    except TimeoutError:
-
-        raise RuntimeError(
-            "Ollama took too long to respond. "
-            "Try a shorter question or fewer passages."
-        )
-
-    except json.JSONDecodeError as error:
-
-        raise RuntimeError(
-            f"Could not decode Ollama response: {error}"
-        )
+            f"Follow-up question generation failed: {error}"
+        ) from error

@@ -5,7 +5,7 @@ from langgraph.graph import StateGraph, START, END
 
 from src.agents.retrieval_agent import run_retrieval_agent
 from src.agents.citation_agent import run_citation_agent
-from src.llm.ollama_client import generate_response
+from src.llm.gemini_client import generate_response
 
 
 class ResearchState(TypedDict, total=False):

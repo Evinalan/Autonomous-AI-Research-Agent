@@ -159,6 +159,19 @@ def run_research(topic, verify_claims=False,progress_callback=None):
     result = workflow.invoke({
         "question": topic
     })
+    if not isinstance(result, dict):
+         raise RuntimeError(
+              "Research workflow returned an invalid result.")
+
+    if result.get("error"):
+        raise RuntimeError(result["error"])
+
+    chunks = result.get("chunks", [])
+
+    if not chunks:
+        raise RuntimeError(
+        "No relevant research passages were found."
+    )
     report_progress("Research analysis, summary and gap identification completed.")
     if result.get("error"):
 

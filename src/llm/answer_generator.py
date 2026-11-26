@@ -5,8 +5,10 @@ from src.llm.ollama_client import generate_response
 def generate_research_answer(question, context):
 
     """
-    Generate an answer using the research passages
+    Generate an answer using research passages
     retrieved by the RAG system.
+
+    The language model is Gemini.
     """
 
     prompt = f"""
@@ -49,8 +51,12 @@ Write a clear, structured answer with:
 Remember: Base your answer on the supplied context.
 """
 
-    print("\nSending research context to Ollama...")
+    print("\nSending research context to Gemini...")
 
-    answer = generate_response(prompt)
+    answer = generate_response(
+        prompt,
+        num_predict=1000,
+        temperature=0.2
+    )
 
     return answer
