@@ -184,6 +184,7 @@ def search_similar_chunks(query_embedding, top_k=5):
         result = chunks[int(chunk_index)].copy()
 
         result["similarity_score"] = float(score)
+        print(f"Similarity: {score:.4f} | "f"Title: {result.get('title', 'Unknown')}")
 
         results.append(result)
 
