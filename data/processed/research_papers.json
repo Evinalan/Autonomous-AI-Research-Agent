@@ -1,0 +1,105 @@
+[
+    {
+        "paper_id": "ac4d6ccacd4dcaa85f30f9b9a43e40a1900e08c0",
+        "source": "semantic_scholar",
+        "title": "Alzheimer’s disease detection using deep learning and machine learning: a review",
+        "authors": [
+            "Saeed Mohsen"
+        ],
+        "abstract": "Alzheimer’s disease (AD) is a progressive neurodegenerative disorder that significantly impacts cognitive function, posing challenges in early diagnosis and treatment. Advances in artificial intelligence (AI) have revolutionized medical image analysis, providing robust frameworks for accurate and automated AD detection. This paper reviews recent developments in deep learning (DL) and machine learning (ML) models for AD classification, like convolutional neural networks (CNNs), transfer learning, hybrid architectures, and novel attention mechanisms. Additionally, applications of AD based on AI models, datasets, preprocessing techniques, challenges, and recent studies in this field are discussed. Also, the paper provides different medical modalities, factors of increasing risk of Alzheimer, progress stages of this disease, and several metrics of assessing AI models’ performance. These metrics such as accuracy, matthews correlation coefficient (MCC), F1-score, recall, precision, area under the receiver operating characteristic (ROC) curve, confusion matrix, and loss. Further, the paper presents several comparisons of different DL approaches for AD, limitations, new trends, suggestions, and future directions for this evolving field.",
+        "published": "2025-06-04",
+        "year": 2025,
+        "pdf_url": "https://link.springer.com/content/pdf/10.1007/s10462-025-11258-y.pdf",
+        "paper_url": "https://www.semanticscholar.org/paper/ac4d6ccacd4dcaa85f30f9b9a43e40a1900e08c0",
+        "citation_count": 68,
+        "local_pdf_path": "data/papers/alzheimer-s-disease-detection-using-deep-learning--0f9b57d4c30b.pdf",
+        "download_status": "success",
+        "extraction_status": "success",
+        "page_count": 39,
+        "extracted_text_path": "data/processed/extracted_text/3b4e4d40433ee6e6.json"
+    },
+    {
+        "paper_id": "f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "source": "semantic_scholar",
+        "title": "Deep CNN ResNet-18 based model with attention and transfer learning for Alzheimer's disease detection",
+        "authors": [
+            "Sofia Biju Francis",
+            "Jai Prakash Verma"
+        ],
+        "abstract": "Introduction The prevalence of age-related brain issues has risen in developed countries because of changes in lifestyle. Alzheimer's disease leads to a rapid and irreversible decline in cognitive abilities by damaging memory cells. Methods A ResNet-18-based system is proposed, integrating Depth Convolution with a Squeeze and Excitation (SE) block to minimize tuning parameters. This design is based on analyses of existing deep learning architectures and feature extraction techniques. Additionally, pre-trained ResNet-18 models were created with and without the SE block to compare ROC and accuracy values across different hyperparameters. Results The proposed model achieved ROC values of 95% for Alzheimer's Disease (AD), 95% for Cognitively Normal (CN), and 93% for Mild Cognitive Impairment (MCI), with a maximum test accuracy of 88.51%. However, the pre-trained model with SE had 93.26% accuracy and ROC values of 98%, 99%, and 98%, while the model without SE had 94%, 97%, and 94% ROC values and 92.41% accuracy. Discussion Collecting medical data can be expensive and raises ethical concerns. Small data sets are also prone to local minima issues in the cost function. A scratch model that experiences extensive hyperparameter tuning may end up being either overfitted or underfitted. Class imbalance also reduces performance. Transfer learning is most effective with small, imbalanced datasets, and pre-trained models with SE blocks perform better than others. The proposed model introduced a method to reduce training parameters and prevent overfitting from imbalanced medical data. Overall performance findings show that the suggested approach performs better than the state-of-the-art techniques.",
+        "published": "2025-01-07",
+        "year": 2025,
+        "pdf_url": "https://www.frontiersin.org/journals/neuroinformatics/articles/10.3389/fninf.2024.1507217/pdf",
+        "paper_url": "https://www.semanticscholar.org/paper/f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "citation_count": 32,
+        "local_pdf_path": "data/papers/deep-cnn-resnet-18-based-model-with-attention-and--25eecab349d9.pdf",
+        "download_status": "success",
+        "extraction_status": "success",
+        "page_count": 28,
+        "extracted_text_path": "data/processed/extracted_text/5f77ab577aa359b1.json"
+    },
+    {
+        "paper_id": "c38eb6ace5e207ed7e4cbcfad7519465a63defeb",
+        "source": "semantic_scholar",
+        "title": "An Efficient Ensemble Approach for Alzheimer’s Disease Detection Using an Adaptive Synthetic Technique and Deep Learning",
+        "authors": [
+            "Muhammad Mujahid",
+            "A. Rehman",
+            "Teg Alam",
+            "Faten S. Alamri",
+            "S. Fati",
+            "Tanzila Saba"
+        ],
+        "abstract": "Alzheimer’s disease is an incurable neurological disorder that leads to a gradual decline in cognitive abilities, but early detection can significantly mitigate symptoms. The automatic diagnosis of Alzheimer’s disease is more important due to the shortage of expert medical staff, because it reduces the burden on medical staff and enhances the results of diagnosis. A detailed analysis of specific brain disorder tissues is required to accurately diagnose the disease via segmented magnetic resonance imaging (MRI). Several studies have used the traditional machine-learning approaches to diagnose the disease from MRI, but manual extracted features are more complex, time-consuming, and require a huge amount of involvement from expert medical staff. The traditional approach does not provide an accurate diagnosis. Deep learning has automatic extraction features and optimizes the training process. The Magnetic Resonance Imaging (MRI) Alzheimer’s disease dataset consists of four classes: mild demented (896 images), moderate demented (64 images), non-demented (3200 images), and very mild demented (2240 images). The dataset is highly imbalanced. Therefore, we used the adaptive synthetic oversampling technique to address this issue. After applying this technique, the dataset was balanced. The ensemble of VGG16 and EfficientNet was used to detect Alzheimer’s disease on both imbalanced and balanced datasets to validate the performance of the models. The proposed method combined the predictions of multiple models to make an ensemble model that learned complex and nuanced patterns from the data. The input and output of both models were concatenated to make an ensemble model and then added to other layers to make a more robust model. In this study, we proposed an ensemble of EfficientNet-B2 and VGG-16 to diagnose the disease at an early stage with the highest accuracy. Experiments were performed on two publicly available datasets. The experimental results showed that the proposed method achieved 97.35% accuracy and 99.64% AUC for multiclass datasets and 97.09% accuracy and 99.59% AUC for binary-class datasets. We evaluated that the proposed method was extremely efficient and provided superior performance on both datasets as compared to previous methods.",
+        "published": "2023-07-26",
+        "year": 2023,
+        "pdf_url": "https://www.mdpi.com/2075-4418/13/15/2489/pdf?version=1690418553",
+        "paper_url": "https://www.semanticscholar.org/paper/c38eb6ace5e207ed7e4cbcfad7519465a63defeb",
+        "citation_count": 118,
+        "download_status": "failed",
+        "extraction_status": "skipped"
+    },
+    {
+        "paper_id": "72b3390486d9b9e4f520e158eae290219d68fc16",
+        "source": "semantic_scholar",
+        "title": "Deep learning-based speech analysis for Alzheimer’s disease detection: a literature review",
+        "authors": [
+            "Qin Yang",
+            "Xin Li",
+            "Xin-Yun Ding",
+            "Fei-Yang Xu",
+            "Zhenhua Ling"
+        ],
+        "abstract": "Background Alzheimer’s disease has become one of the most common neurodegenerative diseases worldwide, which seriously affects the health of the elderly. Early detection and intervention are the most effective prevention methods currently. Compared with traditional detection methods such as traditional scale tests, electroencephalograms, and magnetic resonance imaging, speech analysis is more convenient for automatic large-scale Alzheimer’s disease detection and has attracted extensive attention from researchers. In particular, deep learning-based speech analysis and language processing techniques for Alzheimer’s disease detection have been studied and achieved impressive results. Methods To integrate the latest research progresses, hundreds of relevant papers from ACM, DBLP, IEEE, PubMed, Scopus, Web of Science electronic databases, and other sources were retrieved. We used these keywords for paper search: (Alzheimer OR dementia OR cognitive impairment) AND (speech OR voice OR audio) AND (deep learning OR neural network). Conclusions Fifty-two papers were finally retained after screening. We reviewed and presented the speech databases, deep learning methods, and model performances of these studies. In the end, we pointed out the mainstreams and limitations in the current studies and provided a direction for future research.",
+        "published": "2022-12-14",
+        "year": 2022,
+        "pdf_url": "https://alzres.biomedcentral.com/counter/pdf/10.1186/s13195-022-01131-3",
+        "paper_url": "https://www.semanticscholar.org/paper/72b3390486d9b9e4f520e158eae290219d68fc16",
+        "citation_count": 120,
+        "local_pdf_path": "data/papers/deep-learning-based-speech-analysis-for-alzheimer--66db2b251e04.pdf",
+        "download_status": "success",
+        "extraction_status": "success",
+        "page_count": 16,
+        "extracted_text_path": "data/processed/extracted_text/249a09f081f103f9.json"
+    },
+    {
+        "paper_id": "20a1a5d64a0f812ac2aa80c0f5f6ddf157fcc79c",
+        "source": "semantic_scholar",
+        "title": "Two-stage deep learning model for Alzheimer’s disease detection and prediction of the mild cognitive impairment time",
+        "authors": [
+            "Shaker El-Sappagh",
+            "Hager Saleh",
+            "Farman Ali",
+            "Eslam A. Amer",
+            "Tamer Abuhmed"
+        ],
+        "abstract": "",
+        "published": "2022-05-08",
+        "year": 2022,
+        "pdf_url": "",
+        "paper_url": "https://www.semanticscholar.org/paper/20a1a5d64a0f812ac2aa80c0f5f6ddf157fcc79c",
+        "citation_count": 100,
+        "download_status": "failed",
+        "extraction_status": "skipped"
+    }
+]

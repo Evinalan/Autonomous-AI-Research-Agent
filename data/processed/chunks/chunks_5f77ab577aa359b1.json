@@ -1,0 +1,1586 @@
+[
+    {
+        "chunk_id": "5f77ab577aa359b1_chunk_1",
+        "paper_id": "f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "title": "Deep CNN ResNet-18 based model with attention and transfer learning for Alzheimer's disease detection",
+        "authors": [
+            "Sofia Biju Francis",
+            "Jai Prakash Verma"
+        ],
+        "source": "semantic_scholar",
+        "published": "2025-01-07",
+        "page_number": 1,
+        "chunk_number": 1,
+        "text": "TYPE Original Research\nPUBLISHED 07 January 2025\nDOI 10.3389/fninf.2024.1507217\nOPEN ACCESS\nEDITED BY\nShailesh Appukuttan,\nUMR7289 Institut de Neurosciences de la\nTimone (INT), France\nREVIEWED BY\nShuqiang Wang,\nChinese Academy of Sciences (CAS), China\nRizwan Khan,\nZhejiang Normal University, China\nKhanna M. Rajesh,\nVel Tech Multi Tech Dr Rangarajan Dr\nSakunthala Engineering College, India\n*CORRESPONDENCE\nSofia Biju Francis\n20ptphde217@nirmauni.ac.in;\nsofia.francis@nmims.edu\nRECEIVED 07 October 2024\nACCEPTED 09 December 2024\nPUBLISHED 07 January 2025\nCITATION\nFrancis SB and Prakash Verma J (2025) Deep\nCNN ResNet-18 based model with attention\nand transfer learning for Alzheimer’s disease\ndetection. Front. Neuroinform. 18:1507217.\ndoi: 10.3389/fninf.2024.1507217\nCOPYRIGHT\n© 2025 Francis and Prakash Verma. This is an\nopen-access article distributed under the\nterms of the Creative Commons Attribution\nLicense (CC BY).",
+        "source_file": "data/processed/extracted_text/5f77ab577aa359b1.json",
+        "doi": "",
+        "paper_url": "https://www.semanticscholar.org/paper/f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "pdf_url": "https://www.frontiersin.org/journals/neuroinformatics/articles/10.3389/fninf.2024.1507217/pdf"
+    },
+    {
+        "chunk_id": "5f77ab577aa359b1_chunk_2",
+        "paper_id": "f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "title": "Deep CNN ResNet-18 based model with attention and transfer learning for Alzheimer's disease detection",
+        "authors": [
+            "Sofia Biju Francis",
+            "Jai Prakash Verma"
+        ],
+        "source": "semantic_scholar",
+        "published": "2025-01-07",
+        "page_number": 1,
+        "chunk_number": 2,
+        "text": "18:1507217.\ndoi: 10.3389/fninf.2024.1507217\nCOPYRIGHT\n© 2025 Francis and Prakash Verma. This is an\nopen-access article distributed under the\nterms of the Creative Commons Attribution\nLicense (CC BY). The use, distribution or\nreproduction in other forums is permitted,\nprovided the original author(s) and the\ncopyright owner(s) are credited and that the\noriginal publication in this journal is cited, in\naccordance with accepted academic practice.\nNo use, distribution or reproduction is\npermitted which does not comply with these\nterms.\nDeep CNN ResNet-18 based\nmodel with attention and transfer\nlearning for Alzheimer’s disease\ndetection\nSofia Biju Francis\n1,2* and Jai Prakash Verma1\n1Department of Computer Science and Engineering, Institute of Technology, Nirma University, Gujarat,\nIndia, 2Department of Computer Engineering, NMIMS, MPSTME, Mumbai, India\nIntroduction: The prevalence of age-related brain issues has risen in developed\ncountries because of changes in lifestyle.",
+        "source_file": "data/processed/extracted_text/5f77ab577aa359b1.json",
+        "doi": "",
+        "paper_url": "https://www.semanticscholar.org/paper/f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "pdf_url": "https://www.frontiersin.org/journals/neuroinformatics/articles/10.3389/fninf.2024.1507217/pdf"
+    },
+    {
+        "chunk_id": "5f77ab577aa359b1_chunk_3",
+        "paper_id": "f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "title": "Deep CNN ResNet-18 based model with attention and transfer learning for Alzheimer's disease detection",
+        "authors": [
+            "Sofia Biju Francis",
+            "Jai Prakash Verma"
+        ],
+        "source": "semantic_scholar",
+        "published": "2025-01-07",
+        "page_number": 1,
+        "chunk_number": 3,
+        "text": "2Department of Computer Engineering, NMIMS, MPSTME, Mumbai, India\nIntroduction: The prevalence of age-related brain issues has risen in developed\ncountries because of changes in lifestyle. Alzheimer’s disease leads to a rapid and\nirreversible decline in cognitive abilities by damaging memory cells.\nMethods:\nA\nResNet-18-based\nsystem\nis\nproposed,\nintegrating\nDepth\nConvolution with a Squeeze and Excitation (SE) block to minimize tuning\nparameters. This design is based on analyses of existing deep learning\narchitectures and feature extraction techniques. Additionally, pre-trained\nResNet-18 models were created with and without the SE block to compare\nROC and accuracy values across different hyperparameters.\nResults:\nThe proposed model achieved ROC values of 95% for Alzheimer’s\nDisease (AD), 95% for Cognitively Normal (CN), and 93% for Mild Cognitive\nImpairment (MCI), with a maximum test accuracy of 88.51%. However, the pretrained model with SE had 93.26% accuracy and ROC values of 98%, 99%, and\n98%, while the model without SE had 94%, 97%, and 94% ROC values and 92.41%\naccuracy.\nDiscussion:\nCollecting medical data can be expensive and raises ethical\nconcerns.",
+        "source_file": "data/processed/extracted_text/5f77ab577aa359b1.json",
+        "doi": "",
+        "paper_url": "https://www.semanticscholar.org/paper/f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "pdf_url": "https://www.frontiersin.org/journals/neuroinformatics/articles/10.3389/fninf.2024.1507217/pdf"
+    },
+    {
+        "chunk_id": "5f77ab577aa359b1_chunk_4",
+        "paper_id": "f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "title": "Deep CNN ResNet-18 based model with attention and transfer learning for Alzheimer's disease detection",
+        "authors": [
+            "Sofia Biju Francis",
+            "Jai Prakash Verma"
+        ],
+        "source": "semantic_scholar",
+        "published": "2025-01-07",
+        "page_number": 1,
+        "chunk_number": 4,
+        "text": "and ROC values of 98%, 99%, and\n98%, while the model without SE had 94%, 97%, and 94% ROC values and 92.41%\naccuracy.\nDiscussion:\nCollecting medical data can be expensive and raises ethical\nconcerns. Small data sets are also prone to local minima issues in the\ncost function. A scratch model that experiences extensive hyperparameter\ntuning may end up being either overfitted or underfitted. Class imbalance\nalso reduces performance. Transfer learning is most effective with small,\nimbalanced datasets, and pre-trained models with SE blocks perform better\nthan others. The proposed model introduced a method to reduce training\nparameters and prevent overfitting from imbalanced medical data. Overall\nperformance findings show that the suggested approach performs better than\nthe state-of-the-art techniques.\nKEYWORDS\nAlzheimer’s disease, cognitive deterioration, ResNet-18, depth convolution, squeeze\nand excitation, transfer learning\n1 Introduction\nAlzheimer’s disease (AD) is a severe neurological condition. A person with AD is\nunable to converse, retain details, make decisions, pick up new skills, and so on (Korolev,\n2014; Hazarika et al., 2023).",
+        "source_file": "data/processed/extracted_text/5f77ab577aa359b1.json",
+        "doi": "",
+        "paper_url": "https://www.semanticscholar.org/paper/f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "pdf_url": "https://www.frontiersin.org/journals/neuroinformatics/articles/10.3389/fninf.2024.1507217/pdf"
+    },
+    {
+        "chunk_id": "5f77ab577aa359b1_chunk_5",
+        "paper_id": "f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "title": "Deep CNN ResNet-18 based model with attention and transfer learning for Alzheimer's disease detection",
+        "authors": [
+            "Sofia Biju Francis",
+            "Jai Prakash Verma"
+        ],
+        "source": "semantic_scholar",
+        "published": "2025-01-07",
+        "page_number": 1,
+        "chunk_number": 5,
+        "text": "disease (AD) is a severe neurological condition. A person with AD is\nunable to converse, retain details, make decisions, pick up new skills, and so on (Korolev,\n2014; Hazarika et al., 2023). The majority of people with Alzheimer’s disease are elderly\nor in their early 60s. The most catastrophic of all the physical alterations is damage to\nbrain cells. The brain areas that sustain the most significant damage are the amygdala,\nhippocampus, and a few additional areas that control most AD symptoms. The patient is\nunable to perform even the most basic tasks because learning cells are first impacted, then\nadditional gray matter cells are destroyed. Consequently, those suffering from Alzheimer’s\ndisease experience extreme behavioral and cognitive challenges in addition to memory\nFrontiers in Neuroinformatics\n01\nfrontiersin.org",
+        "source_file": "data/processed/extracted_text/5f77ab577aa359b1.json",
+        "doi": "",
+        "paper_url": "https://www.semanticscholar.org/paper/f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "pdf_url": "https://www.frontiersin.org/journals/neuroinformatics/articles/10.3389/fninf.2024.1507217/pdf"
+    },
+    {
+        "chunk_id": "5f77ab577aa359b1_chunk_6",
+        "paper_id": "f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "title": "Deep CNN ResNet-18 based model with attention and transfer learning for Alzheimer's disease detection",
+        "authors": [
+            "Sofia Biju Francis",
+            "Jai Prakash Verma"
+        ],
+        "source": "semantic_scholar",
+        "published": "2025-01-07",
+        "page_number": 2,
+        "chunk_number": 6,
+        "text": "Francis and Prakash Verma\n10.3389/fninf.2024.1507217\nloss. The majority of individuals with AD have advanced from\nMild Cognitive Impairment (MCI), an early stage of dementia.\nThe symptoms of MCI are nearly the same as those of AD,\nalbeit less severe. MCI is sometimes called AD in its early stages.\nResearch indicates that eight out of ten individuals with MCI\nacquire AD within 7 years (Hazarika et al., 2023). Typically, neurospecialists work alongside psychologists to administer various\nmental and physical examinations, including a Mini-Mental State\nExamination (MMSE), a neurophysiological assessment, a physical\nassessment and screening tests, a depression analysis, and more.\nVarious instruments are needed to complete these tasks, making the\nprocedure inefficient and time-consuming. To provide tissue-bytissue information on the neurological system, Magnetic Resonance\nImaging (MRI) is a widely used method. Compared to the\nconventional diagnosis method, brain imaging may require less\ntime and equipment for AD classification.",
+        "source_file": "data/processed/extracted_text/5f77ab577aa359b1.json",
+        "doi": "",
+        "paper_url": "https://www.semanticscholar.org/paper/f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "pdf_url": "https://www.frontiersin.org/journals/neuroinformatics/articles/10.3389/fninf.2024.1507217/pdf"
+    },
+    {
+        "chunk_id": "5f77ab577aa359b1_chunk_7",
+        "paper_id": "f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "title": "Deep CNN ResNet-18 based model with attention and transfer learning for Alzheimer's disease detection",
+        "authors": [
+            "Sofia Biju Francis",
+            "Jai Prakash Verma"
+        ],
+        "source": "semantic_scholar",
+        "published": "2025-01-07",
+        "page_number": 2,
+        "chunk_number": 7,
+        "text": "neurological system, Magnetic Resonance\nImaging (MRI) is a widely used method. Compared to the\nconventional diagnosis method, brain imaging may require less\ntime and equipment for AD classification. Furthermore, proper\nbrain imaging processing may identify significant biomarkers long\nbefore the beginning of Alzheimer’s disease (Hazarika et al., 2023).\nConversely, intricate pixel formations make diagnosing AD difficult\nby looking at tissue changes for traditional image processing\nmethods (Fung et al., 2019). Sample brain MRI scans for patients\nwith AD, MCI, and Cognitively Normal (CN) are shown in\nFigure 1.\nThe intricacy of Alzheimer’s disease and the necessity of timely\nidentification make it a formidable medical issue. Conventional\ntechniques might not always be enough to predict the course of\nthe illness with enough accuracy. Alzheimer’s is a complicated\nmedical condition that requires prompt diagnosis due to its\ncomplexity.",
+        "source_file": "data/processed/extracted_text/5f77ab577aa359b1.json",
+        "doi": "",
+        "paper_url": "https://www.semanticscholar.org/paper/f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "pdf_url": "https://www.frontiersin.org/journals/neuroinformatics/articles/10.3389/fninf.2024.1507217/pdf"
+    },
+    {
+        "chunk_id": "5f77ab577aa359b1_chunk_8",
+        "paper_id": "f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "title": "Deep CNN ResNet-18 based model with attention and transfer learning for Alzheimer's disease detection",
+        "authors": [
+            "Sofia Biju Francis",
+            "Jai Prakash Verma"
+        ],
+        "source": "semantic_scholar",
+        "published": "2025-01-07",
+        "page_number": 2,
+        "chunk_number": 8,
+        "text": "might not always be enough to predict the course of\nthe illness with enough accuracy. Alzheimer’s is a complicated\nmedical condition that requires prompt diagnosis due to its\ncomplexity. Deep Learning (DL) techniques are increasingly being\nused by medical experts to visualize and predict diseases and create\nindividualized, preemptive treatment regimens (Saleh et al., 2023).\nTraditional Machine Learning (ML) and DL algorithms aimed to\nsolve discrete, highly data-intensive jobs. Transfer learning has\nemerged as a solution to the isolated learning paradigm to improve\nclassification performance using MRI scans. Its goal is to use the\ncharacteristics learned from pre-trained models. Creating effective\nmodels to help radiologists and medical professionals recognize the\nvarious phases of Alzheimer’s disease, such as AD, MCI, and CN.\nFrancis et al. (2024) employed a deep learning model to evaluate\nthe ADNI dataset and identify the stages of Alzheimer’s disease\nusing Squeeze and Excitation Networks (SENet) and local binary\npatterns. The accuracy of classifying MCIc (MCI converter) against\nMCInc (MCI non-converter) was 86% with SE networks and 82%\nwithout SE networks. Lu et al.",
+        "source_file": "data/processed/extracted_text/5f77ab577aa359b1.json",
+        "doi": "",
+        "paper_url": "https://www.semanticscholar.org/paper/f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "pdf_url": "https://www.frontiersin.org/journals/neuroinformatics/articles/10.3389/fninf.2024.1507217/pdf"
+    },
+    {
+        "chunk_id": "5f77ab577aa359b1_chunk_9",
+        "paper_id": "f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "title": "Deep CNN ResNet-18 based model with attention and transfer learning for Alzheimer's disease detection",
+        "authors": [
+            "Sofia Biju Francis",
+            "Jai Prakash Verma"
+        ],
+        "source": "semantic_scholar",
+        "published": "2025-01-07",
+        "page_number": 2,
+        "chunk_number": 9,
+        "text": "Networks (SENet) and local binary\npatterns. The accuracy of classifying MCIc (MCI converter) against\nMCInc (MCI non-converter) was 86% with SE networks and 82%\nwithout SE networks. Lu et al. (2022) developed a two-stage model\nthat used contrastive learning and transfer learning (ResNet) to\npredict the progression of MCI into AD, with an accuracy of\n82% and an AUC of 84%. The improvised model ADNet was\ncreated by integrating SENet to VGG-16 and improving feature\nextraction after evaluating the ADNI 2D MRI images. Without\nSENet, the accuracy in AD vs. CN classification was 82.94%, but\nwith SENet, it was 84.08%. By developing an optimal weighted\nensemble model consisting of five pre-trained 3D CNN ResNet50 variants (ResNet, ResNeXt, SEResNet, SEResNeXt, and SE-Net),\nDharwada et al. (2024) concentrated on early AD diagnosis using\nsMRI images from the ADNI dataset and achieved an accuracy of\n97.27%. Illakiya et al. (2023) developed a hybrid attention model\nto extract both global and local features by utilizing 3D MRI from\nADNI. It achieved an accuracy of 89.17% with DenseNet-169 along\nwith SENet. With DenseNet-169 alone, able to reach 77% accuracy.\nKhan et al.",
+        "source_file": "data/processed/extracted_text/5f77ab577aa359b1.json",
+        "doi": "",
+        "paper_url": "https://www.semanticscholar.org/paper/f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "pdf_url": "https://www.frontiersin.org/journals/neuroinformatics/articles/10.3389/fninf.2024.1507217/pdf"
+    },
+    {
+        "chunk_id": "5f77ab577aa359b1_chunk_10",
+        "paper_id": "f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "title": "Deep CNN ResNet-18 based model with attention and transfer learning for Alzheimer's disease detection",
+        "authors": [
+            "Sofia Biju Francis",
+            "Jai Prakash Verma"
+        ],
+        "source": "semantic_scholar",
+        "published": "2025-01-07",
+        "page_number": 2,
+        "chunk_number": 10,
+        "text": "both global and local features by utilizing 3D MRI from\nADNI. It achieved an accuracy of 89.17% with DenseNet-169 along\nwith SENet. With DenseNet-169 alone, able to reach 77% accuracy.\nKhan et al. (2022) suggested PMCAD-Net, an applicable multiclass\nclassification network for the early detection of Alzheimer’s disease.\nUsing the ADNI dataset, it distinguishes between EMCI, LMCI,\nCN, and AD, achieving a 98.9% accuracy rate and a 96.3% F1\nscore. Khan et al. (2023) proposed a transfer learning-based method\n(VGG-16 and VGG-19) that differentiated between CN, EMCI,\nLMCI, and AD by using tissue segmentation to extract gray matter\nfrom the ADNI dataset’s MRI images and achieved an accuracy\nof 97.89%.\nOdusami et al. (2021) was able to analyze fMRI images from\nADNI and predict the early stages of AD with an accuracy of\n80.80% for AD vs. CN categorization by unfreezing all layers of\nResNet-18 and modifying all parameters to fit the new dataset.\nThe accuracy of the ensemble model developed from the analysis\nof fMRI images from ADNI was 97.9%, 87.5% with ResNet-18,\nand 96.2% with VGG-16 in Tajammal et al. (2023). Utilizing an\nattention mechanism, ResNet-18, Zhou et al.",
+        "source_file": "data/processed/extracted_text/5f77ab577aa359b1.json",
+        "doi": "",
+        "paper_url": "https://www.semanticscholar.org/paper/f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "pdf_url": "https://www.frontiersin.org/journals/neuroinformatics/articles/10.3389/fninf.2024.1507217/pdf"
+    },
+    {
+        "chunk_id": "5f77ab577aa359b1_chunk_11",
+        "paper_id": "f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "title": "Deep CNN ResNet-18 based model with attention and transfer learning for Alzheimer's disease detection",
+        "authors": [
+            "Sofia Biju Francis",
+            "Jai Prakash Verma"
+        ],
+        "source": "semantic_scholar",
+        "published": "2025-01-07",
+        "page_number": 2,
+        "chunk_number": 11,
+        "text": "model developed from the analysis\nof fMRI images from ADNI was 97.9%, 87.5% with ResNet-18,\nand 96.2% with VGG-16 in Tajammal et al. (2023). Utilizing an\nattention mechanism, ResNet-18, Zhou et al. (2023) developed a 2D\nparameterized model. While average pooling produces an accuracy\nof 88.12%, ResNet-18 alone produces an accuracy of 82.45%. A\nROC of 98.49% is provided by the complete model. Suja and Raajan\n(2024) evaluated a number of deep learning models for the timely\ndiagnosis of AD using the ADNI dataset. The accuracy of the\nResNet-18 model with RMSprop and ADAM was 83.5%. Topsakal\nand Lenkala (2024) proposed an ensemble model that used a pretrained, improved model with gradient boosting to attain a 95%\naccuracy rate. However, ResNet-50 alone had an accuracy of 88%.\nHowever, graph convolutional networks can analyze the\npathological brain regions associated with cognitive disorders and\nachieve good classification performance. They cannot uncover the\nfundamental relationships between multiple brain ROIs associated\nwith illness.",
+        "source_file": "data/processed/extracted_text/5f77ab577aa359b1.json",
+        "doi": "",
+        "paper_url": "https://www.semanticscholar.org/paper/f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "pdf_url": "https://www.frontiersin.org/journals/neuroinformatics/articles/10.3389/fninf.2024.1507217/pdf"
+    },
+    {
+        "chunk_id": "5f77ab577aa359b1_chunk_12",
+        "paper_id": "f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "title": "Deep CNN ResNet-18 based model with attention and transfer learning for Alzheimer's disease detection",
+        "authors": [
+            "Sofia Biju Francis",
+            "Jai Prakash Verma"
+        ],
+        "source": "semantic_scholar",
+        "published": "2025-01-07",
+        "page_number": 2,
+        "chunk_number": 12,
+        "text": "brain regions associated with cognitive disorders and\nachieve good classification performance. They cannot uncover the\nfundamental relationships between multiple brain ROIs associated\nwith illness. These networks first retrieve characteristics for each\nROI or subject before building a classifier for AD diagnosis using\neither unimodal or bimodal imaging data. Utilizing hypergraphbased techniques, which consider high-order relations between\nnumerous ROIs from unimodal or multimodal imaging, improved\nclassification performance and created discriminative connections.\nZuo et al. (2024) designed a Graph-based model and\nforecast aberrant brain connections at various AD stages. The\nprior distribution from graph data is estimated using a Kernel\nDensity Estimation (KDE) technique, and an adversarial learning\nnetwork is integrated for multimodal representation learning.\nThe Pairwise Collaborative Discriminator (PCD) preserves sample\nand distribution consistency, and a hypergraph-based network is\ndeveloped to fuse the learned representations to produce united\nconnectivity-based features. For the binary classification (AD vs.\nCN, LMCI vs. CN, and EMCI vs.",
+        "source_file": "data/processed/extracted_text/5f77ab577aa359b1.json",
+        "doi": "",
+        "paper_url": "https://www.semanticscholar.org/paper/f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "pdf_url": "https://www.frontiersin.org/journals/neuroinformatics/articles/10.3389/fninf.2024.1507217/pdf"
+    },
+    {
+        "chunk_id": "5f77ab577aa359b1_chunk_13",
+        "paper_id": "f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "title": "Deep CNN ResNet-18 based model with attention and transfer learning for Alzheimer's disease detection",
+        "authors": [
+            "Sofia Biju Francis",
+            "Jai Prakash Verma"
+        ],
+        "source": "semantic_scholar",
+        "published": "2025-01-07",
+        "page_number": 2,
+        "chunk_number": 13,
+        "text": "and a hypergraph-based network is\ndeveloped to fuse the learned representations to produce united\nconnectivity-based features. For the binary classification (AD vs.\nCN, LMCI vs. CN, and EMCI vs. CN), 300 individuals were\ngathered from the ADNI-3 database for the investigation. The\naccuracy rates were 96.47%, 92.20%, and 87.50%, respectively. Pan\net al. (2024) developed a comprehensive system integrating fMRI\nand DTI to identify aberrant brain networks for AD research.\nThis study used 236 ADNI subjects and obtained an accuracy of\n80.72% for CN, 63.8% for EMCI, 86.91% for LMCI, and 82.71%\nfor AD. Zong et al. (2024) constructed brain networks using\nDiffusion-based Graph Contrastive Learning (DGCL) to identify\nthe geographical positions of brain regions precisely. Contrastive\nFrontiers in Neuroinformatics\n02\nfrontiersin.org",
+        "source_file": "data/processed/extracted_text/5f77ab577aa359b1.json",
+        "doi": "",
+        "paper_url": "https://www.semanticscholar.org/paper/f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "pdf_url": "https://www.frontiersin.org/journals/neuroinformatics/articles/10.3389/fninf.2024.1507217/pdf"
+    },
+    {
+        "chunk_id": "5f77ab577aa359b1_chunk_14",
+        "paper_id": "f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "title": "Deep CNN ResNet-18 based model with attention and transfer learning for Alzheimer's disease detection",
+        "authors": [
+            "Sofia Biju Francis",
+            "Jai Prakash Verma"
+        ],
+        "source": "semantic_scholar",
+        "published": "2025-01-07",
+        "page_number": 3,
+        "chunk_number": 14,
+        "text": "Francis and Prakash Verma\n10.3389/fninf.2024.1507217\nFIGURE 1\nSagittal middle slice of (A) Alzheimer’s disease (AD), (B) Mild cognitive impairment (MCI), (C) Cognitively normal (CN).\nlearning is adopted to optimize brain connections by removing\nindividual differences in redundant connections unrelated to\ndisorders. Data (DTI format) from 349 subjects-including those in\nthe Control Normal group (CN), Early Mild Cognitive Impairment\n(EMCI), Late Mild Cognitive Impairment (LMCI), and AD were\ngathered from the ADNI, and an accuracy of 86.61% was produced.\nZuo et al. (2023) presented a brain structure-function fusing\nlearning model by fusing representation from rs-fMRI and DTI\nto investigate MCI. The knowledge-aware transformer module\nautomatically captures features of local and global connections\nacross the brain. Achieved an accuracy of 87.80% for EMCI vs.\nSubjective Memory Complaints (SMC), 95.57% for LMCI vs. SMC,\nand 91.14% for LMCI vs. EMCI.\nEvery deep learning network that is constructed from the\nground up will run into a lot of issues. A Deep CNN network\nrequires a large number of parameters to be trained during\nthe training phase.",
+        "source_file": "data/processed/extracted_text/5f77ab577aa359b1.json",
+        "doi": "",
+        "paper_url": "https://www.semanticscholar.org/paper/f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "pdf_url": "https://www.frontiersin.org/journals/neuroinformatics/articles/10.3389/fninf.2024.1507217/pdf"
+    },
+    {
+        "chunk_id": "5f77ab577aa359b1_chunk_15",
+        "paper_id": "f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "title": "Deep CNN ResNet-18 based model with attention and transfer learning for Alzheimer's disease detection",
+        "authors": [
+            "Sofia Biju Francis",
+            "Jai Prakash Verma"
+        ],
+        "source": "semantic_scholar",
+        "published": "2025-01-07",
+        "page_number": 3,
+        "chunk_number": 15,
+        "text": "deep learning network that is constructed from the\nground up will run into a lot of issues. A Deep CNN network\nrequires a large number of parameters to be trained during\nthe training phase. By lowering this parameters, the network’s\ncomputational complexity and time and space constraints would\ndecrease. For the same reason, we can use Squeeze and Excitation\nblocks to minimize the total training parameters, identify the\nchannel interdependencies, and recalibrate the output feature with\ninput to exploit the local and global spatial features to improve\nthe performance. We can also use Depth Convolution instead of\nstandard Convolution. The fully connected layer, including the\ndropout layer, can be replaced with Global Average Pooling to\nlower the overall training parameters and accelerate convergence.\nThis regularization technique significantly reduces overfitting and\ngeneralization errors in the model. However, an extensive dataset\nfor model training and meticulous hyperparameter optimization\nfor increased efficiency are no longer necessary when employing the\nTransfer Learning technique.",
+        "source_file": "data/processed/extracted_text/5f77ab577aa359b1.json",
+        "doi": "",
+        "paper_url": "https://www.semanticscholar.org/paper/f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "pdf_url": "https://www.frontiersin.org/journals/neuroinformatics/articles/10.3389/fninf.2024.1507217/pdf"
+    },
+    {
+        "chunk_id": "5f77ab577aa359b1_chunk_16",
+        "paper_id": "f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "title": "Deep CNN ResNet-18 based model with attention and transfer learning for Alzheimer's disease detection",
+        "authors": [
+            "Sofia Biju Francis",
+            "Jai Prakash Verma"
+        ],
+        "source": "semantic_scholar",
+        "published": "2025-01-07",
+        "page_number": 3,
+        "chunk_number": 16,
+        "text": "the model. However, an extensive dataset\nfor model training and meticulous hyperparameter optimization\nfor increased efficiency are no longer necessary when employing the\nTransfer Learning technique. The main contributions of our work\nare as follows.\n• Squeeze and Excitation (SE) blocks were added to the\nResNet-18 residual block in order to build a Deep CNN\nResNet-18-based model from the ground up using the\nattention\nmechanism.\nAdditionally,\nto\nlower\ntraining\nparameters and lighten the model overall, we employed\nDepth-wise Convolution and Global Average pooling. ROC\nand accuracy were compared to various combinations of\noptimizers, dropout rates, sample sizes, and epochs using\nthe ADNI dataset, which was utilized to train the model.\nCross-validation is used to validate the model and lower the\nregularization errors.\n• The accuracy and ROC were assessed through training and\ntesting using the pre-training model ResNet-18 with SE block\nand ADNI dataset.\n• Through training and testing with the pre-training model\nResNet-18 without SE block, the accuracy and ROC were\nevaluated using the ADNI dataset.\n• ROC values, testing and training accuracy, confusion matrix,\nand other evaluation",
+        "source_file": "data/processed/extracted_text/5f77ab577aa359b1.json",
+        "doi": "",
+        "paper_url": "https://www.semanticscholar.org/paper/f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "pdf_url": "https://www.frontiersin.org/journals/neuroinformatics/articles/10.3389/fninf.2024.1507217/pdf"
+    },
+    {
+        "chunk_id": "5f77ab577aa359b1_chunk_17",
+        "paper_id": "f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "title": "Deep CNN ResNet-18 based model with attention and transfer learning for Alzheimer's disease detection",
+        "authors": [
+            "Sofia Biju Francis",
+            "Jai Prakash Verma"
+        ],
+        "source": "semantic_scholar",
+        "published": "2025-01-07",
+        "page_number": 3,
+        "chunk_number": 17,
+        "text": "with the pre-training model\nResNet-18 without SE block, the accuracy and ROC were\nevaluated using the ADNI dataset.\n• ROC values, testing and training accuracy, confusion matrix,\nand other evaluation parameters were used to compare the\nperformance of the three models mentioned above.\n• The models were assessed using real-time patient MRI scans\nalong with their demographic data as well as with the\nOASIS-1 dataset.\nMedical professionals are using deep learning for disease\nprediction and visualization to create personalized treatment\nplans (Saleh et al., 2023). In comparison to the three deployed\nmodels and the state-of-the-art techniques outlined, ResNet18, a pre-trained model with SE block, demonstrated the most\nconvincing performance.\nFive distinct sections that make up the overall paper. An outline\nof Alzheimer’s disease, the motivation behind this effort, and a\nsurvey summary of associated works are covered in Section 1.\nSection 2 describes the dataset, data pre-processing, and proposed\nmodel’s architectures in detail. The results are demonstrated and\ncompared using several criteria in Section 3.",
+        "source_file": "data/processed/extracted_text/5f77ab577aa359b1.json",
+        "doi": "",
+        "paper_url": "https://www.semanticscholar.org/paper/f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "pdf_url": "https://www.frontiersin.org/journals/neuroinformatics/articles/10.3389/fninf.2024.1507217/pdf"
+    },
+    {
+        "chunk_id": "5f77ab577aa359b1_chunk_18",
+        "paper_id": "f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "title": "Deep CNN ResNet-18 based model with attention and transfer learning for Alzheimer's disease detection",
+        "authors": [
+            "Sofia Biju Francis",
+            "Jai Prakash Verma"
+        ],
+        "source": "semantic_scholar",
+        "published": "2025-01-07",
+        "page_number": 3,
+        "chunk_number": 18,
+        "text": "in Section 1.\nSection 2 describes the dataset, data pre-processing, and proposed\nmodel’s architectures in detail. The results are demonstrated and\ncompared using several criteria in Section 3. Lastly, the conclusion,\nlimitations, and future work are discussed in Sections 4 and 5.\n2 Materials and methods\nThe initial section outlines the datasets utilized for training\nand evaluating all the models, along with a detailed description\nof the preprocessing steps that make these datasets suitable for\nboth training and testing. The following section explains the\nfunctionality of the Deep CNN architecture based on ResNet-18,\nwhich was developed from scratch. This architecture incorporates\ndepthwise convolution and the Squeeze and Excitation algorithms.\nAdditionally, it reviews the framework of two other models that\nemploy a transfer learning approach. Figure 2 shows the complete\nprocedure of our suggested methodology.\nFrontiers in Neuroinformatics\n03\nfrontiersin.org",
+        "source_file": "data/processed/extracted_text/5f77ab577aa359b1.json",
+        "doi": "",
+        "paper_url": "https://www.semanticscholar.org/paper/f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "pdf_url": "https://www.frontiersin.org/journals/neuroinformatics/articles/10.3389/fninf.2024.1507217/pdf"
+    },
+    {
+        "chunk_id": "5f77ab577aa359b1_chunk_19",
+        "paper_id": "f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "title": "Deep CNN ResNet-18 based model with attention and transfer learning for Alzheimer's disease detection",
+        "authors": [
+            "Sofia Biju Francis",
+            "Jai Prakash Verma"
+        ],
+        "source": "semantic_scholar",
+        "published": "2025-01-07",
+        "page_number": 4,
+        "chunk_number": 19,
+        "text": "Francis and Prakash Verma\n10.3389/fninf.2024.1507217\nFIGURE 2\nOverall procedure.\n2.1 Dataset\nThis section covers the datasets used for training and testing,\nalong with details about the preprocessing methods applied to 8-bit\nimages available in each dataset.\n2.1.1 ADNI\nThe ADNI (Alzheimer’s Disease Neuroimaging Initiative)\ndatabase (http://adni.loni.usc.edu/ accessed on August 2022)\nprovided the study’s data. These comprised the core of our analysis:\nvolumetric T1-weighted, B1 corrected, N3 scaled, MagnetizationPrepared Rapid Gradient Echo (MP-RAGE) MRIs with Gradwarp.\nAlzheimer’s Dementia (AD), Cognitively Normal (CN), and Mild\nCognitive Impairment (MCI) were the three categories of the\ndataset that comprised the 2291 (476-AD, 703-CN, 1112-MCI)\npatients in this study. It is 46.83 GB compressed and 70.8 GB\nuncompressed and contains MRI images in NIFTI format. A single\nNIFTI image contains a packed volume of ∼184 slices.\n2.1.2 Real-time hospital patient data\nMRI imaging data from eight patients at the Government\nMedical College in Kottayam, Kerala, were collected for model\nevaluation. Each patient had around 250–400 DICOM images\nconverted to JPG format.",
+        "source_file": "data/processed/extracted_text/5f77ab577aa359b1.json",
+        "doi": "",
+        "paper_url": "https://www.semanticscholar.org/paper/f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "pdf_url": "https://www.frontiersin.org/journals/neuroinformatics/articles/10.3389/fninf.2024.1507217/pdf"
+    },
+    {
+        "chunk_id": "5f77ab577aa359b1_chunk_20",
+        "paper_id": "f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "title": "Deep CNN ResNet-18 based model with attention and transfer learning for Alzheimer's disease detection",
+        "authors": [
+            "Sofia Biju Francis",
+            "Jai Prakash Verma"
+        ],
+        "source": "semantic_scholar",
+        "published": "2025-01-07",
+        "page_number": 4,
+        "chunk_number": 20,
+        "text": "imaging data from eight patients at the Government\nMedical College in Kottayam, Kerala, were collected for model\nevaluation. Each patient had around 250–400 DICOM images\nconverted to JPG format. From these, six to nine sagittal-mode\nJPG images were randomly selected for pre-processing. They also\nprovided the manually conducted tests for the MMSE and the CDR,\nalong with their corresponding scores.\n2.1.3 OASIS-1\nOASIS-1 (Open Access Series of Imaging Studies) is a\npublicly accessible dataset used to test our approach. It is 15.8\nGB compressed and 50 GB uncompressed and available at\nhttp://www.oasis-brains.org. Twelve archive files are available for\ndownload, organized by imaging session. Each session directory\ncontains an XML file, a TXT file, and three subdirectories:\nRAW, PROCESSED, and FSL_SEG. The XML and TXT files\nprovide acquisition and anatomical measurements, while the RAW\nFrontiers in Neuroinformatics\n04\nfrontiersin.org",
+        "source_file": "data/processed/extracted_text/5f77ab577aa359b1.json",
+        "doi": "",
+        "paper_url": "https://www.semanticscholar.org/paper/f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "pdf_url": "https://www.frontiersin.org/journals/neuroinformatics/articles/10.3389/fninf.2024.1507217/pdf"
+    },
+    {
+        "chunk_id": "5f77ab577aa359b1_chunk_21",
+        "paper_id": "f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "title": "Deep CNN ResNet-18 based model with attention and transfer learning for Alzheimer's disease detection",
+        "authors": [
+            "Sofia Biju Francis",
+            "Jai Prakash Verma"
+        ],
+        "source": "semantic_scholar",
+        "published": "2025-01-07",
+        "page_number": 5,
+        "chunk_number": 21,
+        "text": "Francis and Prakash Verma\n10.3389/fninf.2024.1507217\ndirectory holds the individual scan images. The PROCESSED\ndirectory includes two subdirectories: SUBJ_111 and T88_111.\nThe SUBJ_111 folder contains averaged and co-registered sagittal\nimages in GIF format. The T88_111 folder has the atlas-registered,\ngain field-corrected image and its brain-masked version for all\nthree projections, also in GIF format. The FSL_SEG directory\ncontains the segmentation image for gray matter, white matter,\nand Cerebro Spinal Fluid (CSF) generated from the masked atlas\nimage. The “oasis_cross-sectional.csv” spreadsheet contains labels\nfor demographics, clinical information, and derived anatomic\nvolumes. Ten randomly selected sagittal GIF images were converted\nto JPG format for applying our various pre-processing algorithms,\nenabling model testing.\n2.1.4 Data preprocessing\nAll three datasets were mainly preprocessed using MATLAB.\nFor the ADNI dataset, the middle slice was carefully selected\nto observe the hippocampus region, which is the area most\nsignificantly affected by Alzheimer’s disease (AD).",
+        "source_file": "data/processed/extracted_text/5f77ab577aa359b1.json",
+        "doi": "",
+        "paper_url": "https://www.semanticscholar.org/paper/f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "pdf_url": "https://www.frontiersin.org/journals/neuroinformatics/articles/10.3389/fninf.2024.1507217/pdf"
+    },
+    {
+        "chunk_id": "5f77ab577aa359b1_chunk_22",
+        "paper_id": "f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "title": "Deep CNN ResNet-18 based model with attention and transfer learning for Alzheimer's disease detection",
+        "authors": [
+            "Sofia Biju Francis",
+            "Jai Prakash Verma"
+        ],
+        "source": "semantic_scholar",
+        "published": "2025-01-07",
+        "page_number": 5,
+        "chunk_number": 22,
+        "text": "preprocessed using MATLAB.\nFor the ADNI dataset, the middle slice was carefully selected\nto observe the hippocampus region, which is the area most\nsignificantly affected by Alzheimer’s disease (AD). Initially, the\nMRI images in NIFTI format were displayed and captured as a\n2D image focusing on the middle slice using the screen capture\nfunction. The captured image was then cropped and saved in PNG\nformat. Subsequently, the 2D images were organized into three\ndistinct folders labeled AD, CN, and MCI, with assistance from the\nprovided CSV file.\nPreprocessing starts by converting the RGB image to grayscale\nto simplify the data and focus on intensity variations. Histogram\nEqualization is then applied to enhance contrast by stretching the\npixel intensity histogram, improving detail visibility in different\nlighting\nconditions.\nContrast_Limited_Adaptive\nHistogram\nEqualization (CLAHE) is used to boost contrast in low-contrast\nareas\n(Khalid et al., 2023). A binary image is created with\na threshold of 0.3 to distinguish regions of interest from the\nbackground, followed by a few morphological operations to\nanalyze the shapes and structures in the image.",
+        "source_file": "data/processed/extracted_text/5f77ab577aa359b1.json",
+        "doi": "",
+        "paper_url": "https://www.semanticscholar.org/paper/f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "pdf_url": "https://www.frontiersin.org/journals/neuroinformatics/articles/10.3389/fninf.2024.1507217/pdf"
+    },
+    {
+        "chunk_id": "5f77ab577aa359b1_chunk_23",
+        "paper_id": "f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "title": "Deep CNN ResNet-18 based model with attention and transfer learning for Alzheimer's disease detection",
+        "authors": [
+            "Sofia Biju Francis",
+            "Jai Prakash Verma"
+        ],
+        "source": "semantic_scholar",
+        "published": "2025-01-07",
+        "page_number": 5,
+        "chunk_number": 23,
+        "text": "A binary image is created with\na threshold of 0.3 to distinguish regions of interest from the\nbackground, followed by a few morphological operations to\nanalyze the shapes and structures in the image. Erosion is an\noperation that reduces the size of an object by removing pixels\nfrom its boundaries. It utilizes a flat diamond-shaped structuring\nelement with a distance of 3 units from the origin to the points\nof the diamond. After performing erosion, region properties are\ncalculated, and the region with the maximum area is selected.\nFollowing this, morphological dilation is applied to restore the\neroded regions and enhance the prominent features. The dilation\nuses a flat diamond-shaped structuring element with a distance of\n8 units, as well as a disk-shaped element with a radius of 5 units.\nAfter dilation, morphological hole filling is used to address any\ngaps or holes within the segmented region. This process ensures\nthat the area is complete and contiguous.",
+        "source_file": "data/processed/extracted_text/5f77ab577aa359b1.json",
+        "doi": "",
+        "paper_url": "https://www.semanticscholar.org/paper/f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "pdf_url": "https://www.frontiersin.org/journals/neuroinformatics/articles/10.3389/fninf.2024.1507217/pdf"
+    },
+    {
+        "chunk_id": "5f77ab577aa359b1_chunk_24",
+        "paper_id": "f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "title": "Deep CNN ResNet-18 based model with attention and transfer learning for Alzheimer's disease detection",
+        "authors": [
+            "Sofia Biju Francis",
+            "Jai Prakash Verma"
+        ],
+        "source": "semantic_scholar",
+        "published": "2025-01-07",
+        "page_number": 5,
+        "chunk_number": 24,
+        "text": "with a radius of 5 units.\nAfter dilation, morphological hole filling is used to address any\ngaps or holes within the segmented region. This process ensures\nthat the area is complete and contiguous. As a result, the techniques\napplied yield a segmented image that clearly highlights the specific\nlocation of the disease within the Alzheimer’s images, providing a\nprecise visualization for further analysis.\nThe segmented image is resized to 224 × 224 pixels to\nensure uniformity across the datasets, which facilitates efficient\ntraining. Subsequently, gray conversion, histogram equalization,\nand CLAHE are applied to simplify the data and further enhance\nimage contrast. An impulsive noise, known as Salt-and-Pepper,\nis then introduced to the image to evaluate the robustness and\neffectiveness of the filtering technique.",
+        "source_file": "data/processed/extracted_text/5f77ab577aa359b1.json",
+        "doi": "",
+        "paper_url": "https://www.semanticscholar.org/paper/f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "pdf_url": "https://www.frontiersin.org/journals/neuroinformatics/articles/10.3389/fninf.2024.1507217/pdf"
+    },
+    {
+        "chunk_id": "5f77ab577aa359b1_chunk_25",
+        "paper_id": "f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "title": "Deep CNN ResNet-18 based model with attention and transfer learning for Alzheimer's disease detection",
+        "authors": [
+            "Sofia Biju Francis",
+            "Jai Prakash Verma"
+        ],
+        "source": "semantic_scholar",
+        "published": "2025-01-07",
+        "page_number": 5,
+        "chunk_number": 25,
+        "text": "the data and further enhance\nimage contrast. An impulsive noise, known as Salt-and-Pepper,\nis then introduced to the image to evaluate the robustness and\neffectiveness of the filtering technique. Finally, a compatible nonlinear Median Blur filter technique is employed to remove the\nimpulsive noise while preserving essential image details effectively.\nDuring the preprocessing of the ADNI dataset, the following\ntimes were recorded for a single image:\n• AD image: 0.9456 s for 2D conversion and 4.0455 s for\npreprocessing, totaling 4.9911 s.\n• CN image: 0.9901 s for 2D conversion and 3.3949 s for\npreprocessing, totaling 4.385 s.\n• MCI image: 1.2496 s for 2D conversion and 3.2866 s for\npreprocessing, totaling 4.5362 s.\nThe total preprocessing time for a single real-time image was\n14.1287 s, while the OASIS-1 image took 12.6313 s. The complete\npath flow of image preprocessing is shown in Figure 3.\n2.1.5 Data augmentation\nAlthough convolutional neural networks offer a great deal of\ngeneralization potential, this ability is severely constrained when\nthe data set is small.",
+        "source_file": "data/processed/extracted_text/5f77ab577aa359b1.json",
+        "doi": "",
+        "paper_url": "https://www.semanticscholar.org/paper/f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "pdf_url": "https://www.frontiersin.org/journals/neuroinformatics/articles/10.3389/fninf.2024.1507217/pdf"
+    },
+    {
+        "chunk_id": "5f77ab577aa359b1_chunk_26",
+        "paper_id": "f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "title": "Deep CNN ResNet-18 based model with attention and transfer learning for Alzheimer's disease detection",
+        "authors": [
+            "Sofia Biju Francis",
+            "Jai Prakash Verma"
+        ],
+        "source": "semantic_scholar",
+        "published": "2025-01-07",
+        "page_number": 5,
+        "chunk_number": 26,
+        "text": "is shown in Figure 3.\n2.1.5 Data augmentation\nAlthough convolutional neural networks offer a great deal of\ngeneralization potential, this ability is severely constrained when\nthe data set is small. This is due to the overfitting of the model.\nThe problem of insufficient data could be efficiently addressed\nby utilizing data augmentation technology, which has been used\nto enhance the ADNI dataset using digital image processing\ntechnology (Gao et al., 2021). Owing to the restricted amount of\ndata, the original dataset is supplemented by flipping horizontally,\nflipping vertically, and rotating. When an image is rotated, it is\noriented around its center at a particular angle. A rotation of –15 to\n+15 is used in this investigation. The goal is to generate perspective\nadjustments from the same image so that models trained on more\ndata can adapt better to changes in the orientation of the image’s\nobjects (Hasanah et al., 2023).\nData augmentation resulted in an expansion of the dataset from\n2,291 images (476-AD, 703-CN, and 1,112-MCI) to 14,760 images\n(3,067:AD, 4,528:CN, 7,165:MCI) in the first stage and 25,357\nimages (5,267:AD, 7,779:CN, 12,311:MCI) in the second stage.",
+        "source_file": "data/processed/extracted_text/5f77ab577aa359b1.json",
+        "doi": "",
+        "paper_url": "https://www.semanticscholar.org/paper/f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "pdf_url": "https://www.frontiersin.org/journals/neuroinformatics/articles/10.3389/fninf.2024.1507217/pdf"
+    },
+    {
+        "chunk_id": "5f77ab577aa359b1_chunk_27",
+        "paper_id": "f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "title": "Deep CNN ResNet-18 based model with attention and transfer learning for Alzheimer's disease detection",
+        "authors": [
+            "Sofia Biju Francis",
+            "Jai Prakash Verma"
+        ],
+        "source": "semantic_scholar",
+        "published": "2025-01-07",
+        "page_number": 5,
+        "chunk_number": 27,
+        "text": "dataset from\n2,291 images (476-AD, 703-CN, and 1,112-MCI) to 14,760 images\n(3,067:AD, 4,528:CN, 7,165:MCI) in the first stage and 25,357\nimages (5,267:AD, 7,779:CN, 12,311:MCI) in the second stage. This\ncould perhaps solve the overfitting problem to some extent. In\norder to regularize the model and reduce the generalization error,\nthe cross-validation techniques are then applied in an 80:20 ratio.\n2.2 Deep CNN ReNet-18 based scratch\nmodel\nThis part will cover the Deep CNN ResNet-18-based model\nwith the SE block and Depth Convolution in detail and explain each\nembedded block in the architecture.\n2.2.1 ResNet-18 pre-training model\nResNet-18 is composed of three layers: 17 convolution layers, a\nmax pooling layer with a 3 × 3 filter size, and a fully connected\nlayer. The block diagram for the pre-training ResNet-18 model\nis shown in Figure 4A. The ResNet-18 network is based on a\nFrontiers in Neuroinformatics\n05\nfrontiersin.org",
+        "source_file": "data/processed/extracted_text/5f77ab577aa359b1.json",
+        "doi": "",
+        "paper_url": "https://www.semanticscholar.org/paper/f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "pdf_url": "https://www.frontiersin.org/journals/neuroinformatics/articles/10.3389/fninf.2024.1507217/pdf"
+    },
+    {
+        "chunk_id": "5f77ab577aa359b1_chunk_28",
+        "paper_id": "f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "title": "Deep CNN ResNet-18 based model with attention and transfer learning for Alzheimer's disease detection",
+        "authors": [
+            "Sofia Biju Francis",
+            "Jai Prakash Verma"
+        ],
+        "source": "semantic_scholar",
+        "published": "2025-01-07",
+        "page_number": 6,
+        "chunk_number": 28,
+        "text": "Francis and Prakash Verma\n10.3389/fninf.2024.1507217\nFIGURE 3\nImage pre-processing.\nresidual building component (Gao et al., 2021). Figure 4B shows\nthe structure of the residual building component.\nAfter adding the input and output vectors directly through\nthe convolutional layer, the result can be produced using the\nrectified linear unit (ReLU) activation function. This method can\neffectively address the issue of a deeper neural network’s vanishing\nand exploding gradient. F stands for the residual function, while x\nand y, respectively, denote the input and output, which are referred\nto by Equation 1 (Odusami et al., 2021; Gao et al., 2021; Hasanah\net al., 2023).\ny = F(x) + x\n(1)\n2.2.2 Transfer learning\nTransfer learning is a useful technique for training deep\nlearning (DL) models that leverage information from one domain\nto enhance performance on a different but related task or domain\n(Saleh et al., 2023). Pre-trained models are trained on large datasets,\nsuch as ImageNet, which comprises millions of images with over\na thousand labels.",
+        "source_file": "data/processed/extracted_text/5f77ab577aa359b1.json",
+        "doi": "",
+        "paper_url": "https://www.semanticscholar.org/paper/f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "pdf_url": "https://www.frontiersin.org/journals/neuroinformatics/articles/10.3389/fninf.2024.1507217/pdf"
+    },
+    {
+        "chunk_id": "5f77ab577aa359b1_chunk_29",
+        "paper_id": "f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "title": "Deep CNN ResNet-18 based model with attention and transfer learning for Alzheimer's disease detection",
+        "authors": [
+            "Sofia Biju Francis",
+            "Jai Prakash Verma"
+        ],
+        "source": "semantic_scholar",
+        "published": "2025-01-07",
+        "page_number": 6,
+        "chunk_number": 29,
+        "text": "on a different but related task or domain\n(Saleh et al., 2023). Pre-trained models are trained on large datasets,\nsuch as ImageNet, which comprises millions of images with over\na thousand labels. As a feature extractor of general features, it is\nsensible and useful to apply the domain knowledge from these\nmodels to other domains, including medical classification tasks\n(Saleh et al., 2023). Due to the medical nature of the target data, we\nare unable to utilize the pre-trained model fully. We must address\ndomain-specific difficulties in order to adjust the output layer.\nReducing the number of training parameters needed to accomplish\na task, increasing accuracy, and saving time are all achieved by using\nknowledge transfer models rather than randomly started models.\nThis enables effective discrimination between the different classes\nin the dataset. In order to assist doctors in making precise and fast\ndiagnoses, it first reduces the need for vast volumes of labeled data\nand offers a comprehensive and precise classification framework.\nThis method solely trains the weights of the recently added layers\nFrontiers in Neuroinformatics\n06\nfrontiersin.org",
+        "source_file": "data/processed/extracted_text/5f77ab577aa359b1.json",
+        "doi": "",
+        "paper_url": "https://www.semanticscholar.org/paper/f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "pdf_url": "https://www.frontiersin.org/journals/neuroinformatics/articles/10.3389/fninf.2024.1507217/pdf"
+    },
+    {
+        "chunk_id": "5f77ab577aa359b1_chunk_30",
+        "paper_id": "f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "title": "Deep CNN ResNet-18 based model with attention and transfer learning for Alzheimer's disease detection",
+        "authors": [
+            "Sofia Biju Francis",
+            "Jai Prakash Verma"
+        ],
+        "source": "semantic_scholar",
+        "published": "2025-01-07",
+        "page_number": 7,
+        "chunk_number": 30,
+        "text": "Francis and Prakash Verma\n10.3389/fninf.2024.1507217\nFIGURE 4\n(A) ResNet-18 pre-training model. (B) Residual network.\nfor the particular task, freezing the weights of the previously trained\nmodel before training. This tactic lessens the problems brought on\nby a small and uneven dataset. The flow chart of our proposed\nmodel, which makes use of the Transfer Learning concept (Saleh\net al., 2023; Gao et al., 2021), is shown in Figure 5.\n2.2.3 Global average pooling\nThe fully connected layer is a common classifier used by CNN.\nTraining will be hindered and over-fitting is more likely due to\nthe fully connected layer’s excessive amount of parameters. Global\naverage pooling, or GAP, is the procedure that generates the output\nby taking the global average of all the pixels in the feature map for\neach channel. These output feature vectors will be sent straight to\nthe classifier, providing each channel with useful information (Gao\net al., 2021).\n2.2.4 Depth-wise convolution\nThe model performs more slowly and uses more memory\nthan many other models when convolutional procedures are\nutilized extensively.",
+        "source_file": "data/processed/extracted_text/5f77ab577aa359b1.json",
+        "doi": "",
+        "paper_url": "https://www.semanticscholar.org/paper/f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "pdf_url": "https://www.frontiersin.org/journals/neuroinformatics/articles/10.3389/fninf.2024.1507217/pdf"
+    },
+    {
+        "chunk_id": "5f77ab577aa359b1_chunk_31",
+        "paper_id": "f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "title": "Deep CNN ResNet-18 based model with attention and transfer learning for Alzheimer's disease detection",
+        "authors": [
+            "Sofia Biju Francis",
+            "Jai Prakash Verma"
+        ],
+        "source": "semantic_scholar",
+        "published": "2025-01-07",
+        "page_number": 7,
+        "chunk_number": 31,
+        "text": "useful information (Gao\net al., 2021).\n2.2.4 Depth-wise convolution\nThe model performs more slowly and uses more memory\nthan many other models when convolutional procedures are\nutilized extensively. We propose to use depth-wise convolution\nlayers rather than standard convolution ones to solve this issue.\nDepth-wise convolution is a common technique for reducing the\nparameters and improving computational and representational\nefficiency. In this procedure, a distinct filter is applied to each input\nchannel, and a point-wise 1 × 1 convolution is used to merge\nthe outputs.\nˆCk,l,a =\nX\ni,j\nˆKi,j,a.Zk+i−1,l+j−1,a\n(2)\nThe depth-wise convolution filter of size PK ×PK ×X is denoted\nby ˆK in Equation 2, where X is the sum of the input channels and\nPK is the spatial dimension. Here, the ath channel for the filtered\nfeature map ˆC is created by using the ath kernel from ˆL in the\nath-channel of Z.\nPK · PK · X · PZ · PZ\n(3)\nPK · PK · X · PZ · PZ + X · Y · PZ · PZ\n(4)\nFrontiers in Neuroinformatics\n07\nfrontiersin.org",
+        "source_file": "data/processed/extracted_text/5f77ab577aa359b1.json",
+        "doi": "",
+        "paper_url": "https://www.semanticscholar.org/paper/f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "pdf_url": "https://www.frontiersin.org/journals/neuroinformatics/articles/10.3389/fninf.2024.1507217/pdf"
+    },
+    {
+        "chunk_id": "5f77ab577aa359b1_chunk_32",
+        "paper_id": "f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "title": "Deep CNN ResNet-18 based model with attention and transfer learning for Alzheimer's disease detection",
+        "authors": [
+            "Sofia Biju Francis",
+            "Jai Prakash Verma"
+        ],
+        "source": "semantic_scholar",
+        "published": "2025-01-07",
+        "page_number": 8,
+        "chunk_number": 32,
+        "text": "Francis and Prakash Verma\n10.3389/fninf.2024.1507217\nFIGURE 5\nTransfer learning application.\nPK · PK · X · PZ · PZ + X · Y · PZ · PZ\nPK · PK · X · Y · PZ · PZ\n(5)\n1\nY + 1\nP2\nK\n(6)\nEquation 3\ncan\nbe\nused\nto\ncalculate\nthe\ndepth-wise\nconvolution’s computational cost, It is less expensive than\nthe computing cost of the regular convolution operation. Y\nis the total output channels. A 1 × 1 point convolution is\nused to merge the depth-wise convolutions. The total cost,\nincluding the point convolution, can be written as Equation 4.\nEquations 5, 6 can express the overall cost reduction (Hazarika\net al., 2022b,a).\n2.2.5 Squeeze and excitation (SE) block\nThe global features at the channel level are initially extracted\nby the SE module using the Squeeze function on the feature map.\nIt then presents the Convolution function. The global features\nare then subjected to an application of the Excitation function in\norder to ascertain the weights of each channel and comprehend\ntheir interrelation.",
+        "source_file": "data/processed/extracted_text/5f77ab577aa359b1.json",
+        "doi": "",
+        "paper_url": "https://www.semanticscholar.org/paper/f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "pdf_url": "https://www.frontiersin.org/journals/neuroinformatics/articles/10.3389/fninf.2024.1507217/pdf"
+    },
+    {
+        "chunk_id": "5f77ab577aa359b1_chunk_33",
+        "paper_id": "f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "title": "Deep CNN ResNet-18 based model with attention and transfer learning for Alzheimer's disease detection",
+        "authors": [
+            "Sofia Biju Francis",
+            "Jai Prakash Verma"
+        ],
+        "source": "semantic_scholar",
+        "published": "2025-01-07",
+        "page_number": 8,
+        "chunk_number": 33,
+        "text": "the Convolution function. The global features\nare then subjected to an application of the Excitation function in\norder to ascertain the weights of each channel and comprehend\ntheir interrelation. Multiplying the recently added mapping feature\nyields the final features.\nTo build a Squeeze-and-Excitation block, begin with a\nconvolution operation Ftr translating an input X ∈RH\n′×W\n′×C\n′\nto\nfeature mappings U ∈RH×W×C. We use a collection of learned\nkernels, V = [v1, v2, ....vC], where vC denotes the parameters of the\nCth filter. Show the outputs as U = [u1, u2, ....uC],\nuc = vc ∗X =\nC′\nX\ns=1\nvs\nc ∗xs\n(7)\nwhere “∗\" is the convolution operation and vs\nc is a 2D spatial\nkernel that translates to a single channel of vc on the corresponding\nchannel of X. Channel dependencies are implicitly incorporated\nin vC as the output is the total of all channels. The filters\ncapture the local spatial correlation (Hu et al., 2018; Yang et al.,\n2022).\nThe model’s attention mechanism allows it to suppress the less\nimportant channel properties and prioritize the more informative\nones.",
+        "source_file": "data/processed/extracted_text/5f77ab577aa359b1.json",
+        "doi": "",
+        "paper_url": "https://www.semanticscholar.org/paper/f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "pdf_url": "https://www.frontiersin.org/journals/neuroinformatics/articles/10.3389/fninf.2024.1507217/pdf"
+    },
+    {
+        "chunk_id": "5f77ab577aa359b1_chunk_34",
+        "paper_id": "f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "title": "Deep CNN ResNet-18 based model with attention and transfer learning for Alzheimer's disease detection",
+        "authors": [
+            "Sofia Biju Francis",
+            "Jai Prakash Verma"
+        ],
+        "source": "semantic_scholar",
+        "published": "2025-01-07",
+        "page_number": 8,
+        "chunk_number": 34,
+        "text": "local spatial correlation (Hu et al., 2018; Yang et al.,\n2022).\nThe model’s attention mechanism allows it to suppress the less\nimportant channel properties and prioritize the more informative\nones. This attention mechanism memorizes the spatial correlations\nbetween the information after receiving the spatial properties in a\nchannel as input. Under the convolution results of each channel,\nthe sum of the channels has been calculated concurrently, and\nthe spatial relations learned by the convolution kernel can be\nmerged with the relationships between channel characteristics.\nTo fully describe channel-wise dependencies, it has to learn a\nnonlinear interaction between channels and a mutually exclusive\nrelationship. To meet these needs, we employed a straightforward\ngating mechanism with Sigmoid activation.\nzc = Fsq(uc) =\n1\nH × W\nH\nX\ni=1\nW\nX\nj=1\nuc(i, j), z ∈RC\n(8)\ns = Fex(z, W) = σ(g(z, W)) = σ(W2δ(W1z))\n(9)\nW and H are the width and height of the mapping features,\nrespectively and W1 ∈R\nC\nr ×C, W2 ∈RC× C\nr\nTo\nsimplify\nthe\nmodel\nand\nenhance\nits\ncapacity\nfor\ngeneralization, two fully connected (FC) design layers have\nbeen employed.",
+        "source_file": "data/processed/extracted_text/5f77ab577aa359b1.json",
+        "doi": "",
+        "paper_url": "https://www.semanticscholar.org/paper/f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "pdf_url": "https://www.frontiersin.org/journals/neuroinformatics/articles/10.3389/fninf.2024.1507217/pdf"
+    },
+    {
+        "chunk_id": "5f77ab577aa359b1_chunk_35",
+        "paper_id": "f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "title": "Deep CNN ResNet-18 based model with attention and transfer learning for Alzheimer's disease detection",
+        "authors": [
+            "Sofia Biju Francis",
+            "Jai Prakash Verma"
+        ],
+        "source": "semantic_scholar",
+        "published": "2025-01-07",
+        "page_number": 8,
+        "chunk_number": 35,
+        "text": "of the mapping features,\nrespectively and W1 ∈R\nC\nr ×C, W2 ∈RC× C\nr\nTo\nsimplify\nthe\nmodel\nand\nenhance\nits\ncapacity\nfor\ngeneralization, two fully connected (FC) design layers have\nbeen employed. The first FC layer contributes to dimension\nreduction, and “r\" is a parameter for the dimension reduction\nfactor. ReLU activation can then be performed. The last layer\nof FC adds a new dimension. New features on U can eventually\nbe multiplied by the learning activation levels of each channel.\nThe final output of the block is derived by rescaling U using the\nactivations ‘s\":\ñxc = Fscale(uc, sc) = scuc\n(10)\nFrontiers in Neuroinformatics\n08\nfrontiersin.org",
+        "source_file": "data/processed/extracted_text/5f77ab577aa359b1.json",
+        "doi": "",
+        "paper_url": "https://www.semanticscholar.org/paper/f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "pdf_url": "https://www.frontiersin.org/journals/neuroinformatics/articles/10.3389/fninf.2024.1507217/pdf"
+    },
+    {
+        "chunk_id": "5f77ab577aa359b1_chunk_36",
+        "paper_id": "f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "title": "Deep CNN ResNet-18 based model with attention and transfer learning for Alzheimer's disease detection",
+        "authors": [
+            "Sofia Biju Francis",
+            "Jai Prakash Verma"
+        ],
+        "source": "semantic_scholar",
+        "published": "2025-01-07",
+        "page_number": 9,
+        "chunk_number": 36,
+        "text": "Francis and Prakash Verma\n10.3389/fninf.2024.1507217\nFIGURE 6\nProposed model 1: deep CNN_ResNet-18 based scratch model with SE and depth convolution.\nwhere ̃X = [ ̃x1, ̃x2, .... ̃xC] and Fscale(uc, sc) denote the channelwise multiplication between the scalar sc and the feature map uc ∈\nRH×W. Equation 7 through Equation 10 provide a mathematical\nrepresentation of the full function (Hu et al., 2018; Gao et al., 2021;\nAlazwari et al., 2024).\n2.2.6 Deep CNN_ResNet-18 based scratch model\nwith SE and depth wise convolution\nThe proposed Deep CNN model was built on the following\nprinciples: Squeeze and Excitation (attention mechanism), Depth\nconvolution, and Residual structure. The proposed architecture\nFrontiers in Neuroinformatics\n09\nfrontiersin.org",
+        "source_file": "data/processed/extracted_text/5f77ab577aa359b1.json",
+        "doi": "",
+        "paper_url": "https://www.semanticscholar.org/paper/f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "pdf_url": "https://www.frontiersin.org/journals/neuroinformatics/articles/10.3389/fninf.2024.1507217/pdf"
+    },
+    {
+        "chunk_id": "5f77ab577aa359b1_chunk_37",
+        "paper_id": "f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "title": "Deep CNN ResNet-18 based model with attention and transfer learning for Alzheimer's disease detection",
+        "authors": [
+            "Sofia Biju Francis",
+            "Jai Prakash Verma"
+        ],
+        "source": "semantic_scholar",
+        "published": "2025-01-07",
+        "page_number": 10,
+        "chunk_number": 37,
+        "text": "Francis and Prakash Verma\n10.3389/fninf.2024.1507217\nFIGURE 7\n(A) Convolution block (CB). (B) Identity block (IB). (C) squeeze and excitation block (SE).\nis shown in Figure 6. We see the Convolution Block (CB-Block),\nIdentity Block (IB-Block), and Squeeze and Excitation Block (SEBlock) in Figure 7. The following describes this architecture’s key\ncomponents. A Squeeze and Excitation (SE) block is integrated\nwith a Deep CNN model that is based on a ResNet-18 model and\nwas created from scratch using a unique architecture. Moreover,\nDepth convolution was used instead of regular convolution. The\nConvolution blocks, Identity blocks, and SE blocks are used in this\nsix-part architecture. This proposed model with SE block consists of\ntwo convolution layers (C1 and C2), four convolution blocks (CB1,\nCB2, CB3, and CB4), four identity blocks (IB1, IB2, IB3, and IB4),\nSE Block, Global Average Pooling layer, and two Fully Connected\nlayers (FC1 and FC2).\nBatches of sagittal slices from MRI brain scans with dimensions\nof 224 × 224 × 1 are accepted as input.",
+        "source_file": "data/processed/extracted_text/5f77ab577aa359b1.json",
+        "doi": "",
+        "paper_url": "https://www.semanticscholar.org/paper/f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "pdf_url": "https://www.frontiersin.org/journals/neuroinformatics/articles/10.3389/fninf.2024.1507217/pdf"
+    },
+    {
+        "chunk_id": "5f77ab577aa359b1_chunk_38",
+        "paper_id": "f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "title": "Deep CNN ResNet-18 based model with attention and transfer learning for Alzheimer's disease detection",
+        "authors": [
+            "Sofia Biju Francis",
+            "Jai Prakash Verma"
+        ],
+        "source": "semantic_scholar",
+        "published": "2025-01-07",
+        "page_number": 10,
+        "chunk_number": 38,
+        "text": "and IB4),\nSE Block, Global Average Pooling layer, and two Fully Connected\nlayers (FC1 and FC2).\nBatches of sagittal slices from MRI brain scans with dimensions\nof 224 × 224 × 1 are accepted as input. A max-pooling layer\nwith a kernel size of 3 × 3, a batch normalization layer, a ReLU\nactivation function, and a convolutional layer with a kernel size\nof 7 × 7 are employed in the first section, C1. The max-pooling\nlayer preserves important feature information while reducing the\nmodel’s size and parameters and expanding the receptive fields.\nBeginning with a depth-wise convolution, the Convolution Block\nin the second section proceeds with a convolution layer and\nReLU activation. Afterward, an Identity Block, which comprises\nthe ResNet-18 model’s residual portion, is employed to address the\nvanishing and exploding gradient issues that most deep-learning\nnetworks encounter. The third part, which consists of convolution\nC2 followed by ReLU activation, receives the combined output of\nthe second part as input. The fourth part, SE-Block, includes the\nSqueeze-and-Excitation (SE) module.\nThe SE module has two main components.",
+        "source_file": "data/processed/extracted_text/5f77ab577aa359b1.json",
+        "doi": "",
+        "paper_url": "https://www.semanticscholar.org/paper/f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "pdf_url": "https://www.frontiersin.org/journals/neuroinformatics/articles/10.3389/fninf.2024.1507217/pdf"
+    },
+    {
+        "chunk_id": "5f77ab577aa359b1_chunk_39",
+        "paper_id": "f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "title": "Deep CNN ResNet-18 based model with attention and transfer learning for Alzheimer's disease detection",
+        "authors": [
+            "Sofia Biju Francis",
+            "Jai Prakash Verma"
+        ],
+        "source": "semantic_scholar",
+        "published": "2025-01-07",
+        "page_number": 10,
+        "chunk_number": 39,
+        "text": "by ReLU activation, receives the combined output of\nthe second part as input. The fourth part, SE-Block, includes the\nSqueeze-and-Excitation (SE) module.\nThe SE module has two main components. Squeeze is the\nfirst method, causing the input image to undergo Global Average\nPooling and compressing the feature map into a 1 × 1 × C vector.\nExcitation is the second, consisting of two densely connected layers\nand two activation functions (Sigmoid and ReLU). The first fully\nconnected layer receives 1 × 1 × C as input and outputs 1 × 1 × C\n× 1/r, where “r\" is a reduction parameter that lowers the number\nof channels to reduce computation. The second fully connected\nlayer receives 1 × 1 × C × 1/r as input, and 1 × 1 × C is the\noutput. This study uses r = 16. After obtaining the output vector,\nthe initial feature map and the 1 × 1 × C vector will be scaled.\nThe initial feature map measures W × H × C. The final output\nresult is obtained by multiplying the weight value of each channel\nFrontiers in Neuroinformatics\n10\nfrontiersin.org",
+        "source_file": "data/processed/extracted_text/5f77ab577aa359b1.json",
+        "doi": "",
+        "paper_url": "https://www.semanticscholar.org/paper/f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "pdf_url": "https://www.frontiersin.org/journals/neuroinformatics/articles/10.3389/fninf.2024.1507217/pdf"
+    },
+    {
+        "chunk_id": "5f77ab577aa359b1_chunk_40",
+        "paper_id": "f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "title": "Deep CNN ResNet-18 based model with attention and transfer learning for Alzheimer's disease detection",
+        "authors": [
+            "Sofia Biju Francis",
+            "Jai Prakash Verma"
+        ],
+        "source": "semantic_scholar",
+        "published": "2025-01-07",
+        "page_number": 11,
+        "chunk_number": 40,
+        "text": "Francis and Prakash Verma\n10.3389/fninf.2024.1507217\nFIGURE 8\nProposed model 2: ResNet-18 pre-trained model with SE block.\noutput by the SE module by the two-dimensional matrix of the\ncorresponding channel of the initial feature map. The output size\nof this layer was set to 1 × 1 in the fifth section, which used\nGlobal Average Pooling, ReLU, and Dropout. The sixth section\nuses a fully connected classification Layer with three neurons in\nthe output related to predicting three Alzheimer’s stages. Features\nranging from low to high could be extracted by the modification of\nResNet-18. The model’s sensitivity to channel features is increased\nby recalibrating the starting features in the channel dimension. This\nallows the model to identify the salient aspects of different channels\nautomatically. Lowering the training parameters, accelerating the\nmodel’s rate of convergence, and improving classification accuracy\nare all accomplished via the Global Average Pooling layer. By using\ndepth convolution and the SE block, we could reduce the training\nFrontiers in Neuroinformatics\n11\nfrontiersin.org",
+        "source_file": "data/processed/extracted_text/5f77ab577aa359b1.json",
+        "doi": "",
+        "paper_url": "https://www.semanticscholar.org/paper/f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "pdf_url": "https://www.frontiersin.org/journals/neuroinformatics/articles/10.3389/fninf.2024.1507217/pdf"
+    },
+    {
+        "chunk_id": "5f77ab577aa359b1_chunk_41",
+        "paper_id": "f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "title": "Deep CNN ResNet-18 based model with attention and transfer learning for Alzheimer's disease detection",
+        "authors": [
+            "Sofia Biju Francis",
+            "Jai Prakash Verma"
+        ],
+        "source": "semantic_scholar",
+        "published": "2025-01-07",
+        "page_number": 12,
+        "chunk_number": 41,
+        "text": "Francis and Prakash Verma\n10.3389/fninf.2024.1507217\nFIGURE 9\nModel 3: ResNet-18 pre-trained model without SE block.\nparameters from 11.189 to 9.125 million. This resulted in training\nthe model taking 1,915.59 s, testing taking 1 s, and real-time\nevaluation taking 17 ms.\n2.3 ResNet-18 pre-trained model with SE\nIn this model, we employ transfer learning to optimize the\ntraining of gathered data and avoid overfitting issues. Figure 8\ndisplays the above-prescribed model.\nThe ResNet-18 pretraining model initializes the weights\n(ImageNet) of 17 convolutional layers, with the exception of SEBlock (Gao et al., 2021), during the training phase. Once the\nlearned weights were loaded, the entire model was retrained using\nthe current ADNI dataset. This can increase training speed and\naccuracy and enhance the model’s ability to detect illness stages\nfrom the existing MRI image collection. For feature learning to be\nsteady and successful, this is essential. The Squeeze and Excitation\ncomponents make up the ResNet-18 pre-trained model with\nSE. Every SE block adaptively re-calibrates channel-wise feature\nresponses by simulating channel interdependencies and embedding\nthe knowledge globally.",
+        "source_file": "data/processed/extracted_text/5f77ab577aa359b1.json",
+        "doi": "",
+        "paper_url": "https://www.semanticscholar.org/paper/f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "pdf_url": "https://www.frontiersin.org/journals/neuroinformatics/articles/10.3389/fninf.2024.1507217/pdf"
+    },
+    {
+        "chunk_id": "5f77ab577aa359b1_chunk_42",
+        "paper_id": "f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "title": "Deep CNN ResNet-18 based model with attention and transfer learning for Alzheimer's disease detection",
+        "authors": [
+            "Sofia Biju Francis",
+            "Jai Prakash Verma"
+        ],
+        "source": "semantic_scholar",
+        "published": "2025-01-07",
+        "page_number": 12,
+        "chunk_number": 42,
+        "text": "make up the ResNet-18 pre-trained model with\nSE. Every SE block adaptively re-calibrates channel-wise feature\nresponses by simulating channel interdependencies and embedding\nthe knowledge globally. ResNet-18, the pre-training model, was\nused as the first layer, and the last fully connected layer of the\nResNet-18 model was replaced by four SE blocks integrated as the\nnext four layers. After that, the features were flattened and averaged.\nUltimately, a fully connected layer made up of three neurons with\na softmax activation function is linked in order to categorize the\nthree stages of Alzheimer’s disease.\n2.4 ResNet-18 pre-trained model without\nSE\nThe ResNet-18 pre-training model (freezing all layers except\nthe last) is the first layer of the ResNet-18 pre-training model\nwithout SE. To identify three distinct stages of Alzheimer’s disease,\na classification layer consisting of three neurons with softmax\nactivation functions follows. Using the existing ADNI dataset, the\nmodel was retrained to take advantage of the transfer learning\nprinciple and improve performance after loading the learned\nweights from ImageNet.",
+        "source_file": "data/processed/extracted_text/5f77ab577aa359b1.json",
+        "doi": "",
+        "paper_url": "https://www.semanticscholar.org/paper/f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "pdf_url": "https://www.frontiersin.org/journals/neuroinformatics/articles/10.3389/fninf.2024.1507217/pdf"
+    },
+    {
+        "chunk_id": "5f77ab577aa359b1_chunk_43",
+        "paper_id": "f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "title": "Deep CNN ResNet-18 based model with attention and transfer learning for Alzheimer's disease detection",
+        "authors": [
+            "Sofia Biju Francis",
+            "Jai Prakash Verma"
+        ],
+        "source": "semantic_scholar",
+        "published": "2025-01-07",
+        "page_number": 12,
+        "chunk_number": 43,
+        "text": "follows. Using the existing ADNI dataset, the\nmodel was retrained to take advantage of the transfer learning\nprinciple and improve performance after loading the learned\nweights from ImageNet. Figure 9 displays the architecture for\nthe same.\nFrontiers in Neuroinformatics\n12\nfrontiersin.org",
+        "source_file": "data/processed/extracted_text/5f77ab577aa359b1.json",
+        "doi": "",
+        "paper_url": "https://www.semanticscholar.org/paper/f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "pdf_url": "https://www.frontiersin.org/journals/neuroinformatics/articles/10.3389/fninf.2024.1507217/pdf"
+    },
+    {
+        "chunk_id": "5f77ab577aa359b1_chunk_44",
+        "paper_id": "f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "title": "Deep CNN ResNet-18 based model with attention and transfer learning for Alzheimer's disease detection",
+        "authors": [
+            "Sofia Biju Francis",
+            "Jai Prakash Verma"
+        ],
+        "source": "semantic_scholar",
+        "published": "2025-01-07",
+        "page_number": 13,
+        "chunk_number": 44,
+        "text": "Francis and Prakash Verma\n10.3389/fninf.2024.1507217\nFIGURE 10\nAccuracy and loss curve. (A) Model 1. (B) Model 2. (C) Model 3.\nFrontiers in Neuroinformatics\n13\nfrontiersin.org",
+        "source_file": "data/processed/extracted_text/5f77ab577aa359b1.json",
+        "doi": "",
+        "paper_url": "https://www.semanticscholar.org/paper/f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "pdf_url": "https://www.frontiersin.org/journals/neuroinformatics/articles/10.3389/fninf.2024.1507217/pdf"
+    },
+    {
+        "chunk_id": "5f77ab577aa359b1_chunk_45",
+        "paper_id": "f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "title": "Deep CNN ResNet-18 based model with attention and transfer learning for Alzheimer's disease detection",
+        "authors": [
+            "Sofia Biju Francis",
+            "Jai Prakash Verma"
+        ],
+        "source": "semantic_scholar",
+        "published": "2025-01-07",
+        "page_number": 14,
+        "chunk_number": 45,
+        "text": "Francis and Prakash Verma\n10.3389/fninf.2024.1507217\nFIGURE 11\nConfusion matrix and ROC. (A) Confusion matrix of Model 1 and 2. (B) Confusion matrix of Model 3. (C) ROC curve of Model 1 and 2.\nFrontiers in Neuroinformatics\n14\nfrontiersin.org",
+        "source_file": "data/processed/extracted_text/5f77ab577aa359b1.json",
+        "doi": "",
+        "paper_url": "https://www.semanticscholar.org/paper/f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "pdf_url": "https://www.frontiersin.org/journals/neuroinformatics/articles/10.3389/fninf.2024.1507217/pdf"
+    },
+    {
+        "chunk_id": "5f77ab577aa359b1_chunk_46",
+        "paper_id": "f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "title": "Deep CNN ResNet-18 based model with attention and transfer learning for Alzheimer's disease detection",
+        "authors": [
+            "Sofia Biju Francis",
+            "Jai Prakash Verma"
+        ],
+        "source": "semantic_scholar",
+        "published": "2025-01-07",
+        "page_number": 15,
+        "chunk_number": 46,
+        "text": "Francis and Prakash Verma\n10.3389/fninf.2024.1507217\nFIGURE 12\nROC curve of Model 3 and Accuracy for 2,291 data 1. (A) ROC curve of Model 3. (B) 2,291 and Adam and Dropout. (C) 2,291 and RMSProp and\nDropout.\nFrontiers in Neuroinformatics\n15\nfrontiersin.org",
+        "source_file": "data/processed/extracted_text/5f77ab577aa359b1.json",
+        "doi": "",
+        "paper_url": "https://www.semanticscholar.org/paper/f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "pdf_url": "https://www.frontiersin.org/journals/neuroinformatics/articles/10.3389/fninf.2024.1507217/pdf"
+    },
+    {
+        "chunk_id": "5f77ab577aa359b1_chunk_47",
+        "paper_id": "f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "title": "Deep CNN ResNet-18 based model with attention and transfer learning for Alzheimer's disease detection",
+        "authors": [
+            "Sofia Biju Francis",
+            "Jai Prakash Verma"
+        ],
+        "source": "semantic_scholar",
+        "published": "2025-01-07",
+        "page_number": 16,
+        "chunk_number": 47,
+        "text": "Francis and Prakash Verma\n10.3389/fninf.2024.1507217\nFIGURE 13\nTraining and test accuracy for 14k and 25k data and Optimizer and Dropout. (A) 14k data and Adam and Dropout. (B) 14k data and RMSProp and\nDropout. (C) 25k data and Adam and Dropout.\nFrontiers in Neuroinformatics\n16\nfrontiersin.org",
+        "source_file": "data/processed/extracted_text/5f77ab577aa359b1.json",
+        "doi": "",
+        "paper_url": "https://www.semanticscholar.org/paper/f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "pdf_url": "https://www.frontiersin.org/journals/neuroinformatics/articles/10.3389/fninf.2024.1507217/pdf"
+    },
+    {
+        "chunk_id": "5f77ab577aa359b1_chunk_48",
+        "paper_id": "f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "title": "Deep CNN ResNet-18 based model with attention and transfer learning for Alzheimer's disease detection",
+        "authors": [
+            "Sofia Biju Francis",
+            "Jai Prakash Verma"
+        ],
+        "source": "semantic_scholar",
+        "published": "2025-01-07",
+        "page_number": 17,
+        "chunk_number": 48,
+        "text": "Francis and Prakash Verma\n10.3389/fninf.2024.1507217\nFIGURE 14\nTraining and tEST aCCURacy for 25k data and ROC for 2,291 and Optimizer and Dropout. (A) 25k data and RMSProp and Dropout. (B) 2,219 data and\nAdam and Dropout. (C) 2,219 data and RMSProp and Dropout.\nFrontiers in Neuroinformatics\n17\nfrontiersin.org",
+        "source_file": "data/processed/extracted_text/5f77ab577aa359b1.json",
+        "doi": "",
+        "paper_url": "https://www.semanticscholar.org/paper/f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "pdf_url": "https://www.frontiersin.org/journals/neuroinformatics/articles/10.3389/fninf.2024.1507217/pdf"
+    },
+    {
+        "chunk_id": "5f77ab577aa359b1_chunk_49",
+        "paper_id": "f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "title": "Deep CNN ResNet-18 based model with attention and transfer learning for Alzheimer's disease detection",
+        "authors": [
+            "Sofia Biju Francis",
+            "Jai Prakash Verma"
+        ],
+        "source": "semantic_scholar",
+        "published": "2025-01-07",
+        "page_number": 18,
+        "chunk_number": 49,
+        "text": "Francis and Prakash Verma\n10.3389/fninf.2024.1507217\nFIGURE 15\nROC values(AD, CN, MCI) for 14k and 25k data and Optimizer and Dropout. (A) 14k data and ADAM and Dropout. (B) 14k data and RMSProp and\nDropout. (C) ROC values (AD, CN, MCI) for 25k data and ADAM and Dropout.\nFrontiers in Neuroinformatics\n18\nfrontiersin.org",
+        "source_file": "data/processed/extracted_text/5f77ab577aa359b1.json",
+        "doi": "",
+        "paper_url": "https://www.semanticscholar.org/paper/f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "pdf_url": "https://www.frontiersin.org/journals/neuroinformatics/articles/10.3389/fninf.2024.1507217/pdf"
+    },
+    {
+        "chunk_id": "5f77ab577aa359b1_chunk_50",
+        "paper_id": "f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "title": "Deep CNN ResNet-18 based model with attention and transfer learning for Alzheimer's disease detection",
+        "authors": [
+            "Sofia Biju Francis",
+            "Jai Prakash Verma"
+        ],
+        "source": "semantic_scholar",
+        "published": "2025-01-07",
+        "page_number": 19,
+        "chunk_number": 50,
+        "text": "Francis and Prakash Verma\n10.3389/fninf.2024.1507217\nFIGURE 16\nROC values of 25k data and Metrics values comparison. (A) 25k data and RMSProp and Dropout. (B) Testing and training accuracy comparison of 3\nModels. (C) Metrics values comparison of 3 Models.\nFrontiers in Neuroinformatics\n19\nfrontiersin.org",
+        "source_file": "data/processed/extracted_text/5f77ab577aa359b1.json",
+        "doi": "",
+        "paper_url": "https://www.semanticscholar.org/paper/f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "pdf_url": "https://www.frontiersin.org/journals/neuroinformatics/articles/10.3389/fninf.2024.1507217/pdf"
+    },
+    {
+        "chunk_id": "5f77ab577aa359b1_chunk_51",
+        "paper_id": "f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "title": "Deep CNN ResNet-18 based model with attention and transfer learning for Alzheimer's disease detection",
+        "authors": [
+            "Sofia Biju Francis",
+            "Jai Prakash Verma"
+        ],
+        "source": "semantic_scholar",
+        "published": "2025-01-07",
+        "page_number": 20,
+        "chunk_number": 51,
+        "text": "Francis and Prakash Verma\n10.3389/fninf.2024.1507217\nTABLE 1 Test and training accuracy, ROC values: 2,291 (original) dataset vs. Epoch vs. Optimizer vs. Dropout.\nDataset\nEpoch\nOptimizer\nDropout-0.5\nROC\nDropout-0.2\nROC\nAdam\nTraining\nTesting\nAD\nCN\nMCI\nTraining\nTesting\nAD\nCN\nMCI\n2,291\n10\n56.67\n42.7\n54\n50\n48\n53.24\n38.34\n51\n58\n53\n30\n99.2\n59.04\n77\n77\n69\n98.9\n53.59\n71\n76\n70\n50\n95.63\n61\n72\n74\n61\n97.74\n58.38\n75\n75\n69\nRMSprop\nTraining\nTesting\nAD\nCN\nMCI\nTraining\nTesting\nAD\nCN\nMCI\n10\n54.32\n29.41\n67\n65\n54\n57.29\n47.49\n54\n57\n57\n30\n95.58\n39.65\n75\n69\n70\n96.59\n58.17\n73\n63\n60\n50\n98.04\n55.33\n75\n78\n73\n98.59\n59.26\n71\n72\n66\nTABLE 2 Test and training accuracy, ROC values: 14K Dataset vs. Epoch vs. Optimizer vs.",
+        "source_file": "data/processed/extracted_text/5f77ab577aa359b1.json",
+        "doi": "",
+        "paper_url": "https://www.semanticscholar.org/paper/f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "pdf_url": "https://www.frontiersin.org/journals/neuroinformatics/articles/10.3389/fninf.2024.1507217/pdf"
+    },
+    {
+        "chunk_id": "5f77ab577aa359b1_chunk_52",
+        "paper_id": "f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "title": "Deep CNN ResNet-18 based model with attention and transfer learning for Alzheimer's disease detection",
+        "authors": [
+            "Sofia Biju Francis",
+            "Jai Prakash Verma"
+        ],
+        "source": "semantic_scholar",
+        "published": "2025-01-07",
+        "page_number": 20,
+        "chunk_number": 52,
+        "text": "2 Test and training accuracy, ROC values: 14K Dataset vs. Epoch vs. Optimizer vs. Dropout.\nDataset\nEpoch\nOptimizer\nDropout (0.5)\nROC\nDropout (0.2)\nROC\nAdam\nTraining\nTesting\nAD\nCN\nMCI\nTraining\nTesting\nAD\nCN\nMCI\n14k\n10\n52.73\n50.16\n70\n70\n56\n60.84\n50.37\n74\n74\n65\n20\n87.3\n61.72\n75\n73\n70\n92.14\n63.04\n84\n85\n81\n30\n97.5\n69.24\n85\n84\n81\n98.13\n70.66\n85\n85\n82\n50\n98.64\n61.65\n83\n84\n81\n98.75\n62.7\n79\n80\n76\n70\n98.89\n67.17\n79\n85\n80\n99.41\n69.83\n84\n86\n85\n100\n99.6\n64.23\n84\n85\n82\n99.47\n68.39\n84\n84\n84\n200\n99.96\n52.95\n71\n75\n71\n99.64\n50.37\n64\n58\n59\nRMSprop\nTraining\nTesting\nAD\nCN\nMCI\nTraining\nTesting\nAD\nCN\nMCI\n10\n68.69\n56.4\n72\n77\n60\n67.44\n55.42\n79\n78\n70\n20\n92.86\n66.02\n84\n84\n81\n93.44\n67.17\n85\n85\n80\n30\n97.5\n70.22\n87\n88\n85\n97.52\n67.95\n85\n83\n82\n50\n98.64\n66.77\n88\n87\n83\n98.91\n71.65\n88\n87\n85\n70\n99.28\n73.98\n85\n86\n83\n99.16\n73.34\n87\n87\n85\n100\n99.41\n70.7\n88\n87\n85\n99.41\n74.22\n88\n87\n85\n150\n99.53\n73.78\n87\n90\n87\n99.69\n67.01\n85\n86\n83\n200\n99.82\n73.51\n86\n86\n84\n99.7\n75.03\n88\n88\n87\n2.5 Experimental setup\nFor all the experimental investigations, we used a Dell\nPowerEdge R760XA Server GPU node, an Intel Xeon Gold 6438Y+,\n32-core, 2 GHz processor, 512 GB of RAM, DDR5 4800MT/s,\n1.92 TB of SSD, and an X Nvidia Hopper H100 (80",
+        "source_file": "data/processed/extracted_text/5f77ab577aa359b1.json",
+        "doi": "",
+        "paper_url": "https://www.semanticscholar.org/paper/f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "pdf_url": "https://www.frontiersin.org/journals/neuroinformatics/articles/10.3389/fninf.2024.1507217/pdf"
+    },
+    {
+        "chunk_id": "5f77ab577aa359b1_chunk_53",
+        "paper_id": "f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "title": "Deep CNN ResNet-18 based model with attention and transfer learning for Alzheimer's disease detection",
+        "authors": [
+            "Sofia Biju Francis",
+            "Jai Prakash Verma"
+        ],
+        "source": "semantic_scholar",
+        "published": "2025-01-07",
+        "page_number": 20,
+        "chunk_number": 53,
+        "text": "investigations, we used a Dell\nPowerEdge R760XA Server GPU node, an Intel Xeon Gold 6438Y+,\n32-core, 2 GHz processor, 512 GB of RAM, DDR5 4800MT/s,\n1.92 TB of SSD, and an X Nvidia Hopper H100 (80 GB)\nwith Windows 11.\n3 Experiments results and discussion\nThis section analyzes the performance of three models with\nregard to various hyperparameters in terms of the confusion\nmatrix, ROC values, and training and test accuracy. Analyses of\nprediction accuracy and convergence on a few criteria were also\ncarried out. Using a new dataset called OASIS-1 and real-time\npatient MRI scans, along with their demographic data, also showed\nhow all models were evaluated.\n3.1 Comparisons of three model\nperformance\nThree models, (1) DeepCNN ResNet-18 based scratch model\nwith SE, (2) ResNet-18 pre-trained model with SE, and (3) ResNet18 pre-trained model without SE, have classification best test\naccuracies of 88.51% (135th epoch), 93.26% (69th epoch), and\n92.41% (106th epoch), respectively. The three models displayed\nnearly identical best training accuracies with 99.81% (142nd epoch),\n99.93% (149th epoch), and 99.73% (68th epoch).",
+        "source_file": "data/processed/extracted_text/5f77ab577aa359b1.json",
+        "doi": "",
+        "paper_url": "https://www.semanticscholar.org/paper/f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "pdf_url": "https://www.frontiersin.org/journals/neuroinformatics/articles/10.3389/fninf.2024.1507217/pdf"
+    },
+    {
+        "chunk_id": "5f77ab577aa359b1_chunk_54",
+        "paper_id": "f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "title": "Deep CNN ResNet-18 based model with attention and transfer learning for Alzheimer's disease detection",
+        "authors": [
+            "Sofia Biju Francis",
+            "Jai Prakash Verma"
+        ],
+        "source": "semantic_scholar",
+        "published": "2025-01-07",
+        "page_number": 20,
+        "chunk_number": 54,
+        "text": "(69th epoch), and\n92.41% (106th epoch), respectively. The three models displayed\nnearly identical best training accuracies with 99.81% (142nd epoch),\n99.93% (149th epoch), and 99.73% (68th epoch). Figure 10 depicts\nall three models’ accuracy and loss curves.\nFrontiers in Neuroinformatics\n20\nfrontiersin.org",
+        "source_file": "data/processed/extracted_text/5f77ab577aa359b1.json",
+        "doi": "",
+        "paper_url": "https://www.semanticscholar.org/paper/f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "pdf_url": "https://www.frontiersin.org/journals/neuroinformatics/articles/10.3389/fninf.2024.1507217/pdf"
+    },
+    {
+        "chunk_id": "5f77ab577aa359b1_chunk_55",
+        "paper_id": "f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "title": "Deep CNN ResNet-18 based model with attention and transfer learning for Alzheimer's disease detection",
+        "authors": [
+            "Sofia Biju Francis",
+            "Jai Prakash Verma"
+        ],
+        "source": "semantic_scholar",
+        "published": "2025-01-07",
+        "page_number": 21,
+        "chunk_number": 55,
+        "text": "Francis and Prakash Verma\n10.3389/fninf.2024.1507217\nTABLE 3 Test and training accuracy, ROC values: 25K Dataset vs. Epoch vs. Optimizer vs. Dropout.\nDataset\nEpoch\nOptimizer\nDropout (0.5)\nROC\nDropout (0.2)\nROC\nAdam\nTraining\nTesting\nAD\nCN\nMCI\nTraining\nTesting\nAD\nCN\nMCI\n25k\n10\n73.16\n30.26\n77\n76\n54\n82.96\n62.52\n86\n84\n76\n20\n97.18\n81.62\n93\n93\n91\n97.37\n81.98\n94\n94\n92\n30\n98.4\n63.29\n91\n92\n78\n98.24\n79.42\n93\n93\n91\n50\n99.09\n75.2\n93\n93\n88\n99.19\n80.4\n93\n93\n92\n70\n99.57\n71.41\n88\n89\n85\n99.27\n78.08\n94\n95\n91\n100\n99.68\n67.29\n88\n87\n82\n99.64\n32.57\n72\n59\n64\n150\n99.89\n58.77\n69\n78\n72\n99.6\n79.04\n90\n92\n90\n200\n99.73\n30.776\n50\n50\n50\n99.77\n53.53\n81\n84\n78\nRMSprop\nTraining\nTesting\nAD\nCN\nMCI\nTraining\nTesting\nAD\nCN\nMCI\n10\n80.86\n49.15\n81\n87\n67\n84.7\n75.37\n92\n92\n86\n20\n96.38\n76.91\n93\n93\n90\n96.96\n75.24\n93\n92\n89\n30\n97.95\n79.46\n93\n92\n91\n98.26\n69.72\n91\n89\n85\n50\n99.01\n80.68\n93\n93\n91\n99.14\n84.29\n94\n95\n94\n70\n99.33\n78.9\n93\n94\n93\n99.42\n83.97\n95\n95\n94\n100\n99.46\n85.23\n96\n96\n94\n99.64\n76.2\n91\n93\n91\n150\n99.81\n88.51\n95\n95\n93\n99.81\n83.04\n95\n94\n93\n200\n99.76\n84.46\n95\n95\n93\n99.85\n83.66\n96\n95\n94\nThe ROC values were the major criterion for evaluating these\nmodels because the ADNI dataset is highly imbalanced, even after\naugmentation",
+        "source_file": "data/processed/extracted_text/5f77ab577aa359b1.json",
+        "doi": "",
+        "paper_url": "https://www.semanticscholar.org/paper/f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "pdf_url": "https://www.frontiersin.org/journals/neuroinformatics/articles/10.3389/fninf.2024.1507217/pdf"
+    },
+    {
+        "chunk_id": "5f77ab577aa359b1_chunk_56",
+        "paper_id": "f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "title": "Deep CNN ResNet-18 based model with attention and transfer learning for Alzheimer's disease detection",
+        "authors": [
+            "Sofia Biju Francis",
+            "Jai Prakash Verma"
+        ],
+        "source": "semantic_scholar",
+        "published": "2025-01-07",
+        "page_number": 21,
+        "chunk_number": 56,
+        "text": "ROC values were the major criterion for evaluating these\nmodels because the ADNI dataset is highly imbalanced, even after\naugmentation techniques. The ROC values for the three models\nwere AD:95, CN:95, MCI:93 for Model 1; AD:98, CN:99, MCI:98\nfor Model 2; and AD:94, CN:97, MCI:94 for Model 3. These\nvalues demonstrate the efficacy of identifying the various phases of\nAlzheimer’s disease.\nThe confusion matrix and ROC values for each of the three\nmodels are shown in Figure 11. Several regularization strategies,\nincluding adding a dropout layer, increasing epochs, altering the\noptimizer, and providing data augmentation to the original dataset\nprior to training, have been used to lower generalization errors\nor avoid overfitting. It was discovered that all of the strategies\nsignificantly improved the accuracy and ROC values. A better\nrepresentation of ROC values and improvisation of testing and\ntraining accuracies is displayed from Figures 12–15. In order\nto generalize the model and lessen overfitting, cross-validation\nprocedures were also employed in an 80:20 ratio on the original\ndataset.",
+        "source_file": "data/processed/extracted_text/5f77ab577aa359b1.json",
+        "doi": "",
+        "paper_url": "https://www.semanticscholar.org/paper/f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "pdf_url": "https://www.frontiersin.org/journals/neuroinformatics/articles/10.3389/fninf.2024.1507217/pdf"
+    },
+    {
+        "chunk_id": "5f77ab577aa359b1_chunk_57",
+        "paper_id": "f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "title": "Deep CNN ResNet-18 based model with attention and transfer learning for Alzheimer's disease detection",
+        "authors": [
+            "Sofia Biju Francis",
+            "Jai Prakash Verma"
+        ],
+        "source": "semantic_scholar",
+        "published": "2025-01-07",
+        "page_number": 21,
+        "chunk_number": 57,
+        "text": "accuracies is displayed from Figures 12–15. In order\nto generalize the model and lessen overfitting, cross-validation\nprocedures were also employed in an 80:20 ratio on the original\ndataset. The comparison of test and training accuracies, ROC\nvalues, and other evaluation metrics for each of the three models\nare interpreted in Figures 16B, C.\nThe pre-trained ResNet-18 model with SE Blocks produced\nthe best results for every comparison because of the efficiency\nof using pre-trained models and the decrease in the number of\ntraining parameters. The network that is trained from scratch\nusing deep learning techniques, unfortunately, has the following\ndrawbacks: (a) It requires a large amount of labeled training\ndata, which could be problematic for the medical field where\ndoctors annotate the data (b) It can be expensive; and (c) It\nrequires a significant amount of computational resources.",
+        "source_file": "data/processed/extracted_text/5f77ab577aa359b1.json",
+        "doi": "",
+        "paper_url": "https://www.semanticscholar.org/paper/f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "pdf_url": "https://www.frontiersin.org/journals/neuroinformatics/articles/10.3389/fninf.2024.1507217/pdf"
+    },
+    {
+        "chunk_id": "5f77ab577aa359b1_chunk_58",
+        "paper_id": "f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "title": "Deep CNN ResNet-18 based model with attention and transfer learning for Alzheimer's disease detection",
+        "authors": [
+            "Sofia Biju Francis",
+            "Jai Prakash Verma"
+        ],
+        "source": "semantic_scholar",
+        "published": "2025-01-07",
+        "page_number": 21,
+        "chunk_number": 58,
+        "text": "labeled training\ndata, which could be problematic for the medical field where\ndoctors annotate the data (b) It can be expensive; and (c) It\nrequires a significant amount of computational resources. (c) These\nTABLE 4 Metrics values.\nModel 1\nModel 2\nModel 3\nPrecision\n85.83\n92.64\n89.17\nRecall\n84.90\n92.57\n88.66\nSpecificity\n82.68\n53.51\n86.59\nF-Measure\n84.68\n92.54\n88.59\nmodels also require a lot of hyper-parameters to be carefully and\nlaboriously adjusted, which can result in either over-fitting or\nunder-fitting and, ultimately, poorer performance. (d) Using a tiny\nset of medical training data can trap the cost function in a local\nminima problem. Test accuracy, training accuracy, and ROC values\nwere examined with respect to several data augmentation levels,\nepochs, optimizer, and dropout stages. Convergence accelerated\nwith increasing data quantity and epoch. Overall, the optimizer\nRMSprop generated speedy convergence. On the 14K dataset,\nDropout 0.2 outperformed, whereas on the 25K dataset, Dropout\n0.5 produced superior outcomes.",
+        "source_file": "data/processed/extracted_text/5f77ab577aa359b1.json",
+        "doi": "",
+        "paper_url": "https://www.semanticscholar.org/paper/f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "pdf_url": "https://www.frontiersin.org/journals/neuroinformatics/articles/10.3389/fninf.2024.1507217/pdf"
+    },
+    {
+        "chunk_id": "5f77ab577aa359b1_chunk_59",
+        "paper_id": "f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "title": "Deep CNN ResNet-18 based model with attention and transfer learning for Alzheimer's disease detection",
+        "authors": [
+            "Sofia Biju Francis",
+            "Jai Prakash Verma"
+        ],
+        "source": "semantic_scholar",
+        "published": "2025-01-07",
+        "page_number": 21,
+        "chunk_number": 59,
+        "text": "data quantity and epoch. Overall, the optimizer\nRMSprop generated speedy convergence. On the 14K dataset,\nDropout 0.2 outperformed, whereas on the 25K dataset, Dropout\n0.5 produced superior outcomes. Test accuracy and ROC values\nwere the primary metrics used to assess the model’s effectiveness.\nThe test and training accuracy during hyperparameter tuning are\nprovided in Tables 1–3. The Confusion Matrix evaluates how well\nthe classification model predicts a category label for each input\ndataset. Accuracy is the ratio of accurately anticipated cases to all\nother cases. The precision of each category is used to calculate\nthe proportion of all predicted positive instances. Recall shows\nthe proportion of all actual positive cases among anticipated\npositive occurrences.\nFrontiers in Neuroinformatics\n21\nfrontiersin.org",
+        "source_file": "data/processed/extracted_text/5f77ab577aa359b1.json",
+        "doi": "",
+        "paper_url": "https://www.semanticscholar.org/paper/f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "pdf_url": "https://www.frontiersin.org/journals/neuroinformatics/articles/10.3389/fninf.2024.1507217/pdf"
+    },
+    {
+        "chunk_id": "5f77ab577aa359b1_chunk_60",
+        "paper_id": "f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "title": "Deep CNN ResNet-18 based model with attention and transfer learning for Alzheimer's disease detection",
+        "authors": [
+            "Sofia Biju Francis",
+            "Jai Prakash Verma"
+        ],
+        "source": "semantic_scholar",
+        "published": "2025-01-07",
+        "page_number": 22,
+        "chunk_number": 60,
+        "text": "Francis and Prakash Verma\n10.3389/fninf.2024.1507217\nTABLE 5 State_of_art_Methods.\nReferences\nDataset\nClassification\nAccuracy\nModel\nScratch model\nOdusami et al. (2021)\nADNI\nAD vs. CN\n75.12\nResNet-18(scratch)\nLu et al. (2022)\nADNI\nMCI vs. AD\n70.7\n3D ResNet-18 (scratch)\nDharwada et al. (2024)\nADNI\nAD vs. CN\n87.37\n3D ResNet-50 +SE(scratch)\nFrancis et al. (2024)\nADNI\nMCIn vs. MCInc\n82\nLocal Binary Pattern +Conv\nProposed\nADNI\nAD vs. CN vs. MCI\n88.51\nDeep CNN ResNet-18 based\n+ SE\nPre-trained Model +SE\nIllakiya et al. (2023)\nADNI\nAD vs. CN\n89.17\nDense-169+SE\nDharwada et al. (2024)\nADNI\nAD vs. CN\n89.25\n3D ResNet-50 +SE\nZhang et al. (2024)\nADNI\nAD vs. CN\n84.08\nVGG-16+SE\nProposed\nADNI\nAD vs. CN vs. MCI\n93.26\nPre-trained ResNet-18\n+ SE\nPre-trained model without SE\nIllakiya et al. (2023)\nADNI\nAD vs. CN\n77\nDense-169\nTajammal et al. (2023)\nADNI\nAD vs. CN\n87.5\nResNet-18\nSuja and Raajan (2024)\nADNI\nAD vs. CN\n80.19\nResNet-18\nZhang et al. (2024)\nADNI\nAD vs. CN\n82.94\nVGG-16\nSuja and Raajan (2024)\nADNI\nAD vs. CN\n80.19\nVGG-16\nTopsakal and Lenkala (2024)\nADNI\nAD vs. CN\n74.9\nResNet-50\nProposed\nADNI\nAD vs. CN vs.",
+        "source_file": "data/processed/extracted_text/5f77ab577aa359b1.json",
+        "doi": "",
+        "paper_url": "https://www.semanticscholar.org/paper/f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "pdf_url": "https://www.frontiersin.org/journals/neuroinformatics/articles/10.3389/fninf.2024.1507217/pdf"
+    },
+    {
+        "chunk_id": "5f77ab577aa359b1_chunk_61",
+        "paper_id": "f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "title": "Deep CNN ResNet-18 based model with attention and transfer learning for Alzheimer's disease detection",
+        "authors": [
+            "Sofia Biju Francis",
+            "Jai Prakash Verma"
+        ],
+        "source": "semantic_scholar",
+        "published": "2025-01-07",
+        "page_number": 22,
+        "chunk_number": 61,
+        "text": "et al. (2024)\nADNI\nAD vs. CN\n82.94\nVGG-16\nSuja and Raajan (2024)\nADNI\nAD vs. CN\n80.19\nVGG-16\nTopsakal and Lenkala (2024)\nADNI\nAD vs. CN\n74.9\nResNet-50\nProposed\nADNI\nAD vs. CN vs. MCI\n92.41\nPre-trained ResNet-18\nwithout SE\nThe Confusion Matrix is used to compute the Precision,\nRecall, Specificity, and F1 score in order to assess each model’s\nperformance. The metric values for each of the three models are\nshown in Table 4. The second model, which uses the Transfer\nLearning and Squeeze and Excitation principles, is the best at\ndetecting three AD biomarkers, as Table 4 shows. By adding\nappropriate parameters, such as integrating the SE block and\nemploying Depth-wise convolution instead of the traditional one\nto reduce tuning parameters, we have improved the efficiency of the\nsuggested Deep CNN ResNet-18 model. In the same field, state-ofthe-art techniques that are either developed from scratch using SE\nblocks or that use pre-training models with or without SE blocks are\nlisted in Table 5.",
+        "source_file": "data/processed/extracted_text/5f77ab577aa359b1.json",
+        "doi": "",
+        "paper_url": "https://www.semanticscholar.org/paper/f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "pdf_url": "https://www.frontiersin.org/journals/neuroinformatics/articles/10.3389/fninf.2024.1507217/pdf"
+    },
+    {
+        "chunk_id": "5f77ab577aa359b1_chunk_62",
+        "paper_id": "f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "title": "Deep CNN ResNet-18 based model with attention and transfer learning for Alzheimer's disease detection",
+        "authors": [
+            "Sofia Biju Francis",
+            "Jai Prakash Verma"
+        ],
+        "source": "semantic_scholar",
+        "published": "2025-01-07",
+        "page_number": 22,
+        "chunk_number": 62,
+        "text": "ResNet-18 model. In the same field, state-ofthe-art techniques that are either developed from scratch using SE\nblocks or that use pre-training models with or without SE blocks are\nlisted in Table 5. All of our approaches demonstrated a faster rate of\nconvergence than earlier scholars’ attempts, and Table 6 compares\nthe values of all significant evaluation metrics of their work to the\nsuggested one.\n3.2 Convergence and prediction accuracy\nanalysis\nConvergence and prediction accuracy analysis under several\ncriteria,\nincluding\nTransfer\nlearning,\nData\nAugmentation,\nOptimization and Dropout, and Adding more SE blocks, are the\nmain topics of this section.\n3.2.1 Transfer learning\nPre-trained models use large amounts of data and knowledge\ntransfer techniques to reduce the number of training samples\nrequired to complete a task. Compared to training using randomly\ninitialized models, this approach improves accuracy, saves time,\nand facilitates efficient discriminating across the dataset’s many\nclasses.",
+        "source_file": "data/processed/extracted_text/5f77ab577aa359b1.json",
+        "doi": "",
+        "paper_url": "https://www.semanticscholar.org/paper/f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "pdf_url": "https://www.frontiersin.org/journals/neuroinformatics/articles/10.3389/fninf.2024.1507217/pdf"
+    },
+    {
+        "chunk_id": "5f77ab577aa359b1_chunk_63",
+        "paper_id": "f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "title": "Deep CNN ResNet-18 based model with attention and transfer learning for Alzheimer's disease detection",
+        "authors": [
+            "Sofia Biju Francis",
+            "Jai Prakash Verma"
+        ],
+        "source": "semantic_scholar",
+        "published": "2025-01-07",
+        "page_number": 22,
+        "chunk_number": 63,
+        "text": "to complete a task. Compared to training using randomly\ninitialized models, this approach improves accuracy, saves time,\nand facilitates efficient discriminating across the dataset’s many\nclasses. The experiment’s findings show that, on the test dataset,\nthe model ResNet-18 with SE’s accuracy is 4.75% higher, and the\nother model, ResNet-18, without SE’s accuracy, is 3.9% higher than\nthe model without transfer learning and designed from scratch.\nTherefore, transfer learning is a better option for having better\nconvergence and prediction accuracy.\n3.2.2 Data augmentation\nThe Deep CNN scratch model’s convergence and recognition\naccuracy values, both with and without data augmentation,\nare listed in Tables 1–3. The model was trained on different\naugmentation\nphases\nusing\nthe\nsame\nexperimental\nsetup,\nFrontiers in Neuroinformatics\n22\nfrontiersin.org",
+        "source_file": "data/processed/extracted_text/5f77ab577aa359b1.json",
+        "doi": "",
+        "paper_url": "https://www.semanticscholar.org/paper/f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "pdf_url": "https://www.frontiersin.org/journals/neuroinformatics/articles/10.3389/fninf.2024.1507217/pdf"
+    },
+    {
+        "chunk_id": "5f77ab577aa359b1_chunk_64",
+        "paper_id": "f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "title": "Deep CNN ResNet-18 based model with attention and transfer learning for Alzheimer's disease detection",
+        "authors": [
+            "Sofia Biju Francis",
+            "Jai Prakash Verma"
+        ],
+        "source": "semantic_scholar",
+        "published": "2025-01-07",
+        "page_number": 23,
+        "chunk_number": 64,
+        "text": "Francis and Prakash Verma\n10.3389/fninf.2024.1507217\nTABLE 6 Metrics values comparison of State_of_art_Methods.\nReferences\nPrecision\nRecall\nSpecificity\nF1-score\nAccuracy\nScratch model\nOdusami et al. (2021)\n97.8\n50.59\n75.12\nLu et al. (2022)\n67.9\n73.3\n69.1\n70.7\nDharwada et al. (2024)\n88.09\n84.22\n87.87\n84.52\n87.37\nFrancis et al. (2024)\n82\n82\n82\n82\n82\nProposed\n85.83\n88.51\n82.68\n84.68\n88.51\nPre-trained model + SE\nIllakiya et al. (2023)\n96\n89\n92\n89.17\nDharwada et al. (2024)\n88.09\n84.22\n87.87\n84.52\n89.25\nZhang et al. (2024)\n80.63\n86.32\n84.08\nProposed\n92.64\n92.57\n53.51\n92.54\n93.26\nPre-trained model without SE\nIllakiya et al. (2023)\n75.81\n76.37\n75.66\n77\nTajammal et al. (2023)\n85.4\n88.6\n84.3\n86.5\n87.5\nSuja and Raajan (2024)\n84.85\n95.38\n39.01\n89.81\n80.19\nZhang et al.",
+        "source_file": "data/processed/extracted_text/5f77ab577aa359b1.json",
+        "doi": "",
+        "paper_url": "https://www.semanticscholar.org/paper/f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "pdf_url": "https://www.frontiersin.org/journals/neuroinformatics/articles/10.3389/fninf.2024.1507217/pdf"
+    },
+    {
+        "chunk_id": "5f77ab577aa359b1_chunk_65",
+        "paper_id": "f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "title": "Deep CNN ResNet-18 based model with attention and transfer learning for Alzheimer's disease detection",
+        "authors": [
+            "Sofia Biju Francis",
+            "Jai Prakash Verma"
+        ],
+        "source": "semantic_scholar",
+        "published": "2025-01-07",
+        "page_number": 23,
+        "chunk_number": 65,
+        "text": "model without SE\nIllakiya et al. (2023)\n75.81\n76.37\n75.66\n77\nTajammal et al. (2023)\n85.4\n88.6\n84.3\n86.5\n87.5\nSuja and Raajan (2024)\n84.85\n95.38\n39.01\n89.81\n80.19\nZhang et al. (2024)\n81.52\n84.81\n82.94\nSuja and Raajan (2024)\n83.95\n92.53\n29.25\n88.04\n80.19\nTopsakal and Lenkala (2024)\n74.9\nProposed\n89.17\n88.66\n86.59\n88.59\n92.41\nBold values indicate the best monitored values for different metrics for different models.\nand the final classification accuracy for the first and second\naugmentation stages in the testing dataset was 73.78% and\n88.51%,\nrespectively.\nBefore\ndata\naugmentation,\naccuracy\nwas\n59.26%;\nThe\nabove\ntables\nillustrate\nthat\naccuracy\nincreased by about 29.25% after augmentation. Figures 12–\n16, every enhancing effect brought about by augmentation has\nbeen shown.\n3.2.3 Comparison of optimization algorithms and\ndropout\nTo anticipate the best outcome on the final classification, a\ndropout of 0.5 or 0.2 is used to the custom layer over a fully\nconnected layer in order to prevent overfitting, generalize the\ndata, and minimize validation loss. The model’s performance is\ngreatly impacted by the optimization process.",
+        "source_file": "data/processed/extracted_text/5f77ab577aa359b1.json",
+        "doi": "",
+        "paper_url": "https://www.semanticscholar.org/paper/f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "pdf_url": "https://www.frontiersin.org/journals/neuroinformatics/articles/10.3389/fninf.2024.1507217/pdf"
+    },
+    {
+        "chunk_id": "5f77ab577aa359b1_chunk_66",
+        "paper_id": "f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "title": "Deep CNN ResNet-18 based model with attention and transfer learning for Alzheimer's disease detection",
+        "authors": [
+            "Sofia Biju Francis",
+            "Jai Prakash Verma"
+        ],
+        "source": "semantic_scholar",
+        "published": "2025-01-07",
+        "page_number": 23,
+        "chunk_number": 66,
+        "text": "custom layer over a fully\nconnected layer in order to prevent overfitting, generalize the\ndata, and minimize validation loss. The model’s performance is\ngreatly impacted by the optimization process. Our study uses\nthe Adam and RMSprop optimization technique to adjust hyperparameters while changing the epoch and dropout settings. The\nresults showed that, out of all the models, the RMSprop algorithm\nmodel with a dropout of 0.5 had the highest accuracy. The\nAdam algorithm worked better in terms of convergence with a\ndropout of 0.2. Results showed that the RMSprop’s testing phase\naccuracy was 88.51% based on 150 epochs and a 0.5 dropout.\nAdam’s accuracy was 79.04% with a dropout of 0.2 under the same\nconditions.",
+        "source_file": "data/processed/extracted_text/5f77ab577aa359b1.json",
+        "doi": "",
+        "paper_url": "https://www.semanticscholar.org/paper/f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "pdf_url": "https://www.frontiersin.org/journals/neuroinformatics/articles/10.3389/fninf.2024.1507217/pdf"
+    },
+    {
+        "chunk_id": "5f77ab577aa359b1_chunk_67",
+        "paper_id": "f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "title": "Deep CNN ResNet-18 based model with attention and transfer learning for Alzheimer's disease detection",
+        "authors": [
+            "Sofia Biju Francis",
+            "Jai Prakash Verma"
+        ],
+        "source": "semantic_scholar",
+        "published": "2025-01-07",
+        "page_number": 23,
+        "chunk_number": 67,
+        "text": "of 0.2. Results showed that the RMSprop’s testing phase\naccuracy was 88.51% based on 150 epochs and a 0.5 dropout.\nAdam’s accuracy was 79.04% with a dropout of 0.2 under the same\nconditions. Using the RMSprop optimization strategy yields the\nbest training effect for the ResNet-18 pre-training model with and\nwithout SE.\nTABLE 7 Evaluation metric values of revised Model 1.\nMetrics\nModel 1\nImprovised Model 1\nPrecision\n85.83\n85.99\nRecall\n88.51\n87.05\nSpecificity\n82.68\n84.06\nF-Measure\n84.68\n85.57\nTest accuracy\n88.51\n87.05\nTrain accuracy\n99.81\n99.71\nROC values (AD, CN MCI)\n95%, 95%,93%\n97%, 95%, 95%\nTraining parameters\n9.125 million\n6.76 million\n3.2.4 Adding more SE blocks to existing model 1\nMoreover, the model was trained with two more additional\nSE blocks using the same hyperparameter configurations, resulting\nin a decrease in training parameters to 6.76 million. The relevant\narchitecture is displayed in Figure 17. The accuracy and loss curve,\nROC curve, and Confusion matrix are shown in Figure 18. The\nTable 7 displays all attained evaluation metric values. Our best\ntest accuracy was 87.05% (139th epoch), and our best training\naccuracy was 99.71% (120th epoch).",
+        "source_file": "data/processed/extracted_text/5f77ab577aa359b1.json",
+        "doi": "",
+        "paper_url": "https://www.semanticscholar.org/paper/f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "pdf_url": "https://www.frontiersin.org/journals/neuroinformatics/articles/10.3389/fninf.2024.1507217/pdf"
+    },
+    {
+        "chunk_id": "5f77ab577aa359b1_chunk_68",
+        "paper_id": "f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "title": "Deep CNN ResNet-18 based model with attention and transfer learning for Alzheimer's disease detection",
+        "authors": [
+            "Sofia Biju Francis",
+            "Jai Prakash Verma"
+        ],
+        "source": "semantic_scholar",
+        "published": "2025-01-07",
+        "page_number": 23,
+        "chunk_number": 68,
+        "text": "matrix are shown in Figure 18. The\nTable 7 displays all attained evaluation metric values. Our best\ntest accuracy was 87.05% (139th epoch), and our best training\naccuracy was 99.71% (120th epoch). The ROC values for AD, CN,\nand MCI were 97%, 95%, and 95%, respectively. Compared to the\nprevious one, the training and test accuracies and recall scores were\nmarginally lower. The results were slightly better than the previous\none in terms of precision, specificity, F1-score, and ROC.\nFrontiers in Neuroinformatics\n23\nfrontiersin.org",
+        "source_file": "data/processed/extracted_text/5f77ab577aa359b1.json",
+        "doi": "",
+        "paper_url": "https://www.semanticscholar.org/paper/f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "pdf_url": "https://www.frontiersin.org/journals/neuroinformatics/articles/10.3389/fninf.2024.1507217/pdf"
+    },
+    {
+        "chunk_id": "5f77ab577aa359b1_chunk_69",
+        "paper_id": "f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "title": "Deep CNN ResNet-18 based model with attention and transfer learning for Alzheimer's disease detection",
+        "authors": [
+            "Sofia Biju Francis",
+            "Jai Prakash Verma"
+        ],
+        "source": "semantic_scholar",
+        "published": "2025-01-07",
+        "page_number": 24,
+        "chunk_number": 69,
+        "text": "Francis and Prakash Verma\n10.3389/fninf.2024.1507217\nFIGURE 17\nImprovised Model 1 architecture.\n3.2.5 Ablation studies\nSqueeze and excitation framework, depth-wise convolution,\nand global average pooling all help the suggested framework\nreduce training parameters. To assess the effectiveness of the\nrecommended approach, we compared training accuracy, testing\naccuracy, and ROC values to different patterns of hyperparameter\nvalues, such as data augmentation, optimizer, epochs, and dropout.\nThree architectures were proposed in this section, and predictions\nare given: (1) discontinuing or putting into practice the transfer\nlearning approach, (2) abandoning or putting into practice data\nFrontiers in Neuroinformatics\n24\nfrontiersin.org",
+        "source_file": "data/processed/extracted_text/5f77ab577aa359b1.json",
+        "doi": "",
+        "paper_url": "https://www.semanticscholar.org/paper/f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "pdf_url": "https://www.frontiersin.org/journals/neuroinformatics/articles/10.3389/fninf.2024.1507217/pdf"
+    },
+    {
+        "chunk_id": "5f77ab577aa359b1_chunk_70",
+        "paper_id": "f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "title": "Deep CNN ResNet-18 based model with attention and transfer learning for Alzheimer's disease detection",
+        "authors": [
+            "Sofia Biju Francis",
+            "Jai Prakash Verma"
+        ],
+        "source": "semantic_scholar",
+        "published": "2025-01-07",
+        "page_number": 25,
+        "chunk_number": 70,
+        "text": "Francis and Prakash Verma\n10.3389/fninf.2024.1507217\nFIGURE 18\nAccuracy and Loss curve of revised Model 1. (A) Accuracy and loss. (B) ROC curve and Confusion matrix.\nTABLE 8 Criteria of bio-markers.\nBio markers range\nMMSE Score\nCN: 24–30\nMCI: 18–23\nAD: 0–17\nCDR\n0: None\n0.5: Questionable\n1: Mild\n2: Moderate\n3: Severe\naugmentation techniques, (3) including or excluding the Squeeze\nand Excitation block. Every value is documented in Tables 1–4,\n7 and from Figures 6–18 show the impact of the strategies, as\nmentioned earlier, on prediction performance. The results of F1\nmeasure, ROC values, Precision, Recall, and Specificity indicate\nthat each effort may have a substantial effect on the prediction\nperformance.\n3.3 Evaluating the models\nThis\nsection\nwill\ndemonstrate\nhow\nwell\nthe\nthree\nmodels\nwork\nusing\nreal-time\ndata\nand\nexamine\nhow\nwell\nthe\nsuggested\nmodel\nperforms\nusing\nthe\nnew\nOASIS-1 dataset.\n3.3.1 Evaluation with real-time patient data\nWe collected MRI scans in DICOM format and manually\nrecorded\ndemographic\ndata,\nincluding\nMini-Mental\nState\nExamination (MMSE) and Clinical Dementia Rating (CDR), from\neight patients in real-time.",
+        "source_file": "data/processed/extracted_text/5f77ab577aa359b1.json",
+        "doi": "",
+        "paper_url": "https://www.semanticscholar.org/paper/f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "pdf_url": "https://www.frontiersin.org/journals/neuroinformatics/articles/10.3389/fninf.2024.1507217/pdf"
+    },
+    {
+        "chunk_id": "5f77ab577aa359b1_chunk_71",
+        "paper_id": "f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "title": "Deep CNN ResNet-18 based model with attention and transfer learning for Alzheimer's disease detection",
+        "authors": [
+            "Sofia Biju Francis",
+            "Jai Prakash Verma"
+        ],
+        "source": "semantic_scholar",
+        "published": "2025-01-07",
+        "page_number": 25,
+        "chunk_number": 71,
+        "text": "collected MRI scans in DICOM format and manually\nrecorded\ndemographic\ndata,\nincluding\nMini-Mental\nState\nExamination (MMSE) and Clinical Dementia Rating (CDR), from\neight patients in real-time. Due to their low quality, two patients’\nMRIs were not compatible with the model. First, we converted\nthe DICOM files to JPG format and randomly selected six to nine\nslices. We followed the entire preprocessing procedure before\nforecasting each patient’s disease using the model and calculated\nFrontiers in Neuroinformatics\n25\nfrontiersin.org",
+        "source_file": "data/processed/extracted_text/5f77ab577aa359b1.json",
+        "doi": "",
+        "paper_url": "https://www.semanticscholar.org/paper/f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "pdf_url": "https://www.frontiersin.org/journals/neuroinformatics/articles/10.3389/fninf.2024.1507217/pdf"
+    },
+    {
+        "chunk_id": "5f77ab577aa359b1_chunk_72",
+        "paper_id": "f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "title": "Deep CNN ResNet-18 based model with attention and transfer learning for Alzheimer's disease detection",
+        "authors": [
+            "Sofia Biju Francis",
+            "Jai Prakash Verma"
+        ],
+        "source": "semantic_scholar",
+        "published": "2025-01-07",
+        "page_number": 26,
+        "chunk_number": 72,
+        "text": "Francis and Prakash Verma\n10.3389/fninf.2024.1507217\nTABLE 9 Evaluation: real-time patient data analysis.\nActual\nPredicted value\nRecall (%)\nPatients\nMMSE\nCDR\nActual\nM1\nM2\nM3\nM1\nM2\nM3\nRoselin\n21\n0.5 to 1\nMCI\nCN:0,MCI:\n6,AD:0\nCN:1,MCI:\n5,AD:0\nCN:0,MCI:\n6,AD:0\n100\n83.33\n100\nChacko\n24\n0.5 to 1\nMCI\nCN:0,MCI:\n9,AD:0\nCN:0,MCI:\n9,AD:0\nCN:0,MCI:\n9,AD:0\n100\n100\n100\nJoseph\n26\n0.5 to 1\nCN/MCI\nCN:0,MCI:\n7,AD:0\nCN:0,MCI:\n6,AD:1\nCN:0,MCI:\n5,AD:2\n100\n85.71\n62.5\nJustin\n12\n1 to 2\nAD/MCI\nCN:0,MCI:\n8,AD:0\nCN:0,MCI:\n7,AD:1\nCN:0,MCI:\n7,AD:1\n100\n100\n100\nLaila\n8\n2 to 3\nAD/MCI\nCN:0,MCI:\n7,AD:2\nCN:0,MCI:\n9,AD:0\nCN:0,MCI:\n8,AD:1\n100\n100\n100\nNarayan\n10\n2 to 3\nAD/MCI\nCN:0,MCI:\n7,AD:0\nCN:0,MCI:\n6,AD:1\nCN:0,MCI:\n7,AD:0\n100\n100\n100\nVasan\n22\n0.5 to 1\nMCI\nUnfit\nUnfit\nUnfit\nNA\nNA\nNA\nDhaya\n6\n3\nAD\nUnfit\nUnfit\nUnfit\nNA\nNA\nNA\nTABLE 10 Evaluate the model with OASIS dataset.\nPatients\nActual\nPredicted\nvalue by\nModel",
+        "source_file": "data/processed/extracted_text/5f77ab577aa359b1.json",
+        "doi": "",
+        "paper_url": "https://www.semanticscholar.org/paper/f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "pdf_url": "https://www.frontiersin.org/journals/neuroinformatics/articles/10.3389/fninf.2024.1507217/pdf"
+    },
+    {
+        "chunk_id": "5f77ab577aa359b1_chunk_73",
+        "paper_id": "f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "title": "Deep CNN ResNet-18 based model with attention and transfer learning for Alzheimer's disease detection",
+        "authors": [
+            "Sofia Biju Francis",
+            "Jai Prakash Verma"
+        ],
+        "source": "semantic_scholar",
+        "published": "2025-01-07",
+        "page_number": 26,
+        "chunk_number": 73,
+        "text": "to 1\nMCI\nUnfit\nUnfit\nUnfit\nNA\nNA\nNA\nDhaya\n6\n3\nAD\nUnfit\nUnfit\nUnfit\nNA\nNA\nNA\nTABLE 10 Evaluate the model with OASIS dataset.\nPatients\nActual\nPredicted\nvalue by\nModel 1\nSubject-ID\nMMSE\nCDR\nActual\nProposed\nmodel\nOAS1_0018_MR1\n28\n0\nCN\nMCI\nOAS1_0056_MR1\n15\n1\nMCI/AD\nMCI\nOAS1_0098_MR1\n18\n0.5\nAD\nAD\nOAS1_0179_MR1\n21\n0.5\nMCI\nMCI\nOAS1_0184_MR1\n16\n1\nAD\nAD\nOAS1_0185_MR1\n17\n1\nMCI/AD\nMCI\nOAS1_0308_MR1\n15\n2\nAD\nAD\nOAS1_0351_MR1\n15\n2\nAD\nAD\nOAS1_0382_MR1\n15\n1\nAD\nAD\nOAS1_0430_MR1\n17\n1\nMCI/AD\nMCI\nthe recall for each model. The suggested Model 1 outperformed\nthe other two models with a score of 100%. Model 2 gave two\npatients 83.33% and 85.71%. Model 3 yielded a result of 62.5%\nfor one patient. The biomarker threshold values and a thorough\nexamination of real-time data using all three models are displayed\nin Tables 8, 9, respectively.\n3.3.2 Evaluation with OASIS-1 dataset\nWe randomly selected data from ten patients using the OASIS1 dataset, including MRI sagittal GIF images and demographic\ninformation from CSV files. The GIF images were converted to JPG\nformat and pre-processed.",
+        "source_file": "data/processed/extracted_text/5f77ab577aa359b1.json",
+        "doi": "",
+        "paper_url": "https://www.semanticscholar.org/paper/f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "pdf_url": "https://www.frontiersin.org/journals/neuroinformatics/articles/10.3389/fninf.2024.1507217/pdf"
+    },
+    {
+        "chunk_id": "5f77ab577aa359b1_chunk_74",
+        "paper_id": "f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "title": "Deep CNN ResNet-18 based model with attention and transfer learning for Alzheimer's disease detection",
+        "authors": [
+            "Sofia Biju Francis",
+            "Jai Prakash Verma"
+        ],
+        "source": "semantic_scholar",
+        "published": "2025-01-07",
+        "page_number": 26,
+        "chunk_number": 74,
+        "text": "selected data from ten patients using the OASIS1 dataset, including MRI sagittal GIF images and demographic\ninformation from CSV files. The GIF images were converted to JPG\nformat and pre-processed. Our model achieved a recall of 90%, with\nresults displayed in Table 10.\n4 Conclusion\nTo sum up, we combined the SE block and reduced parameters\nusing Depth-wise convolution to build a Deep CNN_ResNet-18based model from the ground up. The network’s feature extraction\nand classification sections are integrated after the SE module. The\nglobal average pool is selected by the model in order to reduce the\noverall number of model parameters and speed up convergence.\nA total of 25,357 MRI brain scans were used in 150 training\nepochs after data augmentation. The scratch model’s accuracy\nduring testing, employing depth-wise convolution and SE, reached\n88.51%, with ROC values of AD:95, CN:95, and MCI:93, according\nto experimental results.\nThe scratch model with SE has shown the best testing\naccuracy with RMSprop as an optimizer and a dropout of\n0.5.",
+        "source_file": "data/processed/extracted_text/5f77ab577aa359b1.json",
+        "doi": "",
+        "paper_url": "https://www.semanticscholar.org/paper/f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "pdf_url": "https://www.frontiersin.org/journals/neuroinformatics/articles/10.3389/fninf.2024.1507217/pdf"
+    },
+    {
+        "chunk_id": "5f77ab577aa359b1_chunk_75",
+        "paper_id": "f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "title": "Deep CNN ResNet-18 based model with attention and transfer learning for Alzheimer's disease detection",
+        "authors": [
+            "Sofia Biju Francis",
+            "Jai Prakash Verma"
+        ],
+        "source": "semantic_scholar",
+        "published": "2025-01-07",
+        "page_number": 26,
+        "chunk_number": 75,
+        "text": "with ROC values of AD:95, CN:95, and MCI:93, according\nto experimental results.\nThe scratch model with SE has shown the best testing\naccuracy with RMSprop as an optimizer and a dropout of\n0.5. Using the transfer learning approach, one can get faster\nconvergence, higher accuracy, more efficient discrimination across\nthe dataset’s numerous classes, and reduced training time compared\nto designing and training the model from scratch. Among all\nthree models, the pre-trained model ResNet-18 with SE’s accuracy\nis 4.75% higher than the scratch model on the test dataset. In\ncontrast, the other pre-trained model, ResNet-18-without SE’s\naccuracy, is 3.9% higher than the scratch model with SE and\ndepth convolution. Regarding ROC values, the pre-training model\nwith SE shows 3 to 4 points more than the scratch model\nand 4 to 2 points more than the pre-training model without\nSE. The suggested approach performed better than the others,\nas shown by the overall comparison with the state-of-the-art\ntechniques. The results of this study show that methodologies\nbased on deep learning can greatly aid in the identification of\nFrontiers in Neuroinformatics\n26\nfrontiersin.org",
+        "source_file": "data/processed/extracted_text/5f77ab577aa359b1.json",
+        "doi": "",
+        "paper_url": "https://www.semanticscholar.org/paper/f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "pdf_url": "https://www.frontiersin.org/journals/neuroinformatics/articles/10.3389/fninf.2024.1507217/pdf"
+    },
+    {
+        "chunk_id": "5f77ab577aa359b1_chunk_76",
+        "paper_id": "f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "title": "Deep CNN ResNet-18 based model with attention and transfer learning for Alzheimer's disease detection",
+        "authors": [
+            "Sofia Biju Francis",
+            "Jai Prakash Verma"
+        ],
+        "source": "semantic_scholar",
+        "published": "2025-01-07",
+        "page_number": 27,
+        "chunk_number": 76,
+        "text": "Francis and Prakash Verma\n10.3389/fninf.2024.1507217\nneurodegenerative diseases. Using real-time patient data to evaluate\nall the models suggests that the proposed one could aid in\ndifferentiating between the various stages of AD diagnosis. The\nsuggested model fared better when tested using the OASIS dataset\nas well.\n5 Limitation and future scope\nInequality of class was one of our main issues. Each of the\nthree classes was in the 1:1.47:2.33 ratio. Additionally, we had\nproblems with the regularity, shape, and intensity variation of a\nsignificant number of the MRI images from the ADNI dataset.\nThe center slices were the only ones deemed relevant. Realtime data collection was highly challenging to ethical reasons.\nDoctors’ assistance is still needed to confirm the forecast. Using\na series of psychological and mental tests and activities, clinicians\nmanually determine the patients’ MMSE and CDR ratings. Each\nclinician has a different set of results. Therefore, it was necessary\nto establish certain assumptions in order to test our model against\nthese results. When more SE blocks were added in the hopes of\nimproving precision, the opposite occurred.",
+        "source_file": "data/processed/extracted_text/5f77ab577aa359b1.json",
+        "doi": "",
+        "paper_url": "https://www.semanticscholar.org/paper/f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "pdf_url": "https://www.frontiersin.org/journals/neuroinformatics/articles/10.3389/fninf.2024.1507217/pdf"
+    },
+    {
+        "chunk_id": "5f77ab577aa359b1_chunk_77",
+        "paper_id": "f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "title": "Deep CNN ResNet-18 based model with attention and transfer learning for Alzheimer's disease detection",
+        "authors": [
+            "Sofia Biju Francis",
+            "Jai Prakash Verma"
+        ],
+        "source": "semantic_scholar",
+        "published": "2025-01-07",
+        "page_number": 27,
+        "chunk_number": 77,
+        "text": "it was necessary\nto establish certain assumptions in order to test our model against\nthese results. When more SE blocks were added in the hopes of\nimproving precision, the opposite occurred. The performance was\ndeteriorating as increasing the epochs beyond 150. There were\nmore variance in prediction performance and metric values among\ndifferent optimizers for a particular combination of dropout and\nepochs. Owing to the intricacy of medical data, the entire training\nprocess required a significant amount of processing power to\nproduce consistent results.\nCurrently, the suggested scratch model solely employs MRI. In\nthe future, additional imaging modalities, such as sMRI, fMRI, rsfMRI images, PET, etc., can be acquired and tested in the model.\nWe can balance the dataset using a few sophisticated strategies\nto increase accuracy. We can offer various training and testing\noptions, including using the ADNI for training and additional\ndomain datasets, such as AIBL, for testing.",
+        "source_file": "data/processed/extracted_text/5f77ab577aa359b1.json",
+        "doi": "",
+        "paper_url": "https://www.semanticscholar.org/paper/f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "pdf_url": "https://www.frontiersin.org/journals/neuroinformatics/articles/10.3389/fninf.2024.1507217/pdf"
+    },
+    {
+        "chunk_id": "5f77ab577aa359b1_chunk_78",
+        "paper_id": "f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "title": "Deep CNN ResNet-18 based model with attention and transfer learning for Alzheimer's disease detection",
+        "authors": [
+            "Sofia Biju Francis",
+            "Jai Prakash Verma"
+        ],
+        "source": "semantic_scholar",
+        "published": "2025-01-07",
+        "page_number": 27,
+        "chunk_number": 78,
+        "text": "few sophisticated strategies\nto increase accuracy. We can offer various training and testing\noptions, including using the ADNI for training and additional\ndomain datasets, such as AIBL, for testing. Other advanced\nimage processing techniques can be used to enhance accuracy,\nand optimized strategies for the pertinent feature selection can\nhelp improve the efficiency of feature extraction and raise test\naccuracy overall.\nA few researchers have developed a graph-based network and\nadded hypergraphs to the generative model to fuse multimodal\ndata (rs-fMRI and DTI) to more accurately and robustly predict\nbrain connection abnormalities at different stages of AD. In the\nfuture, we might concentrate on a method that uses graphs to\nsolve the same problem. Additionally, we may think about applying\neXplainable Artificial Intelligence (XAI) techniques to make sense\nof the interpretation of the local and global properties that our\nmodel’s SE block learns.",
+        "source_file": "data/processed/extracted_text/5f77ab577aa359b1.json",
+        "doi": "",
+        "paper_url": "https://www.semanticscholar.org/paper/f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "pdf_url": "https://www.frontiersin.org/journals/neuroinformatics/articles/10.3389/fninf.2024.1507217/pdf"
+    },
+    {
+        "chunk_id": "5f77ab577aa359b1_chunk_79",
+        "paper_id": "f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "title": "Deep CNN ResNet-18 based model with attention and transfer learning for Alzheimer's disease detection",
+        "authors": [
+            "Sofia Biju Francis",
+            "Jai Prakash Verma"
+        ],
+        "source": "semantic_scholar",
+        "published": "2025-01-07",
+        "page_number": 27,
+        "chunk_number": 79,
+        "text": "Additionally, we may think about applying\neXplainable Artificial Intelligence (XAI) techniques to make sense\nof the interpretation of the local and global properties that our\nmodel’s SE block learns. This would provide valuable information\non how the model influences AD classification and advance our\nunderstanding of its decision-making process (Hazarika et al.,\n2022a).\nData availability statement\nThe original contributions presented in the study are included\nin the article/supplementary material, further inquiries can be\ndirected to the corresponding authors.\nEthics statement\nThe studies involving humans were approved by Government\nMedical College, Radiology Services, Kottayam, Kerala. The studies\nwere conducted in accordance with the local legislation and\ninstitutional requirements. The participants provided their written\ninformed consent to participate in this study.",
+        "source_file": "data/processed/extracted_text/5f77ab577aa359b1.json",
+        "doi": "",
+        "paper_url": "https://www.semanticscholar.org/paper/f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "pdf_url": "https://www.frontiersin.org/journals/neuroinformatics/articles/10.3389/fninf.2024.1507217/pdf"
+    },
+    {
+        "chunk_id": "5f77ab577aa359b1_chunk_80",
+        "paper_id": "f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "title": "Deep CNN ResNet-18 based model with attention and transfer learning for Alzheimer's disease detection",
+        "authors": [
+            "Sofia Biju Francis",
+            "Jai Prakash Verma"
+        ],
+        "source": "semantic_scholar",
+        "published": "2025-01-07",
+        "page_number": 27,
+        "chunk_number": 80,
+        "text": "Kerala. The studies\nwere conducted in accordance with the local legislation and\ninstitutional requirements. The participants provided their written\ninformed consent to participate in this study. Written informed\nconsent was obtained from the individual(s) for the publication of\nany potentially identifiable images or data included in this article.\nAuthor contributions\nSF:\nConceptualization,\nData\ncuration,\nFormal\nanalysis,\nInvestigation, Methodology, Software, Validation, Visualization,\nWriting – original draft, Writing – review & editing. JP: Project\nadministration, Supervision, Writing – review & editing.\nFunding\nThe author(s) declare that no financial support was received for\nthe research, authorship, and/or publication of this article.\nConflict of interest\nThe authors declare that the research was conducted without\nany commercial or financial relationships that could be construed\nas a potential conflict of interest.\nGenerative AI statement\nThe author(s) declare that no Gen AI was used in the creation\nof this manuscript.\nPublisher’s note\nAll claims expressed in this article are solely those of the\nauthors and do not necessarily represent those of their affiliated\norganizations,",
+        "source_file": "data/processed/extracted_text/5f77ab577aa359b1.json",
+        "doi": "",
+        "paper_url": "https://www.semanticscholar.org/paper/f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "pdf_url": "https://www.frontiersin.org/journals/neuroinformatics/articles/10.3389/fninf.2024.1507217/pdf"
+    },
+    {
+        "chunk_id": "5f77ab577aa359b1_chunk_81",
+        "paper_id": "f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "title": "Deep CNN ResNet-18 based model with attention and transfer learning for Alzheimer's disease detection",
+        "authors": [
+            "Sofia Biju Francis",
+            "Jai Prakash Verma"
+        ],
+        "source": "semantic_scholar",
+        "published": "2025-01-07",
+        "page_number": 27,
+        "chunk_number": 81,
+        "text": "in the creation\nof this manuscript.\nPublisher’s note\nAll claims expressed in this article are solely those of the\nauthors and do not necessarily represent those of their affiliated\norganizations, or those of the publisher, the editors and the\nreviewers. Any product that may be evaluated in this article, or\nclaim that may be made by its manufacturer, is not guaranteed or\nendorsed by the publisher.\nReferences\nAlazwari, S., Maashi, M., Alsamri, J., Alamgeer, M., Ebad, S. A., Alotaibi, S.\nS., et al. (2024). Improving laryngeal cancer detection using chaotic metaheuristics\nintegration with squeeze-and-excitation resnet model. Health Inf. Sci. Syst. 12:38.\ndoi: 10.1007/s13755-024-00296-5\nFrontiers in Neuroinformatics\n27\nfrontiersin.org",
+        "source_file": "data/processed/extracted_text/5f77ab577aa359b1.json",
+        "doi": "",
+        "paper_url": "https://www.semanticscholar.org/paper/f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "pdf_url": "https://www.frontiersin.org/journals/neuroinformatics/articles/10.3389/fninf.2024.1507217/pdf"
+    },
+    {
+        "chunk_id": "5f77ab577aa359b1_chunk_82",
+        "paper_id": "f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "title": "Deep CNN ResNet-18 based model with attention and transfer learning for Alzheimer's disease detection",
+        "authors": [
+            "Sofia Biju Francis",
+            "Jai Prakash Verma"
+        ],
+        "source": "semantic_scholar",
+        "published": "2025-01-07",
+        "page_number": 28,
+        "chunk_number": 82,
+        "text": "Francis and Prakash Verma\n10.3389/fninf.2024.1507217\nDharwada, S., Tembhurne, J., and Diwan, T. (2024). An optimal weighted ensemble\nof 3d cnns for early diagnosis of Alzheimer’s disease. SN Comput. Sci. 5:252.\ndoi: 10.1007/s42979-023-02581-8\nFrancis, A., Pandian, S., Sagayam, K. M., Dang, L., Anitha, J., Dinh, L.,\net al. (2024). Early detection of Alzheimer’s disease using squeeze and excitation\nnetwork with local binary pattern descriptor. Pattern Anal. Appl. 27, 1–13.\ndoi: 10.1007/s10044-024-01280-1\nFung, Y. R., Guan, Z., Kumar, R., Wu, J. Y., and Fiterau, M. (2019).\nAlzheimer’s disease brain MRI classification: challenges and insights. arXiv [Preprint].\narXiv:1906.04231. doi: 10.48550/arXiv:1906.04231\nGao, M., Song, P., Wang, F., Liu, J., Mandelis, A., Qi, D., et al. (2021). A novel deep\nconvolutional neural network based on resnet-18 and transfer learning for detection of\nwood knot defects. J. Sens. 2021:4428964. doi: 10.1155/2021/4428964\nHasanah, S. A., Pravitasari, A. A., Abdullah, A. S., Yulita, I. N., and Asnawi, M. H.\n(2023). A deep learning review of resnet architecture for lung disease identification in\nCXR image. Appl. Sci. 13:13111.",
+        "source_file": "data/processed/extracted_text/5f77ab577aa359b1.json",
+        "doi": "",
+        "paper_url": "https://www.semanticscholar.org/paper/f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "pdf_url": "https://www.frontiersin.org/journals/neuroinformatics/articles/10.3389/fninf.2024.1507217/pdf"
+    },
+    {
+        "chunk_id": "5f77ab577aa359b1_chunk_83",
+        "paper_id": "f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "title": "Deep CNN ResNet-18 based model with attention and transfer learning for Alzheimer's disease detection",
+        "authors": [
+            "Sofia Biju Francis",
+            "Jai Prakash Verma"
+        ],
+        "source": "semantic_scholar",
+        "published": "2025-01-07",
+        "page_number": 28,
+        "chunk_number": 83,
+        "text": "S. A., Pravitasari, A. A., Abdullah, A. S., Yulita, I. N., and Asnawi, M. H.\n(2023). A deep learning review of resnet architecture for lung disease identification in\nCXR image. Appl. Sci. 13:13111. doi: 10.3390/app132413111\nHazarika, R. A., Kandar, D., and Maji, A. K. (2022a). A deep convolutional\nneural networks based approach for Alzheimer’s disease and mild cognitive\nimpairment classification using brain images. IEEE Access 10, 99066–99076.\ndoi: 10.1109/ACCESS.2022.3206389\nHazarika, R. A., Kandar, D., and Maji, A. K. (2022b). An experimental analysis\nof different deep learning based models for Alzheimer’s disease classification using\nbrain magnetic resonance images. J. King Saud Univ.-Comput. Inf. Sci. 34, 8576–8598.\ndoi: 10.1016/j.jksuci.2021.09.003\nHazarika, R. A., Maji, A. K., Kandar, D., Jasinska, E., Krejci, P., Leonowicz,\nZ., et al. (2023). An approach for classification of Alzheimer’s disease using deep\nneural network and brain magnetic resonance imaging (MRI). Electronics 12:676.\ndoi: 10.3390/electronics12030676\nHu, J., Shen, L., and Sun, G. (2018).",
+        "source_file": "data/processed/extracted_text/5f77ab577aa359b1.json",
+        "doi": "",
+        "paper_url": "https://www.semanticscholar.org/paper/f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "pdf_url": "https://www.frontiersin.org/journals/neuroinformatics/articles/10.3389/fninf.2024.1507217/pdf"
+    },
+    {
+        "chunk_id": "5f77ab577aa359b1_chunk_84",
+        "paper_id": "f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "title": "Deep CNN ResNet-18 based model with attention and transfer learning for Alzheimer's disease detection",
+        "authors": [
+            "Sofia Biju Francis",
+            "Jai Prakash Verma"
+        ],
+        "source": "semantic_scholar",
+        "published": "2025-01-07",
+        "page_number": 28,
+        "chunk_number": 84,
+        "text": "classification of Alzheimer’s disease using deep\nneural network and brain magnetic resonance imaging (MRI). Electronics 12:676.\ndoi: 10.3390/electronics12030676\nHu, J., Shen, L., and Sun, G. (2018). “Squeeze-and-excitation networks,\" in\nProceedings of the IEEE conference on computer vision and pattern recognition (Salt Lake\nCity: IEEE), 7132–7141. doi: 10.1109/CVPR.2018.00745\nIllakiya, T., Ramamurthy, K., Siddharth, M., Mishra, R., and Udainiya,\nA. (2023). Ahanet: Adaptive hybrid attention network for Alzheimer’s disease\nclassification using brain magnetic resonance imaging. Bioengineering 10:714.\ndoi: 10.3390/bioengineering10060714\nKhalid, A., Senan, E. M., Al-Wagih, K., Ali Al-Azzam, M. M., and Alkhraisha, Z. M.\n(2023). Automatic analysis of MRI images for early prediction of Alzheimer’s disease\nstages based on hybrid features of CNN and handcrafted features. Diagnostics 13:1654.\ndoi: 10.3390/diagnostics13091654\nKhan, R., Akbar, S., Mehmood, A., Shahid, F., Munir, K., Ilyas, N., et al. (2023).\nA transfer learning approach for multiclass classification of Alzheimer’s disease using\nMRI images. Front. Neurosci. 16:1050777. doi: 10.3389/fnins.2022.1050777\nKhan, R., Qaisar, Z.",
+        "source_file": "data/processed/extracted_text/5f77ab577aa359b1.json",
+        "doi": "",
+        "paper_url": "https://www.semanticscholar.org/paper/f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "pdf_url": "https://www.frontiersin.org/journals/neuroinformatics/articles/10.3389/fninf.2024.1507217/pdf"
+    },
+    {
+        "chunk_id": "5f77ab577aa359b1_chunk_85",
+        "paper_id": "f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "title": "Deep CNN ResNet-18 based model with attention and transfer learning for Alzheimer's disease detection",
+        "authors": [
+            "Sofia Biju Francis",
+            "Jai Prakash Verma"
+        ],
+        "source": "semantic_scholar",
+        "published": "2025-01-07",
+        "page_number": 28,
+        "chunk_number": 85,
+        "text": "et al. (2023).\nA transfer learning approach for multiclass classification of Alzheimer’s disease using\nMRI images. Front. Neurosci. 16:1050777. doi: 10.3389/fnins.2022.1050777\nKhan, R., Qaisar, Z. H., Mehmood, A., Ali, G., Alkhalifah, T., Alturise, F., et al.\n(2022). A practical multiclass classification network for the diagnosis of Alzheimer’s\ndisease. Appl. Sci. 12:6507. doi: 10.3390/app12136507\nKorolev, I. O. (2014). Alzheimer’s disease: a clinical and basic science review. Med.\nStudent Res. J. 4, 24–33.\nLu, P., Hu, L., Zhang, N., Liang, H., Tian, T., Lu, L., et al. (2022). A two-stage model\nfor predicting mild cognitive impairment to Alzheimer’s disease conversion. Front.\nAging Neurosci. 14:826622. doi: 10.3389/fnagi.2022.826622\nOdusami, M., Maskeli ̄unas, R., Damaševiˇcius, R., and Krilaviˇcius, T. (2021).\nAnalysis of features of Alzheimer’s disease: Detection of early stage from functional\nbrain changes in magnetic resonance images using a finetuned resnet18 network.\nDiagnostics, 11, 1071. doi: 10.3390/diagnostics11061071\nPan, J., Zuo, Q., Wang, B., Chen, C. P., Lei, B., Wang, S., et al.",
+        "source_file": "data/processed/extracted_text/5f77ab577aa359b1.json",
+        "doi": "",
+        "paper_url": "https://www.semanticscholar.org/paper/f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "pdf_url": "https://www.frontiersin.org/journals/neuroinformatics/articles/10.3389/fninf.2024.1507217/pdf"
+    },
+    {
+        "chunk_id": "5f77ab577aa359b1_chunk_86",
+        "paper_id": "f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "title": "Deep CNN ResNet-18 based model with attention and transfer learning for Alzheimer's disease detection",
+        "authors": [
+            "Sofia Biju Francis",
+            "Jai Prakash Verma"
+        ],
+        "source": "semantic_scholar",
+        "published": "2025-01-07",
+        "page_number": 28,
+        "chunk_number": 86,
+        "text": "changes in magnetic resonance images using a finetuned resnet18 network.\nDiagnostics, 11, 1071. doi: 10.3390/diagnostics11061071\nPan, J., Zuo, Q., Wang, B., Chen, C. P., Lei, B., Wang, S., et al. (2024).\nDecgan:\ndecoupling\ngenerative\nadversarial\nnetwork\nfor\ndetecting\nabnormal\nneural circuits in Alzheimer’s disease. IEEE Trans. Artif. Intell. 5, 5050–5063\ndoi: 10.1109/TAI.2024.3416420\nSaleh, A. W., Gupta, G., Khan, S. B., Alkhaldi, N. A., and Verma, A.\n(2023). An Alzheimer’s disease classification model using transfer learning densenet\nwith embedded healthcare decision support system. Decis. Anal. J. 9:100348.\ndoi: 10.1016/j.dajour.2023.100348\nSuja, G., and Raajan, P. (2024). Early diagnosis of Alzheimer’s disease with\ngenerative adversarial networks. ICTACT J. Image Video Process. 14, 3187–3193.\ndoi: 10.21917/ijivp.2024.0454\nTajammal, T., Khurshid, S. K., Jaleel, A., Qayyum Wahla, S., and Ziar, R. A. (2023).\nDeep learning-based ensembling technique to classify Alzheimer’s disease stages using\nfunctional MRI. J. Healthc. Eng. 2023:6961346. doi: 10.1155/2023/6961346\nTopsakal, O., and Lenkala, S. (2024).",
+        "source_file": "data/processed/extracted_text/5f77ab577aa359b1.json",
+        "doi": "",
+        "paper_url": "https://www.semanticscholar.org/paper/f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "pdf_url": "https://www.frontiersin.org/journals/neuroinformatics/articles/10.3389/fninf.2024.1507217/pdf"
+    },
+    {
+        "chunk_id": "5f77ab577aa359b1_chunk_87",
+        "paper_id": "f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "title": "Deep CNN ResNet-18 based model with attention and transfer learning for Alzheimer's disease detection",
+        "authors": [
+            "Sofia Biju Francis",
+            "Jai Prakash Verma"
+        ],
+        "source": "semantic_scholar",
+        "published": "2025-01-07",
+        "page_number": 28,
+        "chunk_number": 87,
+        "text": "learning-based ensembling technique to classify Alzheimer’s disease stages using\nfunctional MRI. J. Healthc. Eng. 2023:6961346. doi: 10.1155/2023/6961346\nTopsakal, O., and Lenkala, S. (2024). Enhancing alzheimer’s disease detection\nthrough ensemble learning of fine-tuned pre-trained neural networks. Electronics\n13:3452. doi: 10.3390/electronics13173452\nYang, Y., Sun, L., Mao, X., and Zhao, M. (2022). Data augmentation based on\ngenerative adversarial network with mixed attention mechanism. Electronics 11:1718.\ndoi: 10.3390/electronics11111718\nZhang, X., Gao, L., Wang, Z., Yu, Y., Zhang, Y., Hong, J., et al. (2024). Improved\nneural network with multi-task learning for Alzheimer’s disease classification. Heliyon\n10:e26405. doi: 10.1016/j.heliyon.2024.e26405\nZhou, Z., Yu, L., Tian, S., and Xiao, G. (2023). Diagnosis of Alzheimer’s\ndisease\nusing\n2d\ndynamic\nmagnetic\nresonance\nimaging.\nJ.\nAmbient\nIntell.\nHumaniz.\nComput.\n14,\n10153–10163.\ndoi:\n10.1007/s12652-021-0\n3678-9\nZong, Y., Zuo, Q., Ng, M. K.-P., Lei, B., and Wang, S. (2024). A new\nbrain network construction paradigm for brain disorder via diffusion-based graph\ncontrastive learning. IEEE Trans. Pattern Anal. Mach. Intell.",
+        "source_file": "data/processed/extracted_text/5f77ab577aa359b1.json",
+        "doi": "",
+        "paper_url": "https://www.semanticscholar.org/paper/f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "pdf_url": "https://www.frontiersin.org/journals/neuroinformatics/articles/10.3389/fninf.2024.1507217/pdf"
+    },
+    {
+        "chunk_id": "5f77ab577aa359b1_chunk_88",
+        "paper_id": "f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "title": "Deep CNN ResNet-18 based model with attention and transfer learning for Alzheimer's disease detection",
+        "authors": [
+            "Sofia Biju Francis",
+            "Jai Prakash Verma"
+        ],
+        "source": "semantic_scholar",
+        "published": "2025-01-07",
+        "page_number": 28,
+        "chunk_number": 88,
+        "text": "Q., Ng, M. K.-P., Lei, B., and Wang, S. (2024). A new\nbrain network construction paradigm for brain disorder via diffusion-based graph\ncontrastive learning. IEEE Trans. Pattern Anal. Mach. Intell. 46, 10389–10403\ndoi: 10.1109/TPAMI.2024.3442811\nZuo, Q., Wu, H., Chen, C. P., Lei, B., and Wang, S. (2024). Prior-guided\nadversarial learning with hypergraph for predicting abnormal connections in\nAlzheimer’s disease. IEEE Trans. Cybern. 54, 3652–3665. doi: 10.1109/TCYB.2023.33\n44641\nZuo,\nQ.,\nZhong,\nN.,\nPan,\nY.,\nWu,\nH.,\nLei,\nB.,\nWang,\nS.,\net\nal.\n(2023).\nBrain\nstructure-function\nfusing\nrepresentation\nlearning\nusing\nadversarial\ndecomposed-VAE\nfor\nanalyzing\nMCI.\nIEEE\nTrans.\nNeural\nSyst.\nRehabil.\nEng.\n31,\n4017–4028.\ndoi:\n10.1109/TNSRE.2023.33\n23432\nFrontiers in Neuroinformatics\n28\nfrontiersin.org",
+        "source_file": "data/processed/extracted_text/5f77ab577aa359b1.json",
+        "doi": "",
+        "paper_url": "https://www.semanticscholar.org/paper/f7b0b450ec785b317b56aa44ff58d3fb5b656d33",
+        "pdf_url": "https://www.frontiersin.org/journals/neuroinformatics/articles/10.3389/fninf.2024.1507217/pdf"
+    }
+]
