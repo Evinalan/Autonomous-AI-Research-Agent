@@ -1,4 +1,3 @@
-
 # ==============================
 # Python cache
 # ==============================
@@ -23,6 +22,7 @@ env/
 !.env.example
 
 .streamlit/secrets.toml
+.streamlit/credentials.toml
 
 # ==============================
 # IDE and editor files
@@ -33,13 +33,11 @@ env/
 # ==============================
 # Streamlit
 # ==============================
-.streamlit/credentials.toml
+.streamlit/cache/
 
 # ==============================
-# Generated research data
+# Generated research history
 # ==============================
-data/raw/
-data/processed/
 data/research_history/
 
 # ==============================
@@ -59,7 +57,7 @@ tmp/
 # ==============================
 # Local AI models
 # ==============================
-*.gguf/
+*.gguf
 
 # ==============================
 # OS files
