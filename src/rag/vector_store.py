@@ -7,9 +7,8 @@ from pathlib import Path
 
 
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
-
 VECTOR_FOLDER = (
-    PROJECT_ROOT / "data" / "processed" / "vector_store"
+    PROJECT_ROOT / "data" / "vector_store"
 )
 
 INDEX_PATH = VECTOR_FOLDER / "research.index"
