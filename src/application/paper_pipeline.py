@@ -4,7 +4,8 @@ from src.api.paper_search import search_all_papers
 from src.utils.paper_utils import (
     normalize_paper,
     remove_duplicates,
-    sort_papers_by_date
+    sort_papers_by_date,
+    rank_papers_by_relevance
 )
 
 from src.utils.paper_storage import save_papers
@@ -66,15 +67,33 @@ def prepare_research_database(topic, max_papers=5):
     ]
 
     # STEP 3: Remove duplicate papers
-
     print("\nSTEP 3: Removing duplicate papers...")
 
     papers = remove_duplicates(papers)
 
-    papers = sort_papers_by_date(papers)
-
     print("Unique papers:", len(papers))
 
+
+    print("\nSTEP 4: Ranking papers by relevance...")
+
+    papers = rank_papers_by_relevance(
+    papers,
+    topic
+    )
+
+    for paper in papers[:5]:
+
+     print(
+        "Relevance:",
+        paper.get("relevance_score", 0),
+        "| Title:",
+        paper.get("title")
+     )
+
+
+    print("\nSTEP 5: Sorting papers by publication date...")
+
+    papers = sort_papers_by_date(papers)
     # Save paper metadata
 
     save_papers(papers)

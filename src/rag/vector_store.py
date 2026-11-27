@@ -265,3 +265,98 @@ def search_chunks_in_memory(
         results.append(result)
 
     return results
+
+def search_diverse_chunks(
+    query_embedding,
+    index,
+    chunks,
+    top_k=5,
+    candidates_multiplier=5,
+    max_chunks_per_paper=2
+):
+    """
+    Retrieve semantically relevant chunks while limiting
+    how many chunks come from the same research paper.
+
+    1. Retrieve extra candidate chunks.
+    2. Sort candidates by similarity.
+    3. Limit repeated chunks from the same paper.
+    4. Return the best diversified results.
+    """
+
+    if top_k <= 0:
+        raise ValueError("top_k must be greater than zero.")
+
+    if candidates_multiplier <= 0:
+        raise ValueError(
+            "candidates_multiplier must be greater than zero."
+        )
+
+    if max_chunks_per_paper <= 0:
+        raise ValueError(
+            "max_chunks_per_paper must be greater than zero."
+        )
+
+    if not chunks:
+        return []
+
+    # Retrieve more candidates than the requested result count.
+    candidate_count = min(
+        top_k * candidates_multiplier,
+        index.ntotal
+    )
+
+    candidates = search_chunks_in_memory(
+        query_embedding=query_embedding,
+        index=index,
+        chunks=chunks,
+        top_k=candidate_count
+    )
+
+    # Sort by semantic similarity.
+    candidates.sort(
+        key=lambda chunk: chunk.get(
+            "similarity_score", 0
+        ),
+        reverse=True
+    )
+
+    selected_chunks = []
+    paper_counts = {}
+
+    for chunk in candidates:
+
+        # Use paper ID to identify the source paper.
+        paper_id = (
+            chunk.get("paper_id")
+            or chunk.get("title")
+            or "unknown"
+        )
+
+        current_count = paper_counts.get(
+            paper_id, 0
+        )
+
+        # Enforce the per-paper limit.
+        if current_count >= max_chunks_per_paper:
+            continue
+
+        selected_chunks.append(chunk)
+
+        paper_counts[paper_id] = current_count + 1
+
+        if len(selected_chunks) >= top_k:
+            break
+
+    print("\nDiversified retrieval completed.")
+
+    print("Requested chunks:", top_k)
+
+    print("Retrieved chunks:", len(selected_chunks))
+
+    print(
+        "Unique papers:",
+        len(paper_counts)
+    )
+
+    return selected_chunks

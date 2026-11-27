@@ -49,15 +49,23 @@ def search_openalex(query, max_results=5):
     try:
 
         params = {
-            "search": query.strip(),
-            "per_page": max_results,
-            "select": (
-                "id,doi,title,publication_date,"
-                "authorships,abstract_inverted_index,"
-                "best_oa_location,primary_location,"
-                "open_access,cited_by_count"
-            )
-        }
+    "search": query.strip(),
+
+    # Retrieve scholarly articles, conference papers,
+    # preprints and review articles.
+    "filter": (
+        "type:article|conference-paper|preprint|review"
+    ),
+
+    "per_page": max_results,
+
+    "select": (
+        "id,doi,title,publication_date,"
+        "authorships,abstract_inverted_index,"
+        "best_oa_location,primary_location,"
+        "open_access,cited_by_count,type"
+    )
+}
 
         # Add the API key only if one is configured.
         api_key = os.getenv("OPENALEX_API_KEY")
@@ -143,7 +151,8 @@ def search_openalex(query, max_results=5):
                 "paper_url": paper_url,
                 "citation_count": work.get(
                     "cited_by_count", 0
-                )
+                ),
+                "publication_type": work.get("type", "")
             })
 
         print("OpenAlex papers found:", len(papers))

@@ -3,8 +3,10 @@ from src.rag.embedding_generator import generate_query_embedding
 
 from src.rag.vector_store import (
     search_similar_chunks,
-    search_chunks_in_memory
+    search_chunks_in_memory,
+    search_diverse_chunks
 )
+
 
 
 def retrieve_relevant_chunks(
@@ -14,13 +16,10 @@ def retrieve_relevant_chunks(
     chunks=None
 ):
     """
-    Convert the research question into an embedding
-    and retrieve relevant research chunks.
+    Retrieve relevant research passages.
 
-    If a topic-specific FAISS index is supplied,
-    search that index.
-
-    Otherwise, use the existing saved FAISS index.
+    Uses diversified retrieval when a topic-specific
+    in-memory FAISS index is provided.
     """
 
     if not question or not question.strip():
@@ -30,25 +29,32 @@ def retrieve_relevant_chunks(
 
     query_embedding = generate_query_embedding(question)
 
-    print("\nSearching the research-paper database...")
-
-    # Dynamic retrieval
     if vector_index is not None and chunks is not None:
 
-        relevant_chunks = search_chunks_in_memory(
-            query_embedding,
-            vector_index,
-            chunks,
-            top_k=top_k
+        print("\nUsing diversified in-memory retrieval...")
+
+        relevant_chunks = search_diverse_chunks(
+            query_embedding=query_embedding,
+            index=vector_index,
+            chunks=chunks,
+            top_k=top_k,
+            candidates_multiplier=5,
+            max_chunks_per_paper=2
         )
 
-    # Legacy retrieval for compatibility
     else:
 
+        print("\nUsing persistent FAISS retrieval...")
+
         relevant_chunks = search_similar_chunks(
-            query_embedding,
+            query_embedding=query_embedding,
             top_k=top_k
         )
+
+    print(
+        "\nRelevant passages retrieved:",
+        len(relevant_chunks)
+    )
 
     return relevant_chunks
 
@@ -106,13 +112,8 @@ def answer_question_with_context(
     vector_index=None,
     chunks=None
 ):
-
-    """
-    Retrieve relevant chunks and prepare LLM context.
-    """
-
     relevant_chunks = retrieve_relevant_chunks(
-        question,
+        question=question,
         top_k=top_k,
         vector_index=vector_index,
         chunks=chunks

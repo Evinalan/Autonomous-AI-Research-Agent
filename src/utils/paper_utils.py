@@ -157,7 +157,8 @@ def remove_duplicates(papers):
 
 def sort_papers_by_date(papers):
     """
-    Sort papers from newest to oldest.
+    Sort papers by relevance first (highest to lowest),
+    then by publication date (newest to oldest).
     """
 
     def get_date(paper):
@@ -173,6 +174,87 @@ def sort_papers_by_date(papers):
 
     return sorted(
         papers,
-        key=get_date,
+        key=lambda paper: (
+            paper.get("relevance_score", 0),
+            get_date(paper)
+        ),
         reverse=True
     )
+
+
+def rank_papers_by_relevance(papers, query):
+    """
+    Rank research papers according to their relevance
+    to the user's research topic.
+
+    Scoring:
+    - Exact query in title: +10
+    - Individual query words in title: +3 each
+    - Exact query in abstract: +5
+    - Individual query words in abstract: +1 each
+    """
+
+    if not query or not query.strip():
+        return papers
+
+    query = query.lower().strip()
+
+    # Remove punctuation and split the query into words.
+    query_words = set(
+        re.findall(r"\b[a-z0-9]+\b", query)
+    )
+
+    ranked_papers = []
+
+    for paper in papers:
+
+        title = clean_text(
+            paper.get("title", "")
+        ).lower()
+
+        abstract = clean_text(
+            paper.get("abstract", "")
+        ).lower()
+
+        score = 0
+
+        # Exact phrase matching.
+        if query in title:
+            score += 10
+
+        if query in abstract:
+            score += 5
+
+        # Individual keyword matching.
+        title_words = set(
+            re.findall(r"\b[a-z0-9]+\b", title)
+        )
+
+        abstract_words = set(
+            re.findall(r"\b[a-z0-9]+\b", abstract)
+        )
+
+        title_matches = len(
+            query_words.intersection(title_words)
+        )
+
+        abstract_matches = len(
+            query_words.intersection(abstract_words)
+        )
+
+        score += title_matches * 3
+        score += abstract_matches
+
+        # Keep the relevance score with the paper.
+        paper = paper.copy()
+        paper["relevance_score"] = score
+
+        ranked_papers.append(paper)
+
+    # Highest relevance score first.
+    ranked_papers.sort(
+        key=lambda paper: paper["relevance_score"],
+        reverse=True
+    )
+
+    return ranked_papers

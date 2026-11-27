@@ -335,7 +335,7 @@ else:
                         if paper_url.startswith(("https://", "http://")):
 
                             st.markdown(
-                                f"[Open Research Paper]({paper_url})"
+                                 f"[Open Research Paper]({paper_url})"
                             )
 
             else:

@@ -334,15 +334,24 @@ def run_research(topic, verify_claims=False, progress_callback=None):
     # STEP 12: RETURN RESULTS TO STREAMLIT
 
     return {
-        "topic": topic,
-        "chunks": chunks,
-        "sources": sources,
-        "summary": result.get("summary", ""),
-        "analysis": result.get("analysis", ""),
-        "research_gaps": result.get("research_gaps", ""),
-        "literature_review": literature_review,
-        "metadata_results": metadata_results,
-        "claim_verification": claim_verification,
-        "pdf_path": str(pdf_path),
-        "history_id": history_id
-    }
+    "topic": topic,
+
+    # Retrieved passages used in the research report
+    "chunks": chunks,
+
+    # Complete topic-specific research database
+    "paper_chunks": paper_chunks,
+
+    # Topic-specific FAISS index
+    "vector_index": vector_index,
+
+    "sources": sources,
+    "summary": result.get("summary", ""),
+    "analysis": result.get("analysis", ""),
+    "research_gaps": result.get("research_gaps", ""),
+    "literature_review": literature_review,
+    "metadata_results": metadata_results,
+    "claim_verification": claim_verification,
+    "pdf_path": str(pdf_path),
+    "history_id": history_id
+   }

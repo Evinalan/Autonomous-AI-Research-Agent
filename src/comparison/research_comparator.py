@@ -6,16 +6,40 @@ from src.rag.rag_pipeline import (
 
 from src.llm.gemini_client import generate_response
 
+from src.application.paper_pipeline import prepare_research_database
+
 
 def retrieve_topic_research(topic, top_k=5):
     """
-    Retrieve research passages related to one topic
-    using the existing FAISS vector database.
+    Prepare a fresh topic-specific research database
+    and retrieve passages using its own FAISS index.
     """
 
-    chunks = retrieve_relevant_chunks(
+    print(f"\nPreparing research database for: {topic}")
+
+    # Step 1: Collect and process papers for this topic.
+    paper_database = prepare_research_database(
         topic,
-        top_k=top_k
+        max_papers=5
+    )
+
+    # Step 2: Get the topic-specific FAISS index.
+    vector_index = paper_database["vector_index"]
+    paper_chunks = paper_database["chunks"]
+
+    if vector_index is None or not paper_chunks:
+        return {
+            "topic": topic,
+            "chunks": [],
+            "context": ""
+        }
+
+    # Step 3: Retrieve passages from this topic's index.
+    chunks = retrieve_relevant_chunks(
+        question=topic,
+        top_k=top_k,
+        vector_index=vector_index,
+        chunks=paper_chunks
     )
 
     if not chunks:
@@ -25,6 +49,7 @@ def retrieve_topic_research(topic, top_k=5):
             "context": ""
         }
 
+    # Step 4: Build context for Gemini.
     context = build_context(chunks)
 
     return {
@@ -32,7 +57,6 @@ def retrieve_topic_research(topic, top_k=5):
         "chunks": chunks,
         "context": context
     }
-
 
 def compare_with_gemini(topic_a, topic_b, context_a, context_b):
     """

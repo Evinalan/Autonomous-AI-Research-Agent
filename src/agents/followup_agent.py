@@ -30,10 +30,31 @@ def answer_followup_question(
     conversation_history = conversation_history or []
 
     # Retrieve additional passages relevant to the question.
-    new_chunks = retrieve_relevant_chunks(
-        question,
-        top_k=top_k
+    # Reuse the original topic-specific FAISS database.
+    vector_index = (
+    research_result.get("vector_index")
+    if research_result else None
     )
+
+    paper_chunks = (
+    research_result.get("paper_chunks", [])
+    if research_result else []
+    )
+
+    if vector_index is not None and paper_chunks:
+
+      new_chunks = retrieve_relevant_chunks(
+        question,
+        top_k=top_k,
+        vector_index=vector_index,
+        chunks=paper_chunks
+       )
+
+    else:
+    # Older saved research history may not contain
+    # the original in-memory FAISS index.
+    # Avoid retrieving unrelated passages from an old index.
+       new_chunks = []
 
     # Get passages saved with the completed research report.
     previous_chunks = []
