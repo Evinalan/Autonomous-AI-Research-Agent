@@ -1,184 +1,275 @@
 
-from typing import TypedDict
+from typing import TypedDict, Any
 
 from langgraph.graph import StateGraph, START, END
 
 from src.agents.retrieval_agent import run_retrieval_agent
 from src.agents.citation_agent import run_citation_agent
+
 from src.llm.gemini_client import generate_response
 
+
+# =====================================================
+# RESEARCH WORKFLOW STATE
+# =====================================================
 
 class ResearchState(TypedDict, total=False):
 
     question: str
 
+    # Dynamic topic-specific FAISS index
+    vector_index: Any
+
+    # Chunks generated from downloaded research papers
+    paper_chunks: list
+
+    # Retrieval information
     retrieval_result: dict
     chunks: list
     context: str
 
+    # Research outputs
     analysis: str
     summary: str
     research_gaps: str
-
     citations: list
 
+    # Error information
     error: str
 
 
-# ------------------------------------------
-# STEP 1: RETRIEVAL NODE
-# ------------------------------------------
+# =====================================================
+# NODE 1: RETRIEVAL AGENT
+# =====================================================
 
 def retrieval_node(state: ResearchState):
 
-    print("\nRETRIEVAL AGENT STARTED")
+    print("\n========== RETRIEVAL AGENT ==========")
 
-    result = run_retrieval_agent(
-        state["question"],
-        top_k=5
-    )
+    question = state.get("question", "").strip()
 
-    if not result:
+    vector_index = state.get("vector_index")
+
+    paper_chunks = state.get("paper_chunks", [])
+
+    if not question:
 
         return {
             "retrieval_result": {},
             "chunks": [],
-            "context": ""
+            "context": "",
+            "error": "Research question is empty."
         }
 
-    return {
-        "retrieval_result": result,
-        "chunks": result.get("retrieved_chunks", []),
-        "context": result.get("context", "")
-    }
+    if vector_index is None or not paper_chunks:
+
+        return {
+            "retrieval_result": {},
+            "chunks": [],
+            "context": "",
+            "error": "Dynamic research database is unavailable."
+        }
+
+    try:
+
+        result = run_retrieval_agent(
+            question,
+            top_k=5,
+            vector_index=vector_index,
+            chunks=paper_chunks
+        )
+
+        if not result:
+
+            return {
+                "retrieval_result": {},
+                "chunks": [],
+                "context": ""
+            }
+
+        retrieved_chunks = result.get(
+            "retrieved_chunks",
+            []
+        )
+
+        context = result.get(
+            "context",
+            ""
+        )
+
+        print(
+            "Retrieved passages:",
+            len(retrieved_chunks)
+        )
+
+        return {
+            "retrieval_result": result,
+            "chunks": retrieved_chunks,
+            "context": context
+        }
+
+    except Exception as error:
+
+        print("Retrieval agent failed:", error)
+
+        return {
+            "retrieval_result": {},
+            "chunks": [],
+            "context": "",
+            "error": str(error)
+        }
 
 
-# ------------------------------------------
-# STEP 2: COMBINED AI RESEARCH NODE
-# ------------------------------------------
+# =====================================================
+# NODE 2: COMBINED RESEARCH AGENT
+# =====================================================
 
 def combined_research_node(state: ResearchState):
 
-    print("\nCOMBINED RESEARCH AGENT STARTED")
+    print("\n========== COMBINED RESEARCH AGENT ==========")
 
-    question = state["question"]
-    context = state["context"]
+    question = state.get("question", "")
+
+    context = state.get("context", "")
+
+    if not context.strip():
+
+        return {
+            "analysis": "",
+            "summary": "",
+            "research_gaps": (
+                "Research gaps could not be identified "
+                "because no relevant research context "
+                "was retrieved."
+            ),
+            "error": "Research context is empty."
+        }
 
     prompt = f"""
 You are an academic research assistant.
 
-Answer the research question using ONLY the supplied research context.
-
-RESEARCH QUESTION:
+Research question:
 {question}
 
-RESEARCH CONTEXT:
+Research context:
 {context}
 
-Prepare three sections.
+Your task is to analyze the supplied research passages.
 
-SECTION 1: RESEARCH ANALYSIS
+IMPORTANT INSTRUCTIONS:
 
-Explain:
-- Main research findings
-- Important methods and techniques
-- Datasets or experiments mentioned
-- Important results
-- Limitations
+1. Use ONLY the supplied research context.
+2. Do not invent research findings.
+3. Do not invent paper titles or authors.
+4. Do not invent citations or experimental results.
+5. Clearly distinguish evidence from interpretation.
+6. If the context is insufficient, explain the limitation.
 
-Use source numbers such as [SOURCE 1] whenever possible.
-
-SECTION 2: RESEARCH SUMMARY
-
-Provide:
-- An overview of the research topic
-- Main themes found in the retrieved papers
-- Important conclusions
-
-SECTION 3: RESEARCH GAPS
-
-Identify:
-- Limitations explicitly mentioned in the papers
-- Missing research areas
-- Possible future research directions
-
-Clearly distinguish explicitly stated limitations from your own inferred suggestions.
-
-IMPORTANT:
-- Do not invent research findings.
-- Do not invent paper titles or citations.
-- If information is unavailable, say so.
-- Keep the answer concise but informative.
-- Use the exact section headings below.
+Prepare your response using these exact headings:
 
 RESEARCH ANALYSIS:
-[Your analysis]
+
+Provide a detailed analysis of the research findings.
 
 RESEARCH SUMMARY:
-[Your summary]
+
+Summarize the most important findings.
 
 RESEARCH GAPS:
-[Your research gaps]
+
+Identify possible research gaps based on the supplied
+research passages.
+
+If the supplied passages do not contain enough
+information to identify a research gap, explain
+that limitation instead of inventing one.
 """
-
-    response = generate_response(
-        prompt,
-        num_predict=1200,
-        temperature=0.2
-    )
-
-    # Extract the three sections.
-
-    analysis = ""
-    summary = ""
-    gaps = ""
 
     try:
 
-        analysis_marker = "RESEARCH ANALYSIS:"
-        summary_marker = "RESEARCH SUMMARY:"
-        gaps_marker = "RESEARCH GAPS:"
+        response = generate_response(
+            prompt,
+            num_predict=1200,
+            temperature=0.2
+        )
 
-        analysis_start = response.find(analysis_marker)
-        summary_start = response.find(summary_marker)
-        gaps_start = response.find(gaps_marker)
+        if not response or not response.strip():
 
-        if analysis_start != -1 and summary_start != -1:
+            raise ValueError(
+                "The LLM returned an empty response."
+            )
 
-            analysis = response[
-                analysis_start + len(analysis_marker):summary_start
-            ].strip()
+        response = response.strip()
 
-        if summary_start != -1 and gaps_start != -1:
+    except Exception as error:
 
-            summary = response[
-                summary_start + len(summary_marker):gaps_start
-            ].strip()
+        print("Research generation failed:", error)
 
-        if gaps_start != -1:
+        return {
+            "analysis": "",
+            "summary": "",
+            "research_gaps": "",
+            "error": f"Research generation failed: {error}"
+        }
 
-            gaps = response[
-                gaps_start + len(gaps_marker):
-            ].strip()
+    # -------------------------------------------------
+    # Extract generated sections
+    # -------------------------------------------------
 
-        # Fallback if the model does not follow the format.
+    analysis_marker = "RESEARCH ANALYSIS:"
 
-        if not analysis:
-            analysis = response
+    summary_marker = "RESEARCH SUMMARY:"
 
-        if not summary:
-            summary = "Summary could not be separated from the generated response."
+    gaps_marker = "RESEARCH GAPS:"
 
-        if not gaps:
-            gaps = "Research gaps could not be separated from the generated response."
+    analysis_start = response.find(analysis_marker)
 
-    except Exception:
+    summary_start = response.find(summary_marker)
+
+    gaps_start = response.find(gaps_marker)
+
+    if (
+        analysis_start != -1
+        and summary_start != -1
+        and gaps_start != -1
+        and analysis_start < summary_start < gaps_start
+    ):
+
+        analysis = response[
+            analysis_start + len(analysis_marker):
+            summary_start
+        ].strip()
+
+        summary = response[
+            summary_start + len(summary_marker):
+            gaps_start
+        ].strip()
+
+        gaps = response[
+            gaps_start + len(gaps_marker):
+        ].strip()
+
+    else:
+
+        print(
+            "Warning: Could not separate all generated sections."
+        )
 
         analysis = response
-        summary = "Could not extract summary separately."
-        gaps = "Could not extract research gaps separately."
 
-    print("COMBINED RESEARCH AGENT COMPLETED")
+        summary = (
+            "A separate summary could not be extracted. "
+            "Refer to the research analysis."
+        )
+
+        gaps = (
+            "Research gaps could not be extracted separately. "
+            "Manual review is recommended."
+        )
+
+    print("Research analysis generated.")
+    print("Research summary generated.")
+    print("Research gaps generated.")
 
     return {
         "analysis": analysis,
@@ -187,62 +278,115 @@ RESEARCH GAPS:
     }
 
 
-# ------------------------------------------
-# STEP 3: CITATION NODE
-# ------------------------------------------
+# =====================================================
+# NODE 3: CITATION AGENT
+# =====================================================
 
 def citation_node(state: ResearchState):
 
-    print("\nCITATION AGENT STARTED")
+    print("\n========== CITATION AGENT ==========")
 
-    citations = run_citation_agent(
-        state.get("chunks", [])
-    )
+    chunks = state.get("chunks", [])
 
-    return {
-        "citations": citations
-    }
+    if not chunks:
+
+        return {
+            "citations": []
+        }
+
+    try:
+
+        citations = run_citation_agent(chunks)
+
+        print(
+            "Citations generated:",
+            len(citations) if citations else 0
+        )
+
+        return {
+            "citations": citations or []
+        }
+
+    except Exception as error:
+
+        print("Citation agent failed:", error)
+
+        return {
+            "citations": [],
+            "error": f"Citation generation failed: {error}"
+        }
 
 
-# ------------------------------------------
-# STEP 4: ROUTING
-# ------------------------------------------
+# =====================================================
+# CONDITIONAL ROUTING
+# =====================================================
 
 def route_after_retrieval(state: ResearchState):
 
     if state.get("chunks"):
+
         return "continue"
 
     return "stop"
 
 
+# =====================================================
+# NODE 4: NO RESULTS
+# =====================================================
+
 def no_results_node(state: ResearchState):
+
+    existing_error = state.get("error", "")
 
     return {
         "error": (
+            existing_error
+            or
             "No relevant research passages were found. "
-            "Try another research question or collect more papers."
+            "Try another research question or collect "
+            "more research papers."
         )
     }
 
 
-# ------------------------------------------
-# STEP 5: BUILD WORKFLOW
-# ------------------------------------------
+# =====================================================
+# BUILD LANGGRAPH WORKFLOW
+# =====================================================
 
 def build_research_workflow():
 
     workflow = StateGraph(ResearchState)
 
-    workflow.add_node("retrieval", retrieval_node)
+    # Register nodes
 
-    workflow.add_node("combined_research", combined_research_node)
+    workflow.add_node(
+        "retrieval",
+        retrieval_node
+    )
 
-    workflow.add_node("citations", citation_node)
+    workflow.add_node(
+        "combined_research",
+        combined_research_node
+    )
 
-    workflow.add_node("no_results", no_results_node)
+    workflow.add_node(
+        "citations",
+        citation_node
+    )
 
-    workflow.add_edge(START, "retrieval")
+    workflow.add_node(
+        "no_results",
+        no_results_node
+    )
+
+    # Starting point
+
+    workflow.add_edge(
+        START,
+        "retrieval"
+    )
+
+    # Conditional routing
 
     workflow.add_conditional_edges(
         "retrieval",
@@ -253,13 +397,25 @@ def build_research_workflow():
         }
     )
 
+    # Research generation -> citations
+
     workflow.add_edge(
         "combined_research",
         "citations"
     )
 
-    workflow.add_edge("citations", END)
+    # End points
 
-    workflow.add_edge("no_results", END)
+    workflow.add_edge(
+        "citations",
+        END
+    )
+
+    workflow.add_edge(
+        "no_results",
+        END
+    )
+
+    print("\nResearch workflow compiled successfully.")
 
     return workflow.compile()

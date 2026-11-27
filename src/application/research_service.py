@@ -9,6 +9,8 @@ from src.verification.claim_verifier import verify_generated_text
 
 from src.reporting.report_generator import generate_research_report
 from src.storage.research_history import save_research_history
+from src.application.paper_pipeline import prepare_research_database
+
 
 # ------------------------------------------
 # STEP 1: BUILD LITERATURE REVIEW
@@ -19,11 +21,9 @@ def build_literature_review(chunks):
     grouped_papers = {}
 
     for chunk in chunks:
-
         title = chunk.get("title", "Unknown title")
 
         if title not in grouped_papers:
-
             grouped_papers[title] = {
                 "authors": chunk.get("authors", []),
                 "source": chunk.get("source", "Unknown"),
@@ -38,7 +38,6 @@ def build_literature_review(chunks):
     review = ""
 
     for title, paper in grouped_papers.items():
-
         review += f"\n{title}\n"
 
         authors = paper["authors"]
@@ -65,13 +64,10 @@ def verify_sources(sources):
     metadata_results = []
 
     for source in sources:
-
         try:
-
             verification = verify_paper_metadata(source)
 
         except Exception as error:
-
             verification = {
                 "status": "api_error",
                 "message": str(error),
@@ -95,7 +91,6 @@ def create_verification_notes(metadata_results):
     notes = ""
 
     for index, item in enumerate(metadata_results, start=1):
-
         source = item["source"]
         verification = item["result"]
 
@@ -131,73 +126,111 @@ def get_research_workflow():
 # STEP 5: MAIN RESEARCH FUNCTION
 # ------------------------------------------
 
-def run_research(topic, verify_claims=False,progress_callback=None):
+def run_research(topic, verify_claims=False, progress_callback=None):
 
     """
     Run the complete research workflow.
 
     Claim verification is optional to improve speed.
     """
+
     def report_progress(message):
 
         print(message)
 
         if progress_callback:
             progress_callback(message)
-    if not topic or not topic.strip():
 
+    if not topic or not topic.strip():
         raise ValueError("Please enter a research topic.")
+
     report_progress("Initializing research workflow...")
+
     topic = topic.strip()
 
-    # RUN LANGGRAPH WORKFLOW
+    # STEP 1: RUN RESEARCH DATABASE PIPELINE
 
     print("\nStarting research workflow...")
 
-    workflow = get_research_workflow()
-    report_progress("Searching the research database...")
-    result = workflow.invoke({
-        "question": topic
-    })
-    if not isinstance(result, dict):
-         raise RuntimeError(
-              "Research workflow returned an invalid result.")
-
-    if result.get("error"):
-        raise RuntimeError(result["error"])
-
-    chunks = result.get("chunks", [])
-
-    if not chunks:
-        raise RuntimeError(
-        "No relevant research passages were found."
+    report_progress(
+        "Searching for research papers related to your topic..."
     )
-    report_progress("Research analysis, summary and gap identification completed.")
-    if result.get("error"):
 
+    paper_database = prepare_research_database(
+        topic,
+        max_papers=5
+    )
+
+    # STEP 2: GET TOPIC-SPECIFIC FAISS INDEX
+
+    vector_index = paper_database["vector_index"]
+    paper_chunks = paper_database["chunks"]
+
+    print(
+        "\nPapers collected:",
+        len(paper_database["papers"])
+    )
+
+    print(
+        "Papers successfully processed:",
+        paper_database["processed_papers"]
+    )
+
+    print(
+        "Total chunks generated:",
+        len(paper_chunks)
+    )
+
+    # STEP 3: INITIALIZE LANGGRAPH WORKFLOW
+
+    workflow = get_research_workflow()
+
+    # STEP 4: PASS INDEX AND CHUNKS INTO LANGGRAPH
+
+    report_progress(
+        "Searching relevant passages in the collected research papers..."
+    )
+
+    result = workflow.invoke({
+        "question": topic,
+        "vector_index": vector_index,
+        "paper_chunks": paper_chunks
+    })
+
+    if not isinstance(result, dict):
+        raise RuntimeError(
+            "Research workflow returned an invalid result."
+        )
+
+    if result.get("error"):
         raise RuntimeError(result["error"])
 
     chunks = result.get("chunks", [])
 
     if not chunks:
-
         raise RuntimeError(
             "No relevant research passages were found."
         )
 
-    # BUILD SOURCE REGISTRY
+    report_progress(
+        "Research analysis, summary and gap identification completed."
+    )
+
+    # STEP 5: BUILD SOURCE REGISTRY
 
     print("\nBuilding source registry...")
 
     sources = build_source_registry(chunks)
 
-    # VERIFY PAPER METADATA
+    # STEP 6: VERIFY PAPER METADATA
 
     print("\nVerifying paper metadata...")
+
     report_progress("Verifying research paper metadata...")
+
     metadata_results = verify_sources(sources)
 
-    # PREPARE GENERATED TEXT
+    # STEP 7: PREPARE GENERATED TEXT
 
     generated_text = (
         "RESEARCH ANALYSIS\n"
@@ -208,11 +241,13 @@ def run_research(topic, verify_claims=False,progress_callback=None):
         + result.get("research_gaps", "")
     )
 
-    # OPTIONAL CLAIM VERIFICATION
+    # STEP 8: OPTIONAL CLAIM VERIFICATION
+
     if verify_claims:
         report_progress("Verifying generated research claims...")
     else:
         report_progress("Skipping optional claim verification...")
+
     claim_verification = {
         "verification_status": "not_run",
         "reason": (
@@ -227,22 +262,20 @@ def run_research(topic, verify_claims=False,progress_callback=None):
         print("\nStarting claim verification...")
 
         try:
-
             claim_verification = verify_generated_text(
                 generated_text,
                 result.get("context", "")
             )
 
         except Exception as error:
-
             claim_verification = {
                 "verification_status": "manual_review_required",
                 "reason": str(error),
                 "claims": []
             }
 
-    # PREPARE REPORT CONTENT
-    
+    # STEP 9: PREPARE REPORT CONTENT
+
     print("\nPreparing research report...")
 
     literature_review = build_literature_review(chunks)
@@ -252,9 +285,7 @@ def run_research(topic, verify_claims=False,progress_callback=None):
     )
 
     report_data = {
-
         "topic": topic,
-
         "summary": result.get("summary", ""),
 
         "introduction": (
@@ -264,68 +295,54 @@ def run_research(topic, verify_claims=False,progress_callback=None):
         ),
 
         "literature_review": literature_review,
-
         "analysis": result.get("analysis", ""),
-
         "research_gaps": result.get("research_gaps", ""),
-
         "conclusion": result.get("summary", ""),
-
         "sources": sources,
-
         "metadata_results": metadata_results,
-
         "claim_verification": claim_verification,
-
         "verification_notes": verification_notes
     }
 
-    # GENERATE PDF
+    # STEP 10: GENERATE PDF
+
     report_progress("Generating your PDF research report...")
+
     print("\nGenerating PDF report...")
 
     pdf_path = generate_research_report(report_data)
-    
-   
+
+    # STEP 11: SAVE RESEARCH HISTORY
 
     history_id = save_research_history({
-    "topic": topic,
-    "summary": result.get("summary", ""),
-    "analysis": result.get("analysis", ""),
-    "literature_review": literature_review,
-    "research_gaps": result.get("research_gaps", ""),
-    "chunks": chunks,
-    "sources": sources,
-    "metadata_results": metadata_results,
-    "claim_verification": claim_verification,
-    "pdf_path": str(pdf_path)
+        "topic": topic,
+        "summary": result.get("summary", ""),
+        "analysis": result.get("analysis", ""),
+        "literature_review": literature_review,
+        "research_gaps": result.get("research_gaps", ""),
+        "chunks": chunks,
+        "sources": sources,
+        "metadata_results": metadata_results,
+        "claim_verification": claim_verification,
+        "pdf_path": str(pdf_path)
     })
 
     print("\nResearch completed successfully!")
 
-    # RETURN RESULTS TO STREAMLIT
+    report_progress("Research report generated successfully!")
+
+    # STEP 12: RETURN RESULTS TO STREAMLIT
 
     return {
-
         "topic": topic,
-
         "chunks": chunks,
-
         "sources": sources,
-
         "summary": result.get("summary", ""),
-
         "analysis": result.get("analysis", ""),
-
         "research_gaps": result.get("research_gaps", ""),
-
         "literature_review": literature_review,
-
         "metadata_results": metadata_results,
-
         "claim_verification": claim_verification,
-
         "pdf_path": str(pdf_path),
         "history_id": history_id
     }
-    report_progress("Research report generated successfully!")

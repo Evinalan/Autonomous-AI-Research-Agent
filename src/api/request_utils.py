@@ -1,54 +1,81 @@
+
 import requests
 import time
 
 
-def get_with_retries(url, params, timeout=30):
+def get_with_retries(url, params, timeout=45):
+    """
+    Send an API request with limited retries.
+
+    - HTTP 429: Skip this API instead of repeatedly retrying.
+    - Timeout/connection errors: Retry up to 3 times.
+    - Other HTTP errors: Return None.
+    """
+
     max_retries = 3
 
     for attempt in range(max_retries):
+
+        response = None
+
         try:
             response = requests.get(
                 url,
                 params=params,
                 timeout=timeout,
                 headers={
-                    "User-Agent": "AI-Research-Agent/1.0"
+                    "User-Agent": "Autonomous-AI-Research-Agent/1.0"
                 }
             )
 
-            # Handle rate limiting
+            # Stop immediately if the API rate limit is reached.
             if response.status_code == 429:
-                retry_after = response.headers.get("Retry-After")
-
-                try:
-                    wait_time = float(retry_after)
-                except (TypeError, ValueError):
-                    wait_time = 15 * (2 ** attempt)
-
+                print(
+                    f"Rate limit reached for {url}. "
+                    "Skipping this API for now."
+                )
                 response.close()
-
-                if attempt == max_retries - 1:
-                    raise requests.exceptions.HTTPError(
-                        "API rate limit exceeded after retries."
-                    )
-
-                print(f"Rate limit reached. Waiting {wait_time} seconds...")
-                time.sleep(wait_time)
-                continue
+                return None
 
             response.raise_for_status()
+
             return response
+
+        except requests.exceptions.Timeout as error:
+
+            print("API request timed out:", error)
+
+        except requests.exceptions.HTTPError as error:
+
+            print("API returned an HTTP error:", error)
+
+            if response is not None:
+                response.close()
+
+            return None
 
         except requests.exceptions.RequestException as error:
 
-            if attempt == max_retries - 1:
-                raise
+            print("API connection failed:", error)
 
-            wait_time = 5 * (2 ** attempt)
+        finally:
+            # Close unsuccessful responses.
+            if response is not None and (
+                response.status_code >= 400
+            ):
+                response.close()
 
-            print("Request failed:", error)
-            print(f"Retrying in {wait_time} seconds...")
+        if attempt < max_retries - 1:
+
+            wait_time = 5 * (attempt + 1)
+
+            print(
+                f"Retrying in {wait_time} seconds..."
+            )
 
             time.sleep(wait_time)
+
+        else:
+            print("Maximum API retries reached.")
 
     return None

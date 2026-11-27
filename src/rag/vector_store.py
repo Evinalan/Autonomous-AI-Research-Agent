@@ -189,3 +189,79 @@ def search_similar_chunks(query_embedding, top_k=5):
         results.append(result)
 
     return results
+
+def search_chunks_in_memory(
+    query_embedding,
+    index,
+    chunks,
+    top_k=5
+):
+    """
+    Search a topic-specific FAISS index already in memory.
+
+    Unlike search_similar_chunks(), this function does not
+    load the old permanently saved FAISS index.
+    """
+
+    if index is None:
+        raise ValueError("A FAISS index must be provided.")
+
+    if not chunks:
+        return []
+
+    if index.ntotal != len(chunks):
+        raise ValueError(
+            "FAISS index and chunk metadata have different sizes."
+        )
+
+    query_embedding = np.asarray(
+        query_embedding,
+        dtype="float32"
+    )
+
+    if query_embedding.ndim == 1:
+        query_embedding = query_embedding.reshape(1, -1)
+
+    if query_embedding.ndim != 2:
+        raise ValueError("Query embedding must be a 2D array.")
+
+    if query_embedding.shape[1] != index.d:
+        raise ValueError(
+            "Query embedding dimension does not match FAISS index."
+        )
+
+    if not np.isfinite(query_embedding).all():
+        raise ValueError("Query embedding contains invalid values.")
+
+    if top_k <= 0:
+        raise ValueError("top_k must be greater than zero.")
+
+    top_k = min(top_k, index.ntotal)
+
+    scores, indices = index.search(
+        query_embedding,
+        top_k
+    )
+
+    results = []
+
+    for score, chunk_index in zip(
+        scores[0],
+        indices[0]
+    ):
+
+        if chunk_index < 0:
+            continue
+
+        result = chunks[int(chunk_index)].copy()
+
+        result["similarity_score"] = float(score)
+
+        print(
+            f"Similarity: {score:.4f} | "
+            f"Title: {result.get('title', 'Unknown')}"
+        )
+
+        results.append(result)
+
+    return results
